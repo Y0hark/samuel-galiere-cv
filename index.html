@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel GALIERE - Architecte Logiciel & Co-founder</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* CSS Variables - Thème Sombre par défaut */
+        :root {
+            --bg-color: #050505;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent: #6366f1;
+            /* Indigo */
+            --accent-glow: rgba(99, 102, 241, 0.15);
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --font-display: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: none;
+            /* Remplacé par curseur custom */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Curseur personnalisé (Désactivé sur mobile via JS ou media query) */
+        .cursor-dot,
+        .cursor-outline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: 9999;
+            pointer-events: none;
+            transition: width 0.2s, height 0.2s, background-color 0.2s;
+        }
+
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent);
+        }
+
+        .cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(99, 102, 241, 0.5);
+            transition: transform 0.1s ease-out, width 0.2s, height 0.2s;
+        }
+
+        /* Bruit de fond (Texture) */
+        .noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 9998;
+            opacity: 0.03;
+            background: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 5%;
+        }
+
+        /* Typography */
+        h1,
+        h2,
+        h3 {
+            font-family: var(--font-display);
+        }
+
+        h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 1rem;
+            color: #fff;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .text-accent {
+            color: var(--accent);
+        }
+
+        a {
+            color: var(--text-main);
+            text-decoration: none;
+            position: relative;
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent);
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+
+        a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* Bouton PDF */
+        .print-btn {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--card-border);
+            color: var(--text-main);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-family: var(--font-display);
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .print-btn:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Section Hero */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            color: var(--text-muted);
+            font-family: var(--font-display);
+            margin-bottom: 2rem;
+        }
+
+        .hero-contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            font-size: 0.9rem;
+            margin-top: 3rem;
+            color: var(--text-muted);
+        }
+
+        .hero-contact span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Section Résumé (About) */
+        .about-text {
+            font-size: clamp(1.2rem, 2vw, 1.8rem);
+            line-height: 1.5;
+            font-weight: 300;
+            max-width: 900px;
+        }
+
+        .about-text strong {
+            font-weight: 500;
+            color: #fff;
+        }
+
+        /* Grid Layouts pour Sections */
+        .section-padding {
+            padding: 8rem 0;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        /* Expérience (Cards) */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .exp-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.4s, border-color 0.4s;
+            backdrop-filter: blur(10px);
+        }
+
+        .exp-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), var(--accent-glow), transparent 40%);
+            opacity: 0;
+            transition: opacity 0.4s;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .exp-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(99, 102, 241, 0.4);
+        }
+
+        .exp-card:hover::before {
+            opacity: 1;
+        }
+
+        .exp-card>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .exp-date {
+            font-family: var(--font-display);
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .exp-company {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .exp-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .tag {
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            border: 1px solid var(--card-border);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        /* Badges Notion */
+        .cert-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .cert-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+        }
+
+        .cert-icon {
+            font-size: 1.5rem;
+        }
+
+        /* Animations Scroll (Classes ajoutées par JS) */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ==========================================================
+           VERSION IMPRESSION (PDF EXPORT) - ULTRA CLEAN & PRO
+           ========================================================== */
+        @media print {
+
+            /* Reset Global pour l'impression */
+            * {
+                cursor: auto !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            :root {
+                --bg-color: #ffffff;
+                --text-main: #111827;
+                --text-muted: #4b5563;
+                --accent: #2563eb;
+                --card-bg: transparent;
+                --card-border: #e5e7eb;
+            }
+
+            body {
+                background: white !important;
+                color: black !important;
+                font-size: 10pt;
+            }
+
+            .noise,
+            .cursor-dot,
+            .cursor-outline,
+            .print-btn {
+                display: none !important;
+            }
+
+            .container {
+                max-width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+
+            /* Ajustements typographiques */
+            h1 {
+                font-size: 24pt;
+                color: black;
+                margin-bottom: 4pt;
+                margin-top: 0;
+            }
+
+            .hero-subtitle {
+                font-size: 14pt;
+                color: var(--accent);
+                margin-bottom: 12pt;
+            }
+
+            h2 {
+                font-size: 16pt;
+                color: black;
+                border-bottom: 2px solid #e5e7eb;
+                margin-bottom: 12pt;
+                margin-top: 16pt;
+                padding-bottom: 4pt;
+                page-break-after: avoid;
+            }
+
+            h3 {
+                font-size: 12pt;
+                color: black;
+                margin-bottom: 2pt;
+            }
+
+            /* Ajustements Layout */
+            .section-padding {
+                padding: 10pt 0;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 20pt 0 10pt 0;
+            }
+
+            .hero-contact {
+                margin-top: 10pt;
+                font-size: 9pt;
+                color: #4b5563;
+                gap: 15pt;
+            }
+
+            .about-text {
+                font-size: 10pt;
+                max-width: 100%;
+            }
+
+            .grid-2 {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                gap: 20pt;
+            }
+
+            /* Expériences pour impression */
+            .exp-card {
+                background: transparent !important;
+                border: none !important;
+                padding: 0 !important;
+                margin-bottom: 15pt !important;
+                page-break-inside: avoid;
+                transform: none !important;
+            }
+
+            .exp-card::before {
+                display: none !important;
+            }
+
+            .exp-header {
+                margin-bottom: 4pt;
+            }
+
+            .exp-company {
+                font-weight: 600;
+                color: #374151;
+                margin-bottom: 4pt;
+                font-size: 10pt;
+            }
+
+            .exp-desc {
+                font-size: 9.5pt;
+                color: #111;
+                margin-bottom: 6pt;
+            }
+
+            .exp-date {
+                font-size: 9pt;
+            }
+
+            .tags {
+                margin-top: 4pt;
+                gap: 4pt;
+            }
+
+            .tag {
+                padding: 2pt 6pt;
+                font-size: 8pt;
+                background: #f3f4f6 !important;
+                border-color: #d1d5db !important;
+                color: #374151 !important;
+            }
+
+            /* Certificats et utils */
+            .cert-item {
+                background: transparent !important;
+                padding: 4pt 0 !important;
+                border: none !important;
+                page-break-inside: avoid;
+            }
+
+            .reveal {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
+
+            /* Cacher les liens (ne pas imprimer les href) */
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- UI Elements -->
+    <div class="noise"></div>
+    <div class="cursor-dot no-print"></div>
+    <div class="cursor-outline no-print"></div>
+    <button class="print-btn no-print" onclick="window.print()">Exporter PDF</button>
+
+    <main class="container">
+
+        <!-- HEADER / HERO -->
+        <header class="hero section-padding">
+            <h1 class="reveal">Samuel <span class="text-accent">GALIERE</span></h1>
+            <div class="hero-subtitle reveal">Architecte Logiciel & Co-founder @ Boliere Co.</div>
+            <p class="about-text reveal">
+                Il y a ce qu'il y a marqué sur mon titre de poste, et il y a ce que je suis vraiment.
+                Sur le papier, je suis <strong>Architecte Logiciel et Business Analyst</strong>. Dans les faits, je suis
+                un constructeur.
+                J'aime quand les systèmes sont propres, quand la donnée circule bien, et quand la technique sert
+                vraiment à quelque chose.
+            </p>
+            <div class="hero-contact reveal">
+                <span>📍 Marseille, France</span>
+                <span>📞 +33 7 82 56 74 56</span>
+                <span>✉️ <a href="mailto:samuelgaliere.pro@gmail.com">samuelgaliere.pro@gmail.com</a></span>
+                <span>🔗 <a href="https://www.linkedin.com/in/samuel-galiere" target="_blank">LinkedIn</a></span>
+            </div>
+        </header>
+
+        <div class="grid-2">
+            <!-- COLONNE GAUCHE : EXPÉRIENCE -->
+            <div>
+                <section class="section-padding pt-0">
+                    <h2 class="reveal">Expérience</h2>
+
+                    <div class="timeline">
+                        <!-- EXP 1 -->
+                        <article class="exp-card reveal">
+                            <div class="exp-header">
+                                <h3>Business Analyst & Proxy Product Owner</h3>
+                                <span class="exp-date">Mars 2024 - Présent</span>
+                            </div>
+                            <div class="exp-company">CEVA Logistics (via TNP)</div>
+                            <div class="exp-desc">
+                                Pilotage du projet CFAST (middleware stratégique unifiant opérations, finance,
+                                tracking).
+                                Je fais le pont entre les besoins métier complexes et la Tech. Conception des modèles de
+                                données, architecture et gestion du cycle de vie Scrum.
+                            </div>
+                            <div class="tags">
+                                <span class="tag">JIRA / Confluence</span>
+                                <span class="tag">SQL / API REST</span>
+                                <span class="tag">Data Modeling</span>
+                                <span class="tag">Agile Scrum</span>
+                            </div>
+                        </article>
+
+                        <!-- EXP 2 -->
+                        <article class="exp-card reveal">
+                            <div class="exp-header">
+                                <h3>Enseignant - Big Data & IA</h3>
+                                <span class="exp-date">Sept 2024 - Présent</span>
+                            </div>
+                            <div class="exp-company">Epitech - L'école de l'excellence informatique</div>
+                            <div class="exp-desc">
+                                Transmission de savoir (Master 1 & 2). Conception de cours sur les architectures Big
+                                Data et le Machine Learning. Mentorat sur la Clean Architecture et la vision produit.
+                            </div>
+                            <div class="tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Spark / Hadoop</span>
+                                <span class="tag">AI Ethics</span>
+                                <span class="tag">LLMs</span>
+                            </div>
+                        </article>
+
+                        <!-- EXP 3 -->
+                        <article class="exp-card reveal">
+                            <div class="exp-header">
+                                <h3>Architecte Logiciel & Expert Notion</h3>
+                                <span class="exp-date">Juin 2021 - Présent</span>
+                            </div>
+                            <div class="exp-company">SG Digital Solution (Freelance)</div>
+                            <div class="exp-desc">
+                                Conception de solutions digitales sur mesure. Configuration de Notion comme OS
+                                d'entreprise. Développement d'applications SaaS avec intégration d'IA (Claude, GPT).
+                            </div>
+                            <div class="tags">
+                                <span class="tag">Notion Expert</span>
+                                <span class="tag">Node.js / Vue.js</span>
+                                <span class="tag">Docker</span>
+                                <span class="tag">API REST</span>
+                            </div>
+                        </article>
+
+                        <!-- EXP 4 -->
+                        <article class="exp-card reveal">
+                            <div class="exp-header">
+                                <h3>QA R&D Developer</h3>
+                                <span class="exp-date">Sept 2023 - Mars 2024</span>
+                            </div>
+                            <div class="exp-company">Reservit</div>
+                            <div class="exp-desc">
+                                Stabilisation de l'application leader de réservation hôtelière. Détection de bugs
+                                complexes, automatisation des tests et refactoring pour réduire la dette technique.
+                            </div>
+                            <div class="tags">
+                                <span class="tag">Java</span>
+                                <span class="tag">Angular</span>
+                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">Jenkins</span>
+                            </div>
+                        </article>
+
+                        <!-- EXP 5 -->
+                        <article class="exp-card reveal">
+                            <div class="exp-header">
+                                <h3>Software Developer DevOps</h3>
+                                <span class="exp-date">Sept 2021 - Août 2023</span>
+                            </div>
+                            <div class="exp-company">CMA CGM</div>
+                            <div class="exp-desc">
+                                Centralisation et analyse des données des pipelines CI/CD du groupe. Création de
+                                dashboards d'observabilité temps réel.
+                            </div>
+                            <div class="tags">
+                                <span class="tag">Java Spring</span>
+                                <span class="tag">Kubernetes</span>
+                                <span class="tag">GitLab CI</span>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+
+            <!-- COLONNE DROITE : COMPETENCES, CERTIFS, EDUCATION -->
+            <div>
+                <section class="section-padding pt-0">
+                    <h2 class="reveal">Expertises</h2>
+                    <div class="tags reveal" style="margin-bottom: 3rem;">
+                        <span class="tag" style="font-size: 1rem; padding: 0.5rem 1rem;">Architecture Logicielle</span>
+                        <span class="tag" style="font-size: 1rem; padding: 0.5rem 1rem;">Développement Full-Stack</span>
+                        <span class="tag" style="font-size: 1rem; padding: 0.5rem 1rem;">Business Analysis</span>
+                        <span class="tag" style="font-size: 1rem; padding: 0.5rem 1rem;">Gestion de Projet
+                            (Scrum)</span>
+                        <span class="tag" style="font-size: 1rem; padding: 0.5rem 1rem;">Big Data & IA</span>
+                        <span class="tag" style="font-size: 1rem; padding: 0.5rem 1rem;">Formation & Mentorat</span>
+                    </div>
+
+                    <h2 class="reveal">Notion Addict</h2>
+                    <p class="exp-desc reveal" style="margin-bottom: 1.5rem;">
+                        Je ne suis pas juste utilisateur, je configure Notion comme un véritable OS d'entreprise.
+                    </p>
+                    <ul class="cert-list reveal" style="margin-bottom: 3rem;">
+                        <li class="cert-item">
+                            <span class="cert-icon">🥇</span>
+                            <div>
+                                <h3 style="font-size: 1.1rem; margin:0;">Notion Advanced Badge</h3>
+                            </div>
+                        </li>
+                        <li class="cert-item">
+                            <span class="cert-icon">🥈</span>
+                            <div>
+                                <h3 style="font-size: 1.1rem; margin:0;">Notion Workflows Badge</h3>
+                            </div>
+                        </li>
+                        <li class="cert-item">
+                            <span class="cert-icon">🥉</span>
+                            <div>
+                                <h3 style="font-size: 1.1rem; margin:0;">Notion Essentials Badge</h3>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h2 class="reveal">Formation</h2>
+                    <div class="timeline">
+                        <article class="exp-card reveal" style="padding: 1.5rem;">
+                            <div class="exp-header" style="margin-bottom: 0.5rem;">
+                                <h3 style="font-size: 1.1rem;">Master's in Software Architecture AI/DATA</h3>
+                                <span class="exp-date">2021 - 2023</span>
+                            </div>
+                            <div class="exp-company" style="margin:0;">EPITECH - European Institute of Technology</div>
+                        </article>
+
+                        <article class="exp-card reveal" style="padding: 1.5rem;">
+                            <div class="exp-header" style="margin-bottom: 0.5rem;">
+                                <h3 style="font-size: 1.1rem;">Licence IT & Management</h3>
+                                <span class="exp-date">2018 - 2021</span>
+                            </div>
+                            <div class="exp-company" style="margin:0;">EMD - Ecole de Management</div>
+                        </article>
+                    </div>
+
+                    <h2 class="reveal" style="margin-top: 3rem;">Langues</h2>
+                    <div class="hero-contact reveal" style="margin-top: 1rem;">
+                        <span>🇬🇧 Anglais (Bilingue)</span>
+                        <span>🇪🇸 Espagnol (Pro limité)</span>
+                        <span>🇫🇷 Français (Natif)</span>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts pour l'interactivité -->
+    <script>
+        // 1. Curseur personnalisé (Désactivé sur appareils tactiles)
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+
+        // Vérifier si c'est un appareil tactile
+        const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+
+        if (!isTouchDevice) {
+            window.addEventListener('mousemove', (e) => {
+                const posX = e.clientX;
+                const posY = e.clientY;
+
+                cursorDot.style.left = `${posX}px`;
+                cursorDot.style.top = `${posY}px`;
+
+                // Léger délai pour l'outline pour un effet fluide
+                cursorOutline.animate({
+                    left: `${posX}px`,
+                    top: `${posY}px`
+                }, { duration: 500, fill: "forwards" });
+            });
+
+            // Effet hover sur les liens et boutons
+            const interactiveElements = document.querySelectorAll('a, button, .exp-card');
+            interactiveElements.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursorOutline.style.width = '60px';
+                    cursorOutline.style.height = '60px';
+                    cursorOutline.style.backgroundColor = 'rgba(99, 102, 241, 0.1)';
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursorOutline.style.width = '40px';
+                    cursorOutline.style.height = '40px';
+                    cursorOutline.style.backgroundColor = 'transparent';
+                });
+            });
+        } else {
+            // Cacher le curseur sur mobile
+            cursorDot.style.display = 'none';
+            cursorOutline.style.display = 'none';
+        }
+
+        // 2. Animations d'apparition au scroll (Intersection Observer)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // Ne jouer l'animation qu'une fois
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // 3. Effet de lueur directionnelle (Glow) sur les cartes d'expérience
+        document.querySelectorAll('.exp-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body>
+
+</html>
