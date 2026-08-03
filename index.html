@@ -67,7 +67,13 @@
             pointer-events: none;
             z-index: 9999;
             transform: translate(-50%, -50%);
+            transition: background 0.3s ease;
         }
+
+        /* Inverted state: applied when the surface under the pointer is dark */
+        .cursor.on-dark { border-color: var(--cream); }
+        .cursor.on-dark.hover { background: rgba(245,242,235,0.14); }
+        .cursor-dot.on-dark { background: var(--cream); }
 
         /* Touch / coarse pointers: restore the native cursor */
         @media (hover: none), (pointer: coarse) {
@@ -1385,6 +1391,48 @@
     const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
     let mx = 0, my = 0, cx = 0, cy = 0;
 
+    // Background awareness: read the actual painted colour under the pointer
+    // and flip the cursor to its light variant over dark surfaces.
+    const bgCache = new WeakMap();
+
+    function parseColor(str) {
+        const m = str.match(/rgba?\(([^)]+)\)/);
+        if (!m) return null;
+        const p = m[1].split(',').map(parseFloat);
+        return { r: p[0], g: p[1], b: p[2], a: p.length > 3 ? p[3] : 1 };
+    }
+
+    function elementBg(el) {
+        if (bgCache.has(el)) return bgCache.get(el);
+        const c = parseColor(getComputedStyle(el).backgroundColor);
+        const res = (c && c.a > 0) ? c : null;
+        bgCache.set(el, res);
+        return res;
+    }
+
+    // Composite the stack of (possibly translucent) backgrounds bottom-up.
+    function surfaceLuminance(x, y) {
+        const layers = [];
+        for (const el of document.elementsFromPoint(x, y)) {
+            const bg = elementBg(el);
+            if (bg) {
+                layers.push(bg);
+                if (bg.a >= 1) break; // fully opaque: nothing below shows through
+            }
+        }
+        if (!layers.length) return 1;
+
+        let base = layers[layers.length - 1];
+        let r = base.r, g = base.g, b = base.b;
+        for (let i = layers.length - 2; i >= 0; i--) {
+            const l = layers[i];
+            r = l.r * l.a + r * (1 - l.a);
+            g = l.g * l.a + g * (1 - l.a);
+            b = l.b * l.a + b * (1 - l.a);
+        }
+        return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
+    }
+
     if (finePointer) {
         document.addEventListener('mousemove', e => {
             mx = e.clientX; my = e.clientY;
@@ -1392,11 +1440,29 @@
             dot.style.top = my + 'px';
         });
 
+        let onDark = false, lastX = -1, lastY = -1;
+
+        function updateContrast() {
+            // Only re-probe when the pointer actually moved a meaningful distance.
+            if (Math.abs(mx - lastX) < 4 && Math.abs(my - lastY) < 4) return;
+            lastX = mx; lastY = my;
+
+            // Hysteresis around the mid-point avoids flicker on borderline surfaces.
+            const lum = surfaceLuminance(mx, my);
+            const next = onDark ? lum < 0.55 : lum < 0.45;
+            if (next !== onDark) {
+                onDark = next;
+                cursor.classList.toggle('on-dark', onDark);
+                dot.classList.toggle('on-dark', onDark);
+            }
+        }
+
         (function animCursor() {
             cx += (mx - cx) * 0.12;
             cy += (my - cy) * 0.12;
             cursor.style.left = cx + 'px';
             cursor.style.top = cy + 'px';
+            updateContrast();
             requestAnimationFrame(animCursor);
         })();
 
