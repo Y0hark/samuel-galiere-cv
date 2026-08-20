@@ -4,14 +4,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samuel Galiere — Systèmes digitaux, IA &amp; Data pour les opérations logistiques</title>
-    <meta name="description" content="J'aide les PME logistiques à transformer leurs fichiers, procédures et suivis dispersés en systèmes opérationnels clairs : Notion, automatisations, dashboards et intégrations métier.">
+    <title>Consultant Notion, IA &amp; Data pour la logistique — Samuel Galiere</title>
+    <meta name="description" content="Consultant freelance à Marseille : je structure les opérations des PME logistiques avec Notion, des automatisations et des dashboards. Premier audit gratuit.">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://samuelgaliere.tech/">
+    <link rel="alternate" hreflang="fr" href="https://samuelgaliere.tech/">
+    <link rel="alternate" hreflang="x-default" href="https://samuelgaliere.tech/">
+
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <meta name="author" content="Samuel Galiere">
+    <meta name="theme-color" content="#F5F2EB">
+    <meta name="color-scheme" content="light">
+    <meta name="geo.region" content="FR-PAC">
+    <meta name="geo.placename" content="Marseille">
+    <meta name="geo.position" content="43.296482;5.369780">
+    <meta name="ICBM" content="43.296482, 5.369780">
+
+    <!-- ─── Open Graph ─── -->
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Samuel Galiere">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:url" content="https://samuelgaliere.tech/">
+    <meta property="og:title" content="Consultant Notion, IA &amp; Data pour la logistique — Samuel Galiere">
+    <meta property="og:description" content="Je transforme les fichiers, procédures et suivis dispersés des PME logistiques en systèmes opérationnels clairs : Notion, automatisations, dashboards, intégrations métier.">
+    <meta property="og:image" content="https://samuelgaliere.tech/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Samuel Galiere — Systèmes digitaux, IA &amp; Data pour les opérations logistiques">
+    <meta property="profile:first_name" content="Samuel">
+    <meta property="profile:last_name" content="Galiere">
+    <meta property="profile:gender" content="male">
+
+    <!-- ─── Twitter / X ─── -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Consultant Notion, IA &amp; Data pour la logistique — Samuel Galiere">
+    <meta name="twitter:description" content="Je transforme les fichiers, procédures et suivis dispersés des PME logistiques en systèmes opérationnels clairs. Premier audit gratuit.">
+    <meta name="twitter:image" content="https://samuelgaliere.tech/og-image.png">
+    <meta name="twitter:image:alt" content="Samuel Galiere — Systèmes digitaux, IA &amp; Data pour les opérations logistiques">
+
+    <!-- ─── Icônes ─── -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- ─── Polices auto-hébergées : plus de requête bloquante vers Google Fonts ─── -->
+    <link rel="preload" href="/fonts/Lora-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/DMSans-var-latin.woff2" as="font" type="font/woff2" crossorigin>
 
     <style>
+        /* ─── POLICES (Lora + DM Sans, sous-ensembles latin) ─── */
+        /* latin-ext */
+        @font-face {
+          font-family: 'DM Sans';
+          font-style: normal;
+          font-weight: 300;
+          font-display: swap;
+          src: url(/fonts/DMSans-var-latin-ext.woff2) format('woff2');
+          unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+          font-family: 'DM Sans';
+          font-style: normal;
+          font-weight: 300;
+          font-display: swap;
+          src: url(/fonts/DMSans-var-latin.woff2) format('woff2');
+          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* latin-ext */
+        @font-face {
+          font-family: 'DM Sans';
+          font-style: normal;
+          font-weight: 400;
+          font-display: swap;
+          src: url(/fonts/DMSans-var-latin-ext.woff2) format('woff2');
+          unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+          font-family: 'DM Sans';
+          font-style: normal;
+          font-weight: 400;
+          font-display: swap;
+          src: url(/fonts/DMSans-var-latin.woff2) format('woff2');
+          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* latin-ext */
+        @font-face {
+          font-family: 'DM Sans';
+          font-style: normal;
+          font-weight: 500;
+          font-display: swap;
+          src: url(/fonts/DMSans-var-latin-ext.woff2) format('woff2');
+          unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+          font-family: 'DM Sans';
+          font-style: normal;
+          font-weight: 500;
+          font-display: swap;
+          src: url(/fonts/DMSans-var-latin.woff2) format('woff2');
+          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* latin-ext */
+        @font-face {
+          font-family: 'Lora';
+          font-style: italic;
+          font-weight: 400;
+          font-display: swap;
+          src: url(/fonts/Lora-400i-latin-ext.woff2) format('woff2');
+          unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+          font-family: 'Lora';
+          font-style: italic;
+          font-weight: 400;
+          font-display: swap;
+          src: url(/fonts/Lora-400i-latin.woff2) format('woff2');
+          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* latin-ext */
+        @font-face {
+          font-family: 'Lora';
+          font-style: normal;
+          font-weight: 400;
+          font-display: swap;
+          src: url(/fonts/Lora-var-latin-ext.woff2) format('woff2');
+          unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+          font-family: 'Lora';
+          font-style: normal;
+          font-weight: 400;
+          font-display: swap;
+          src: url(/fonts/Lora-var-latin.woff2) format('woff2');
+          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* latin-ext */
+        @font-face {
+          font-family: 'Lora';
+          font-style: normal;
+          font-weight: 500;
+          font-display: swap;
+          src: url(/fonts/Lora-var-latin-ext.woff2) format('woff2');
+          unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+          font-family: 'Lora';
+          font-style: normal;
+          font-weight: 500;
+          font-display: swap;
+          src: url(/fonts/Lora-var-latin.woff2) format('woff2');
+          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* latin-ext */
+        @font-face {
+          font-family: 'Lora';
+          font-style: normal;
+          font-weight: 600;
+          font-display: swap;
+          src: url(/fonts/Lora-var-latin-ext.woff2) format('woff2');
+          unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+          font-family: 'Lora';
+          font-style: normal;
+          font-weight: 600;
+          font-display: swap;
+          src: url(/fonts/Lora-var-latin.woff2) format('woff2');
+          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
         :root {
@@ -2178,7 +2349,7 @@
 <div class="cursor-dot" id="cursorDot"></div>
 
 <!-- ─── NAV ─── -->
-<nav class="nav" id="nav">
+<nav class="nav" id="nav" aria-label="Navigation principale">
     <a href="#top" class="nav-name">Samuel Galiere</a>
     <div class="nav-links">
         <a href="#presentation">Présentation</a>
@@ -2190,6 +2361,8 @@
 </nav>
 
 <button class="print-btn" id="printBtn" onclick="window.print()">Télécharger le CV</button>
+
+<main id="contenu">
 
 <!-- ─── HERO ─── -->
 <section class="hero" id="top">
@@ -2216,7 +2389,7 @@
             <span class="text"><strong>CEVA Logistics</strong> me fait confiance</span>
         </div>
 
-        <h1 class="hero-h1">AI, Data &amp; <em>Digital Systems</em> for Logistics Operations</h1>
+        <h1 class="hero-h1">Systèmes digitaux, <em>IA &amp; Data</em> pour les opérations logistiques</h1>
 
         <p class="hero-sub">
             J'aide les PME logistiques à transformer leurs fichiers, procédures et suivis dispersés en systèmes opérationnels clairs : Notion, automatisations, dashboards et intégrations métier.
@@ -3054,13 +3227,15 @@
         </div>
 
         <div class="contact-links reveal">
-            <a class="contact-link" href="https://www.linkedin.com/in/samuel-galiere/" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="contact-link" href="https://github.com/Y0hark" target="_blank" rel="noopener">GitHub</a>
+            <a class="contact-link" href="https://www.linkedin.com/in/samuel-galiere/" target="_blank" rel="noopener me">LinkedIn</a>
+            <a class="contact-link" href="https://github.com/Y0hark" target="_blank" rel="noopener me">GitHub</a>
             <a class="contact-link" href="tel:+33782567456">+33 7 82 56 74 56</a>
             <a class="contact-link" href="mailto:samuelgaliere.pro@gmail.com">samuelgaliere.pro@gmail.com</a>
         </div>
     </div>
 </section>
+
+</main>
 
 <footer>
     <p>Samuel Galiere — Systèmes digitaux, IA &amp; Data pour les opérations logistiques · Co-fondateur de Lumière</p>
@@ -3711,6 +3886,334 @@
             touchX = touchY = null;
         }, { passive: true });
     })();
+</script>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     DONNÉES STRUCTURÉES (schema.org / JSON-LD)
+     ══════════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://samuelgaliere.tech/#website",
+      "url": "https://samuelgaliere.tech/",
+      "name": "Samuel Galiere",
+      "description": "Systèmes digitaux, IA & Data pour les opérations logistiques",
+      "inLanguage": "fr-FR",
+      "publisher": { "@id": "https://samuelgaliere.tech/#samuel" }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://samuelgaliere.tech/#webpage",
+      "url": "https://samuelgaliere.tech/",
+      "name": "Consultant Notion, IA & Data pour la logistique — Samuel Galiere",
+      "description": "Consultant freelance à Marseille : je structure les opérations des PME logistiques avec Notion, des automatisations et des dashboards.",
+      "isPartOf": { "@id": "https://samuelgaliere.tech/#website" },
+      "about": { "@id": "https://samuelgaliere.tech/#samuel" },
+      "mainEntity": { "@id": "https://samuelgaliere.tech/#samuel" },
+      "inLanguage": "fr-FR",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://samuelgaliere.tech/og-image.png",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://samuelgaliere.tech/#samuel",
+      "name": "Samuel Galiere",
+      "givenName": "Samuel",
+      "familyName": "Galiere",
+      "url": "https://samuelgaliere.tech/",
+      "image": "https://samuelgaliere.tech/og-image.png",
+      "email": "mailto:samuelgaliere.pro@gmail.com",
+      "telephone": "+33782567456",
+      "jobTitle": "Architecte logiciel & consultant IA / Data pour les opérations logistiques",
+      "description": "J'aide les PME logistiques à transformer leurs fichiers, procédures et suivis dispersés en systèmes opérationnels clairs : Notion, automatisations, dashboards et intégrations métier.",
+      "nationality": { "@type": "Country", "name": "France" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Marseille",
+        "addressRegion": "Provence-Alpes-Côte d'Azur",
+        "addressCountry": "FR"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/samuel-galiere/",
+        "https://github.com/Y0hark"
+      ],
+      "knowsLanguage": [
+        { "@type": "Language", "name": "Français", "alternateName": "fr" },
+        { "@type": "Language", "name": "Anglais", "alternateName": "en" },
+        { "@type": "Language", "name": "Espagnol", "alternateName": "es" }
+      ],
+      "knowsAbout": [
+        "Notion",
+        "Numérisation de processus",
+        "Architecture de workspace Notion",
+        "Automatisation des processus métier",
+        "Intégration ERP, WMS et TMS",
+        "APIs REST",
+        "Make", "n8n", "Zapier",
+        "Intelligence artificielle appliquée",
+        "Grands modèles de langage (LLM)",
+        "RAG",
+        "Data engineering",
+        "Modélisation et gouvernance des données",
+        "Python", "SQL",
+        "Architecture logicielle",
+        "Business analysis",
+        "Product ownership",
+        "Opérations logistiques",
+        "Supply chain"
+      ],
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Epitech — European Institute of Technology",
+          "sameAs": "https://www.epitech.eu/"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "EMD École de Management"
+        }
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Master",
+          "name": "Master Architecture logicielle, IA & Data",
+          "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Epitech" }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Bachelor",
+          "name": "Bachelor Informatique & Management",
+          "recognizedBy": { "@type": "CollegeOrUniversity", "name": "EMD École de Management" }
+        }
+      ],
+      "worksFor": [
+        { "@type": "Organization", "name": "CEVA Logistics", "sameAs": "https://www.cevalogistics.com/" },
+        { "@type": "CollegeOrUniversity", "name": "Epitech", "sameAs": "https://www.epitech.eu/" },
+        { "@id": "https://samuelgaliere.tech/#business" }
+      ],
+      "founder": { "@id": "https://samuelgaliere.tech/#business" },
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Consultant en numérisation des opérations",
+        "occupationLocation": { "@type": "City", "name": "Marseille" },
+        "skills": "Notion, automatisation, IA & Data, architecture logicielle, business analysis"
+      }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://samuelgaliere.tech/#business",
+      "name": "SG Digital Solution — Samuel Galiere",
+      "alternateName": "Samuel Galiere",
+      "url": "https://samuelgaliere.tech/",
+      "image": "https://samuelgaliere.tech/og-image.png",
+      "description": "Numérisation des opérations pour les PME logistiques : audit, workspace Notion, automatisations, dashboards et intégrations métier.",
+      "founder": { "@id": "https://samuelgaliere.tech/#samuel" },
+      "email": "samuelgaliere.pro@gmail.com",
+      "telephone": "+33782567456",
+      "priceRange": "799 € – 6 500 €",
+      "currenciesAccepted": "EUR",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Marseille",
+        "addressRegion": "Provence-Alpes-Côte d'Azur",
+        "addressCountry": "FR"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 43.296482, "longitude": 5.369780 },
+      "areaServed": [
+        { "@type": "Country", "name": "France" },
+        { "@type": "City", "name": "Marseille" },
+        { "@type": "AdministrativeArea", "name": "Provence-Alpes-Côte d'Azur" }
+      ],
+      "availableLanguage": ["fr", "en", "es"],
+      "serviceType": [
+        "Numérisation de processus",
+        "Conseil Notion",
+        "Automatisation des processus",
+        "Intégration IA & Data",
+        "Formation Notion"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/samuel-galiere/",
+        "https://github.com/Y0hark"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Offres de numérisation des opérations",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "Les packs",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "name": "Diagnostic numérique express",
+                "description": "Savoir quoi numériser en priorité : entretiens terrain, cartographie des processus, priorisation impact / faisabilité et plan d'action 30 / 60 / 90 jours.",
+                "price": "1800",
+                "priceCurrency": "EUR",
+                "valueAddedTaxIncluded": true,
+                "availability": "https://schema.org/InStock",
+                "itemOffered": { "@type": "Service", "name": "Diagnostic numérique express", "serviceType": "Audit et cadrage des opérations" }
+              },
+              {
+                "@type": "Offer",
+                "name": "Workspace Starter",
+                "description": "Une première base Notion propre et utilisable vite : architecture simple, 2 à 3 bases opérationnelles, mini-dashboard et modèles de procédures.",
+                "price": "2600",
+                "priceCurrency": "EUR",
+                "valueAddedTaxIncluded": true,
+                "availability": "https://schema.org/InStock",
+                "itemOffered": { "@type": "Service", "name": "Workspace Starter", "serviceType": "Construction de workspace Notion" }
+              },
+              {
+                "@type": "Offer",
+                "name": "Workspace Business",
+                "description": "Plusieurs processus structurés et pilotés : 4 à 6 bases liées, vues par rôle, formulaires internes, tableaux de bord, droits et documentation.",
+                "price": "4000",
+                "priceCurrency": "EUR",
+                "valueAddedTaxIncluded": true,
+                "availability": "https://schema.org/InStock",
+                "itemOffered": { "@type": "Service", "name": "Workspace Business", "serviceType": "Construction de workspace Notion" }
+              },
+              {
+                "@type": "Offer",
+                "name": "Cockpit Opérations Logistiques",
+                "description": "Le pilotage complet, autonomie comprise : 8 bases et plus, tableaux de bord par rôle, automatisations, formation et transfert d'autonomie.",
+                "price": "6500",
+                "priceCurrency": "EUR",
+                "valueAddedTaxIncluded": true,
+                "availability": "https://schema.org/InStock",
+                "itemOffered": { "@type": "Service", "name": "Cockpit Opérations Logistiques", "serviceType": "Système de pilotage des opérations logistiques" }
+              }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Numériser un processus",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "name": "Petite numérisation",
+                "description": "Une journée : un formulaire d'entrée, la base de suivi derrière et une vue de traitement. Congés, demandes d'achat, remontées d'anomalie.",
+                "price": "799",
+                "priceCurrency": "EUR",
+                "valueAddedTaxIncluded": true,
+                "itemOffered": { "@type": "Service", "name": "Petite numérisation de processus" }
+              },
+              {
+                "@type": "Offer",
+                "name": "Moyenne numérisation",
+                "description": "Deux journées : bases reliées, statuts, vues par rôle, relances automatiques et tableau de bord. Litiges transport, onboarding client, non-conformités.",
+                "price": "1599",
+                "priceCurrency": "EUR",
+                "valueAddedTaxIncluded": true,
+                "itemOffered": { "@type": "Service", "name": "Moyenne numérisation de processus" }
+              },
+              {
+                "@type": "Offer",
+                "name": "Grande numérisation",
+                "description": "Trois journées : processus repris de bout en bout et simplifié, bases liées, gestion des droits, tableaux de bord, documentation et formation.",
+                "price": "2299",
+                "priceCurrency": "EUR",
+                "valueAddedTaxIncluded": true,
+                "itemOffered": { "@type": "Service", "name": "Grande numérisation de processus" }
+              }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Compléments",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "name": "Formation Notion — équipe réduite",
+                "description": "Une journée, jusqu'à 8 participants, sur votre propre workspace.",
+                "price": "799",
+                "priceCurrency": "EUR",
+                "valueAddedTaxIncluded": true,
+                "itemOffered": { "@type": "Service", "name": "Formation Notion", "serviceType": "Formation professionnelle" }
+              },
+              {
+                "@type": "Offer",
+                "name": "Formation référents internes",
+                "description": "Deux journées, jusqu'à 5 participants, pour rendre l'équipe autonome sur son workspace.",
+                "price": "1599",
+                "priceCurrency": "EUR",
+                "valueAddedTaxIncluded": true,
+                "itemOffered": { "@type": "Service", "name": "Formation référents Notion", "serviceType": "Formation professionnelle" }
+              },
+              {
+                "@type": "Offer",
+                "name": "Suivi Essentiel",
+                "description": "Support, corrections et petits ajustements. Sans engagement de durée.",
+                "priceCurrency": "EUR",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "price": "400",
+                  "priceCurrency": "EUR",
+                  "valueAddedTaxIncluded": true,
+                  "unitText": "mois",
+                  "billingDuration": 1,
+                  "billingIncrement": 1
+                },
+                "itemOffered": { "@type": "Service", "name": "Suivi mensuel Essentiel", "serviceType": "Maintenance et support" }
+              },
+              {
+                "@type": "Offer",
+                "name": "Suivi Pilotage",
+                "description": "Évolutions régulières et point mensuel. Sans engagement de durée.",
+                "priceCurrency": "EUR",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "price": "800",
+                  "priceCurrency": "EUR",
+                  "valueAddedTaxIncluded": true,
+                  "unitText": "mois",
+                  "billingDuration": 1,
+                  "billingIncrement": 1
+                },
+                "itemOffered": { "@type": "Service", "name": "Suivi mensuel Pilotage", "serviceType": "Maintenance et support" }
+              },
+              {
+                "@type": "Offer",
+                "name": "Suivi Croissance",
+                "description": "Nouveaux processus et automatisations continues. Sans engagement de durée.",
+                "priceCurrency": "EUR",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "price": "1600",
+                  "priceCurrency": "EUR",
+                  "valueAddedTaxIncluded": true,
+                  "unitText": "mois",
+                  "billingDuration": 1,
+                  "billingIncrement": 1
+                },
+                "itemOffered": { "@type": "Service", "name": "Suivi mensuel Croissance", "serviceType": "Maintenance et support" }
+              },
+              {
+                "@type": "Offer",
+                "name": "Automatisation légère",
+                "description": "Une journée : relances, notifications et synchronisations simples.",
+                "price": "799",
+                "priceCurrency": "EUR",
+                "valueAddedTaxIncluded": true,
+                "itemOffered": { "@type": "Service", "name": "Automatisation légère", "serviceType": "Automatisation des processus" }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
 </script>
 
 </body>
