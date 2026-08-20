@@ -241,6 +241,62 @@
 
         .hero-loc { font-size: 12px; color: var(--muted); }
 
+        .hero-mission {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            max-width: 100%;
+            margin-bottom: 30px;
+            padding: 9px 18px 9px 14px;
+            background: rgba(140,106,74,0.07);
+            border: 1px solid rgba(140,106,74,0.22);
+            border-left: 2px solid var(--earth);
+            border-radius: 2px;
+            opacity: 0;
+            animation: fadeUp 0.9s 0.3s forwards ease;
+        }
+
+        .hero-mission .pulse {
+            position: relative;
+            width: 7px; height: 7px;
+            border-radius: 50%;
+            background: var(--earth);
+            flex-shrink: 0;
+        }
+
+        .hero-mission .pulse::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            border: 1px solid var(--earth-light);
+            animation: missionPulse 2.4s ease-out infinite;
+        }
+
+        @keyframes missionPulse {
+            0%       { transform: scale(0.6); opacity: 0.9; }
+            70%,100% { transform: scale(1.5); opacity: 0; }
+        }
+
+        .hero-mission .label {
+            font-family: var(--sans);
+            font-size: 10.5px;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--earth);
+            white-space: nowrap;
+        }
+
+        .hero-mission .text {
+            font-family: var(--serif);
+            font-size: 14.5px;
+            line-height: 1.4;
+            color: var(--ink-soft);
+        }
+
+        .hero-mission .text strong { font-weight: 600; color: var(--ink); }
+
         h1.hero-h1 {
             font-family: var(--serif);
             font-size: clamp(40px, 6.4vw, 78px);
@@ -895,6 +951,9 @@
             .hero-identity .sep { display: none; }
             .hero-identity { gap: 8px 12px; margin-bottom: 22px; }
             .hero-identity .name { width: 100%; }
+            .hero-mission { margin-bottom: 22px; padding: 8px 14px 8px 12px; gap: 10px; }
+            .hero-mission .label { display: none; }
+            .hero-mission .text { font-size: 14px; }
             .hero-sub { margin-top: 24px; padding-left: 18px; }
             .hero-support { margin-top: 20px; font-size: 14px; }
             .hero-ctas { margin-top: 28px; gap: 10px; }
@@ -921,7 +980,8 @@
             section { padding: 32px 5vw; }
             .hero { min-height: auto; padding: 30px 5vw 30px; justify-content: flex-start; }
             .hero-bg, .hero-pattern { display: none; }
-            .hero-identity, h1.hero-h1, .hero-sub, .hero-support, .hero-ctas, .proof-line { opacity: 1; animation: none; }
+            .hero-identity, .hero-mission, h1.hero-h1, .hero-sub, .hero-support, .hero-ctas, .proof-line { opacity: 1; animation: none; }
+            .hero-mission .pulse::after { display: none; }
             .hero-ctas { display: none; }
             .reveal { opacity: 1; transform: none; }
             .line-draw { width: 100%; }
@@ -1325,60 +1385,54 @@
         }
 
         /* Module processus */
-        .module-offer {
+        /* Numérisation de processus : formats par journée */
+        .num-grid {
             display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 48px;
-            align-items: center;
-            border: 1px solid var(--border);
-            background: rgba(58,74,46,0.045);
-            padding: 40px 38px;
+            grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
+            gap: 1px;
         }
 
-        .module-offer-name {
+        .num-card {
+            background: var(--cream);
+            box-shadow: 0 0 0 1px var(--border);
+            padding: 30px 26px;
+            display: flex;
+            flex-direction: column;
+        }
+        section.alt .num-card { background: var(--cream-dark); }
+        .num-card.is-custom,
+        section.alt .num-card.is-custom { background: rgba(58,74,46,0.06); }
+
+        .num-badge {
+            font-family: var(--sans);
+            font-size: 10.5px;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--moss-light);
+        }
+
+        .num-name {
             font-family: var(--serif);
-            font-size: clamp(21px, 2.4vw, 27px);
+            font-size: 19px;
             font-weight: 500;
             color: var(--ink);
-            line-height: 1.25;
-            margin-bottom: 16px;
+            line-height: 1.3;
+            margin-top: 10px;
         }
 
-        .module-offer-desc {
-            font-size: 14.5px;
-            font-weight: 300;
-            color: var(--ink-soft);
-            line-height: 1.8;
-            max-width: 660px;
-        }
-        .module-offer-desc em { font-style: italic; color: var(--moss); }
-
-        .module-offer-ex {
-            margin-top: 20px;
-            padding-top: 16px;
-            border-top: 1px solid var(--border);
-            font-size: 12.5px;
-            font-weight: 300;
-            color: var(--muted);
-            line-height: 1.7;
-        }
-        .module-offer-ex strong { font-weight: 500; color: var(--ink-soft); }
-
-        .module-offer-right {
-            border-left: 1px solid var(--border);
-            padding-left: 44px;
-        }
-
-        .module-offer-price {
+        .num-price {
             font-family: var(--serif);
-            font-size: clamp(34px, 4.2vw, 46px);
+            font-size: clamp(28px, 3vw, 34px);
             font-weight: 500;
             color: var(--moss);
             line-height: 1;
             letter-spacing: -0.03em;
+            margin-top: 18px;
             white-space: nowrap;
         }
-        .module-offer-price .ttc {
+        .num-price.is-quote { font-size: clamp(21px, 2.2vw, 25px); white-space: normal; }
+        .num-price .ttc {
             display: block;
             font-family: var(--sans);
             font-size: 10.5px;
@@ -1386,9 +1440,40 @@
             letter-spacing: 0.14em;
             text-transform: uppercase;
             color: var(--muted);
-            margin-top: 10px;
+            margin-top: 9px;
             white-space: normal;
         }
+
+        .num-desc {
+            font-size: 13.5px;
+            font-weight: 300;
+            color: var(--ink-soft);
+            line-height: 1.75;
+            margin: 18px 0 24px;
+        }
+        .num-desc em { font-style: italic; color: var(--moss); }
+
+        .num-ex {
+            margin-top: auto;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+            font-size: 12px;
+            font-weight: 300;
+            color: var(--muted);
+            line-height: 1.65;
+        }
+        .num-ex strong { font-weight: 500; color: var(--ink-soft); }
+
+        .num-note {
+            margin-top: 14px;
+            border: 1px dashed var(--border);
+            padding: 22px 26px;
+            font-size: 13.5px;
+            font-weight: 300;
+            color: var(--ink-soft);
+            line-height: 1.8;
+        }
+        .num-note strong { font-weight: 500; color: var(--ink); }
 
         /* Compléments : formations, suivi, automatisations */
         .addon-grid {
@@ -1834,6 +1919,7 @@
             padding-top: calc(var(--u) * 0.9);
             border-top: 1px solid var(--border);
         }
+        .s-pack-price.is-quote { font-size: var(--t-md); }
         .s-pack-price .ttc {
             display: block;
             font-family: var(--sans);
@@ -2009,8 +2095,7 @@
             .pres-grid { grid-template-columns: 1fr; gap: 44px; }
             .reco { grid-template-columns: 1fr; gap: 34px; padding: 42px 32px; }
             .reco-right { border-left: none; border-top: 1px solid rgba(245,242,235,0.18); padding-left: 0; padding-top: 30px; }
-            .module-offer { grid-template-columns: 1fr; gap: 30px; padding: 34px 28px; }
-            .module-offer-right { border-left: none; border-top: 1px solid var(--border); padding-left: 0; padding-top: 26px; }
+            .num-card { padding: 28px 24px; }
         }
 
         @media (max-width: 900px) {
@@ -2044,7 +2129,7 @@
             .reco-title, .reco-price { color: #1E1E1A; }
             .reco-desc, .reco-calc { color: #3D3D38; }
             .reco-tag { color: #8C6A4A; }
-            .free-step, .addon, .notion-tier, .module-offer { break-inside: avoid; }
+            .free-step, .addon, .notion-tier, .num-card, .num-note { break-inside: avoid; }
             .cmp-scroll { overflow: visible; }
             .cmp { min-width: 0; font-size: 9px; }
             .cmp-head-name { font-size: 11px; }
@@ -2123,6 +2208,12 @@
             <span class="status-label">Disponible pour missions freelance</span>
             <span class="sep">/</span>
             <span class="hero-loc">Marseille, France</span>
+        </div>
+
+        <div class="hero-mission">
+            <span class="pulse" aria-hidden="true"></span>
+            <span class="label">En ce moment</span>
+            <span class="text"><strong>CEVA Logistics</strong> me fait confiance</span>
         </div>
 
         <h1 class="hero-h1">AI, Data &amp; <em>Digital Systems</em> for Logistics Operations</h1>
@@ -2371,7 +2462,7 @@
         <!-- Packs -->
         <p class="offer-block-label reveal">Les packs</p>
         <p class="offer-block-intro reveal">
-            Chaque pack a un objectif unique et des livrables listés. Pas de forfait au temps passé : vous achetez un résultat, pas des journées. Le comparatif ci-dessous montre exactement ce que chaque palier ajoute au précédent.
+            Chaque pack a un objectif unique et des livrables listés : vous achetez un résultat, à prix ferme, connu avant de commencer. Le comparatif ci-dessous montre exactement ce que chaque palier ajoute au précédent.
         </p>
 
         <div class="cmp-scroll">
@@ -2380,8 +2471,8 @@
                 <thead>
                     <tr>
                         <th class="cmp-corner"></th>
-                        <th class="cmp-head"><p class="cmp-head-name">Diagnostic numérique express</p><p class="cmp-head-price">1 600 €<span class="ttc">TTC</span></p><p class="cmp-head-goal">Savoir quoi numériser en priorité.</p></th>
-                        <th class="cmp-head"><p class="cmp-head-name">Workspace Starter</p><p class="cmp-head-price">2 400 €<span class="ttc">TTC</span></p><p class="cmp-head-goal">Une première base propre, utilisable vite.</p></th>
+                        <th class="cmp-head"><p class="cmp-head-name">Diagnostic numérique express</p><p class="cmp-head-price">1 800 €<span class="ttc">TTC</span></p><p class="cmp-head-goal">Savoir quoi numériser en priorité.</p></th>
+                        <th class="cmp-head"><p class="cmp-head-name">Workspace Starter</p><p class="cmp-head-price">2 600 €<span class="ttc">TTC</span></p><p class="cmp-head-goal">Une première base propre, utilisable vite.</p></th>
                         <th class="cmp-head is-reco"><span class="cmp-badge">Recommandé</span><p class="cmp-head-name">Workspace Business</p><p class="cmp-head-price">4 000 €<span class="ttc">TTC</span></p><p class="cmp-head-goal">Plusieurs processus structurés et pilotés.</p></th>
                         <th class="cmp-head"><p class="cmp-head-name">Cockpit Opérations Logistiques</p><p class="cmp-head-price">6 500 €<span class="ttc">TTC</span></p><p class="cmp-head-goal">Le pilotage complet, autonomie comprise.</p></th>
                     </tr>
@@ -2532,7 +2623,7 @@
             <strong>Starter, Business et Cockpit s'emboîtent</strong> : chaque palier reprend le précédent et l'étend, vous ne rachetez jamais ce que vous avez déjà. Le diagnostic reste une étude à part entière — Business n'en fait qu'une version ciblée, là où le Cockpit le réintègre en totalité.
         </p>
         <p class="cmp-note reveal">
-            <strong>Cockpit Opérations Logistiques — 6 500 €.</strong> Le même périmètre reconstitué à la carte — diagnostic express (1 600 €) + Workspace Business (4 000 €) + un processus numérisé (3 200 €) — représente 8 800 €. Le Cockpit les réunit pour 2 300 € de moins, et y ajoute les espaces équipe, les dashboards par rôle et le transfert d'autonomie.
+            <strong>Cockpit Opérations Logistiques — 6 500 €.</strong> Le même périmètre reconstitué à la carte — diagnostic express (1 800 €) + Workspace Business (4 000 €) + une grande numérisation (2 299 €) — représente 8 099 €. Le Cockpit les réunit pour 1 599 € de moins, et y ajoute les espaces équipe, les dashboards par rôle et le transfert d'autonomie.
         </p>
 
         <!-- Pack recommandé -->
@@ -2541,7 +2632,7 @@
                 <span class="reco-tag">Pack recommandé</span>
                 <h3 class="reco-title">Workspace Business : le palier où le périmètre double sans que le budget suive.</h3>
                 <p class="reco-desc">
-                    Entre Starter et Business, l'écart est de 1 600 €. Ce que vous gagnez : deux fois plus de bases, les relations entre elles, les vues par rôle, les formulaires internes, les tableaux de bord, la gestion des droits et la documentation d'administration.
+                    Entre Starter et Business, l'écart est de 1 400 €. Ce que vous gagnez : deux fois plus de bases, les relations entre elles, les vues par rôle, les formulaires internes, les tableaux de bord, la gestion des droits et la documentation d'administration.
                 </p>
                 <p class="reco-desc" style="margin-top:14px">
                     C'est le pack qui fait passer d'un espace bien rangé à un véritable outil de pilotage. En dessous, vous rangez. À partir d'ici, vous pilotez.
@@ -2550,31 +2641,65 @@
             <div class="reco-right">
                 <p class="reco-price">4 000 €<span class="ttc">TTC</span></p>
                 <div class="reco-calc">
-                    <span>Workspace Starter — 2 400 €</span>
-                    <span><span class="plus">+</span> 1 600 € seulement</span>
+                    <span>Workspace Starter — 2 600 €</span>
+                    <span><span class="plus">+</span> 1 400 € seulement</span>
                     <span class="reco-gain">= périmètre doublé</span>
                 </div>
             </div>
         </div>
 
-        <!-- Module processus -->
-        <p class="offer-block-label reveal">Le module qui se greffe à n'importe quel palier</p>
+        <!-- Numérisation de processus -->
+        <p class="offer-block-label reveal">Numériser un processus — trois formats</p>
+        <p class="offer-block-intro reveal">
+            Ces formats se greffent sur un palier, sur votre workspace existant, ou se prennent seuls. L'ampleur est déterminée avant de commencer, pendant les échanges gratuits : vous savez ce que vous payez et en combien de temps c'est livré.
+        </p>
 
-        <div class="module-offer reveal">
-            <div>
-                <h3 class="module-offer-name">Numérisation complète d'un processus</h3>
-                <p class="module-offer-desc">
-                    Un processus manuel ou dispersé, repris de bout en bout : compréhension de l'existant, simplification <em>avant</em> numérisation, conception du processus cible, création du workflow, documentation, formation et ajustements après déploiement.
+        <div class="num-grid">
+            <div class="num-card reveal">
+                <span class="num-badge">1 journée</span>
+                <h3 class="num-name">Petite numérisation</h3>
+                <p class="num-price">799 €<span class="ttc">TTC · forfait</span></p>
+                <p class="num-desc">
+                    Une demande qui circule encore par mail ou par tableur : un formulaire d'entrée, la base de suivi derrière, une vue de traitement. Saisie une fois, visible de tous, sans relance.
                 </p>
-                <p class="module-offer-desc" style="margin-top:14px">
-                    Ce module ne remplace pas un palier : il ajoute de la profondeur sur un processus unique, là où les paliers ajoutent de la largeur au workspace. Il se greffe sur un Starter, un Business, ou sur votre workspace existant — et il est déjà compris dans le Cockpit.
-                </p>
-                <p class="module-offer-ex"><strong>Exemples :</strong> litiges transport · onboarding client · anomalies · audits · demandes internes · gestion documentaire · actions qualité · reporting hebdomadaire</p>
+                <p class="num-ex"><strong>Exemples :</strong> demande de congés · demande d'achat · remontée d'anomalie · réservation de véhicule · commande de fournitures</p>
             </div>
-            <div class="module-offer-right">
-                <p class="module-offer-price">3 200 €<span class="ttc">TTC · par processus</span></p>
+
+            <div class="num-card reveal">
+                <span class="num-badge">2 journées</span>
+                <h3 class="num-name">Moyenne numérisation</h3>
+                <p class="num-price">1 599 €<span class="ttc">TTC · forfait</span></p>
+                <p class="num-desc">
+                    Un processus à plusieurs étapes et plusieurs rôles : bases reliées entre elles, statuts, vues par rôle, relances automatiques et un tableau de bord de suivi.
+                </p>
+                <p class="num-ex"><strong>Exemples :</strong> litiges transport · onboarding client · demandes d'intervention · actions qualité · non-conformités</p>
+            </div>
+
+            <div class="num-card reveal">
+                <span class="num-badge">3 journées</span>
+                <h3 class="num-name">Grande numérisation</h3>
+                <p class="num-price">2 299 €<span class="ttc">TTC · forfait</span></p>
+                <p class="num-desc">
+                    Un processus repris de bout en bout et simplifié <em>avant</em> d'être numérisé : plusieurs bases liées, gestion des droits, tableaux de bord, documentation et formation de l'équipe.
+                </p>
+                <p class="num-ex"><strong>Exemples :</strong> gestion documentaire · audits et plans d'action · reporting hebdomadaire multi-sites · cycle de traitement complet</p>
+            </div>
+
+            <div class="num-card is-custom reveal">
+                <span class="num-badge">Au-delà</span>
+                <h3 class="num-name">Sur mesure</h3>
+                <p class="num-price is-quote">Devis gratuit<span class="ttc">Analyse comprise</span></p>
+                <p class="num-desc">
+                    Plus de trois journées, plusieurs processus imbriqués, ou une API en jeu — ERP, WMS, TMS, logiciel de paie. Là, le prix ne s'annonce pas à l'avance : accès, droits, sécurité et qualité des données changent tout.
+                </p>
+                <p class="num-ex"><strong>Vous recevez :</strong> une analyse du projet, un périmètre écrit et un chiffrage daté — sans engagement</p>
             </div>
         </div>
+
+        <p class="num-note reveal">
+            <strong>Ce que « une journée » veut dire :</strong> une journée de travail effectif de ma part — cadrage, mise en service et prise en main de l'équipe comprises — et non une journée mobilisée chez vous. Elle sert à situer l'ampleur, pas à facturer du temps passé : le prix est ferme, annoncé avant de commencer. S'il faut une journée de plus, vous l'apprenez avant, jamais sur la facture.
+        </p>
+
         <!-- Compléments -->
         <p class="offer-block-label reveal">Compléments</p>
 
@@ -2585,21 +2710,21 @@
                 <p class="addon-desc">En présentiel ou à distance, sur votre propre workspace — pas sur un exemple générique.</p>
                 <div class="addon-row">
                     <span class="addon-row-name">Formation Notion — équipe réduite<span class="addon-row-meta">1 journée · jusqu'à 8 participants</span></span>
-                    <span class="addon-row-price">800 €</span>
+                    <span class="addon-row-price">799 €</span>
                 </div>
                 <div class="addon-row">
-                    <span class="addon-row-name">Formation référents internes<span class="addon-row-meta">2 jours · jusqu'à 5 participants</span></span>
-                    <span class="addon-row-price">1 600 €</span>
+                    <span class="addon-row-name">Formation référents internes<span class="addon-row-meta">2 journées · jusqu'à 5 participants</span></span>
+                    <span class="addon-row-price">1 599 €</span>
                 </div>
                 <div class="addon-row">
                     <span class="addon-row-name">Formation +20 personnes<span class="addon-row-meta">Format et sessions à définir</span></span>
-                    <span class="addon-row-price">sur devis</span>
+                    <span class="addon-row-price">Devis gratuit</span>
                 </div>
             </div>
 
             <div class="addon reveal">
                 <h3 class="addon-title">Suivi mensuel</h3>
-                <p class="addon-desc">Sans engagement de durée. C'est ce qui empêche le système de se figer six mois après la livraison.</p>
+                <p class="addon-desc">Sans engagement de durée, résiliable d'un mois sur l'autre. C'est ce qui empêche le système de se figer six mois après la livraison.</p>
                 <div class="addon-row">
                     <span class="addon-row-name">Suivi Essentiel<span class="addon-row-meta">Support, corrections, petits ajustements</span></span>
                     <span class="addon-row-price">400 € / mois</span>
@@ -2618,12 +2743,12 @@
                 <h3 class="addon-title">Automatisations &amp; intégrations</h3>
                 <p class="addon-desc">Une fois le socle stable et les données fiables — jamais avant.</p>
                 <div class="addon-row">
-                    <span class="addon-row-name">Automatisation légère<span class="addon-row-meta">Relances, notifications, synchronisations simples</span></span>
-                    <span class="addon-row-price">1 200 €</span>
+                    <span class="addon-row-name">Automatisation légère<span class="addon-row-meta">1 journée · relances, notifications, synchronisations simples</span></span>
+                    <span class="addon-row-price">799 €</span>
                 </div>
                 <div class="addon-row">
                     <span class="addon-row-name">Intégration métier<span class="addon-row-meta">Connexion à un outil existant via API</span></span>
-                    <span class="addon-row-price">dès 2 400 €</span>
+                    <span class="addon-row-price">Devis gratuit</span>
                 </div>
                 <p class="addon-desc" style="margin:16px 0 0">
                     Les intégrations avec ERP, WMS, TMS ou outils internes nécessitent une vérification technique préalable : accès API, sécurité, droits, qualité des données et contraintes IT.
@@ -3223,12 +3348,12 @@
                     <div class="s-pack">
                         <h3 class="s-pack-name">Diagnostic numérique express</h3>
                         <p class="s-pack-goal">Savoir quoi numériser en priorité.</p>
-                        <p class="s-pack-price">1 600 €<span class="ttc">TTC</span></p>
+                        <p class="s-pack-price">1 800 €<span class="ttc">TTC</span></p>
                     </div>
                     <div class="s-pack">
                         <h3 class="s-pack-name">Workspace Starter</h3>
                         <p class="s-pack-goal">Une première base propre, utilisable vite.</p>
-                        <p class="s-pack-price">2 400 €<span class="ttc">TTC</span></p>
+                        <p class="s-pack-price">2 600 €<span class="ttc">TTC</span></p>
                     </div>
                     <div class="s-pack is-reco">
                         <span class="s-pack-badge">Recommandé</span>
@@ -3243,12 +3368,49 @@
                     </div>
                 </div>
                 <p class="s-footnote">
-                    Starter, Business et Cockpit s'emboîtent : chaque palier reprend le précédent et l'étend. À greffer sur celui de votre choix : la numérisation complète d'un processus (3 200 €), déjà comprise dans le Cockpit. Formations, suivi mensuel et automatisations à la carte.
+                    Starter, Business et Cockpit s'emboîtent : chaque palier reprend le précédent et l'étend. À greffer sur celui de votre choix : la numérisation d'un processus, détaillée page suivante, déjà comprise dans le Cockpit. Formations, suivi mensuel et automatisations à la carte.
                 </p>
             </div>
         </section>
 
-        <!-- 12 — PACK RECOMMANDÉ -->
+        <!-- 12 — NUMÉRISER UN PROCESSUS -->
+        <section class="slide s-alt">
+            <div class="slide-inner">
+                <span class="s-eyebrow">Offres — à la carte</span>
+                <h2 class="s-title">Numériser un processus : <em>trois formats</em></h2>
+                <div class="s-packs">
+                    <div class="s-pack">
+                        <span class="s-pack-badge">1 journée</span>
+                        <h3 class="s-pack-name">Petite numérisation</h3>
+                        <p class="s-pack-goal">Un formulaire d'entrée, sa base de suivi, une vue de traitement.</p>
+                        <p class="s-pack-price">799 €<span class="ttc">TTC · forfait</span></p>
+                    </div>
+                    <div class="s-pack">
+                        <span class="s-pack-badge">2 journées</span>
+                        <h3 class="s-pack-name">Moyenne numérisation</h3>
+                        <p class="s-pack-goal">Plusieurs étapes et plusieurs rôles : bases liées, statuts, relances, tableau de bord.</p>
+                        <p class="s-pack-price">1 599 €<span class="ttc">TTC · forfait</span></p>
+                    </div>
+                    <div class="s-pack">
+                        <span class="s-pack-badge">3 journées</span>
+                        <h3 class="s-pack-name">Grande numérisation</h3>
+                        <p class="s-pack-goal">Le processus de bout en bout, simplifié avant d'être numérisé, équipe formée.</p>
+                        <p class="s-pack-price">2 299 €<span class="ttc">TTC · forfait</span></p>
+                    </div>
+                    <div class="s-pack">
+                        <span class="s-pack-badge">Au-delà</span>
+                        <h3 class="s-pack-name">Sur mesure</h3>
+                        <p class="s-pack-goal">Plusieurs processus imbriqués, ou une API en jeu : ERP, WMS, TMS, paie.</p>
+                        <p class="s-pack-price is-quote">Devis gratuit<span class="ttc">Analyse comprise</span></p>
+                    </div>
+                </div>
+                <p class="s-footnote">
+                    La journée situe l'ampleur, elle ne facture pas du temps passé : le prix est ferme et annoncé avant de commencer. Ces formats se greffent sur un pack, sur un workspace existant, ou se prennent seuls.
+                </p>
+            </div>
+        </section>
+
+        <!-- 13 — PACK RECOMMANDÉ -->
         <section class="slide s-moss">
             <div class="slide-inner">
                 <span class="s-eyebrow">Recommandation</span>
@@ -3262,12 +3424,12 @@
                     <p class="s-hero-price-num">4 000 €<span class="ttc">TTC</span></p>
                 </div>
                 <p class="s-footnote">
-                    1 600 € de plus que le Starter, pour un périmètre doublé. En dessous, vous rangez vos informations. À partir d'ici, vous pilotez votre activité.
+                    1 400 € de plus que le Starter, pour un périmètre doublé. En dessous, vous rangez vos informations. À partir d'ici, vous pilotez votre activité.
                 </p>
             </div>
         </section>
 
-        <!-- 13 — PROCHAINE ÉTAPE -->
+        <!-- 14 — PROCHAINE ÉTAPE -->
         <section class="slide s-ink">
             <div class="slide-inner">
                 <span class="s-eyebrow">Prochaine étape</span>
