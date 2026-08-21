@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultant Notion, IA &amp; Data pour la logistique — Samuel Galiere</title>
-    <meta name="description" content="Consultant freelance à Marseille : je structure les opérations des PME logistiques avec Notion, des automatisations et des dashboards. Premier audit gratuit.">
+    <title>Numériser les opérations logistiques — Samuel Galiere, expert digital logistique</title>
+    <meta name="description" content="Depuis 2021 dans la logistique et le numérique. Je numérise les opérations des PME logistiques : outil sur mesure, ou mise en place express sur Notion. Audit gratuit.">
 
     <link rel="canonical" href="https://samuelgaliere.tech/">
     <link rel="alternate" hreflang="fr" href="https://samuelgaliere.tech/">
@@ -26,8 +26,8 @@
     <meta property="og:site_name" content="Samuel Galiere">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:url" content="https://samuelgaliere.tech/">
-    <meta property="og:title" content="Consultant Notion, IA &amp; Data pour la logistique — Samuel Galiere">
-    <meta property="og:description" content="Je transforme les fichiers, procédures et suivis dispersés des PME logistiques en systèmes opérationnels clairs : Notion, automatisations, dashboards, intégrations métier.">
+    <meta property="og:title" content="Numériser les opérations logistiques — Samuel Galiere">
+    <meta property="og:description" content="Expert numérique pour la logistique depuis 2021. Deux voies pour numériser vos opérations : un outil développé sur mesure, ou une mise en place express sur Notion.">
     <meta property="og:image" content="https://samuelgaliere.tech/og-image.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
@@ -39,8 +39,8 @@
 
     <!-- ─── Twitter / X ─── -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Consultant Notion, IA &amp; Data pour la logistique — Samuel Galiere">
-    <meta name="twitter:description" content="Je transforme les fichiers, procédures et suivis dispersés des PME logistiques en systèmes opérationnels clairs. Premier audit gratuit.">
+    <meta name="twitter:title" content="Numériser les opérations logistiques — Samuel Galiere">
+    <meta name="twitter:description" content="Expert numérique pour la logistique depuis 2021. Un outil sur mesure, ou une mise en place express. Premier audit gratuit.">
     <meta name="twitter:image" content="https://samuelgaliere.tech/og-image.png">
     <meta name="twitter:image:alt" content="Samuel Galiere — Systèmes digitaux, IA &amp; Data pour les opérations logistiques">
 
@@ -1328,150 +1328,6 @@
 
         .free-meta { font-size: 12.5px; font-weight: 300; color: var(--muted); }
 
-        /* Comparatif des packs */
-        .cmp-scroll {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            padding-bottom: 4px;
-        }
-
-        .cmp {
-            width: 100%;
-            min-width: 820px;
-            border-collapse: collapse;
-            text-align: left;
-        }
-
-        .cmp th, .cmp td { vertical-align: top; }
-
-        /* Colonne des critères : reste lisible quand on fait défiler à l'horizontale */
-        .cmp-crit, .cmp-corner {
-            position: sticky;
-            left: 0;
-            z-index: 2;
-            background: var(--cream-dark);
-            width: 32%;
-            padding: 13px 20px 13px 0;
-            font-size: 13.5px;
-            font-weight: 400;
-            color: var(--ink-soft);
-            line-height: 1.5;
-        }
-
-        .cmp-head {
-            position: relative;
-            width: 17%;
-            padding: 30px 16px 22px;
-            border-bottom: 1px solid var(--moss);
-            vertical-align: top;
-        }
-
-        .cmp-corner { border-bottom: 1px solid var(--moss); padding-bottom: 22px; }
-
-        .cmp-head-name {
-            font-family: var(--serif);
-            font-size: 17px;
-            font-weight: 500;
-            color: var(--ink);
-            line-height: 1.25;
-            margin-bottom: 14px;
-            /* trois lignes réservées : le prix reste sur la même ligne partout */
-            min-height: 3.75em;
-        }
-
-        .cmp-head-price {
-            font-family: var(--serif);
-            font-size: 27px;
-            font-weight: 500;
-            color: var(--moss);
-            line-height: 1;
-            letter-spacing: -0.025em;
-        }
-
-        .cmp-head-price .ttc {
-            display: block;
-            font-family: var(--sans);
-            font-size: 10px;
-            font-weight: 500;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: var(--muted);
-            margin-top: 7px;
-        }
-
-        .cmp-head-goal {
-            font-size: 12.5px;
-            font-weight: 300;
-            color: var(--muted);
-            line-height: 1.55;
-            margin-top: 14px;
-        }
-
-        .cmp-badge {
-            position: absolute;
-            top: 0;
-            left: 16px;
-            font-family: var(--sans);
-            font-size: 9.5px;
-            font-weight: 500;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-            color: var(--cream);
-            background: var(--moss);
-            padding: 4px 10px;
-        }
-
-        /* Colonne mise en avant */
-        .cmp .is-reco { background: rgba(58,74,46,0.07); }
-        .cmp thead .is-reco { border-bottom-color: var(--moss); }
-        .cmp .is-reco.cmp-val { color: var(--ink); }
-
-        .cmp-group th {
-            font-family: var(--sans);
-            font-size: 10.5px;
-            font-weight: 500;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: var(--earth);
-            padding: 30px 0 10px;
-            background: var(--cream-dark);
-        }
-
-        .cmp tbody tr:not(.cmp-group) { border-bottom: 1px solid var(--border); }
-
-        .cmp-val {
-            padding: 13px 16px;
-            text-align: center;
-            font-size: 13px;
-            font-weight: 400;
-            color: var(--ink-soft);
-            line-height: 1.45;
-        }
-
-        .cmp-yes { color: var(--moss); font-size: 15px; }
-        .cmp-no  { color: rgba(122,119,112,0.45); }
-
-        .cmp-note {
-            margin-top: 26px;
-            padding-left: 22px;
-            border-left: 2px solid var(--earth-light);
-            font-size: 13.5px;
-            font-weight: 300;
-            color: var(--ink-soft);
-            line-height: 1.75;
-            max-width: 820px;
-        }
-        .cmp-note strong { font-weight: 500; color: var(--ink); }
-        .cmp-note + .cmp-note { margin-top: 14px; }
-
-        .cmp-hint {
-            display: none;
-            font-size: 12px;
-            font-weight: 300;
-            color: var(--muted);
-            margin-bottom: 14px;
-        }
-
         /* Pack recommandé */
         .reco {
             margin-top: 2px;
@@ -1634,17 +1490,6 @@
             line-height: 1.65;
         }
         .num-ex strong { font-weight: 500; color: var(--ink-soft); }
-
-        .num-note {
-            margin-top: 14px;
-            border: 1px dashed var(--border);
-            padding: 22px 26px;
-            font-size: 13.5px;
-            font-weight: 300;
-            color: var(--ink-soft);
-            line-height: 1.8;
-        }
-        .num-note strong { font-weight: 500; color: var(--ink); }
 
         /* Compléments : formations, suivi, automatisations */
         .addon-grid {
@@ -2279,11 +2124,6 @@
             .deck-dots { display: none; }
         }
 
-        @media (max-width: 900px) {
-            .cmp-hint { display: block; }
-            .cmp-crit, .cmp-corner { width: 34%; padding-right: 14px; }
-        }
-
         @media (max-width: 620px) {
             .s-cols-3, .s-steps, .s-packs { grid-template-columns: 1fr; }
             .s-table-head { display: none; }
@@ -2300,14 +2140,7 @@
             .reco-title, .reco-price { color: #1E1E1A; }
             .reco-desc, .reco-calc { color: #3D3D38; }
             .reco-tag { color: #8C6A4A; }
-            .free-step, .addon, .notion-tier, .num-card, .num-note { break-inside: avoid; }
-            .cmp-scroll { overflow: visible; }
-            .cmp { min-width: 0; font-size: 9px; }
-            .cmp-head-name { font-size: 11px; }
-            .cmp-head-price { font-size: 15px; }
-            .cmp-head-goal, .cmp-val, .cmp-crit { font-size: 9px; }
-            .cmp-crit, .cmp-corner, .cmp-group th { position: static; background: transparent; }
-            .cmp tr { break-inside: avoid; }
+            .free-step, .addon, .notion-tier, .num-card, .opt-note { break-inside: avoid; }
         }
 
         /* Listes à l'intérieur d'une carte de slide */
@@ -2340,6 +2173,289 @@
             max-width: 17ch;
         }
         .s-title-xl em { font-style: italic; color: var(--earth-light); }
+
+        /* ══════════════════════════════════════════════════════════
+           AJOUTS — LES DEUX VOIES (sur mesure / express)
+           ══════════════════════════════════════════════════════════ */
+
+        /* Comparatif d'orientation : laquelle choisir */
+        .voies-compare {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1px;
+        }
+        .voie-card {
+            background: var(--cream);
+            box-shadow: 0 0 0 1px var(--border);
+            padding: 34px 32px 36px;
+        }
+        section.alt .voie-card { background: var(--cream-dark); }
+
+        .voie-tag {
+            font-family: var(--sans);
+            font-size: 10.5px;
+            font-weight: 500;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--earth);
+        }
+        .voie-name {
+            font-family: var(--serif);
+            font-size: clamp(22px, 2.6vw, 28px);
+            font-weight: 500;
+            color: var(--ink);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin: 12px 0 10px;
+        }
+        .voie-pitch {
+            font-size: 14px;
+            font-weight: 300;
+            color: var(--ink-soft);
+            line-height: 1.75;
+            margin-bottom: 22px;
+        }
+        .voie-row {
+            display: grid;
+            grid-template-columns: 108px 1fr;
+            gap: 16px;
+            padding: 12px 0;
+            border-top: 1px solid var(--border);
+            align-items: baseline;
+        }
+        .voie-row-k {
+            font-family: var(--sans);
+            font-size: 10.5px;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+        .voie-row-v { font-size: 13.5px; font-weight: 300; color: var(--ink-soft); line-height: 1.6; }
+        .voie-row-v strong { font-weight: 500; color: var(--ink); }
+
+        /* Sélecteur Sur mesure / Express */
+        .seg-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+        .seg {
+            display: inline-flex;
+            padding: 4px;
+            gap: 4px;
+            border: 1px solid var(--border);
+            background: var(--cream);
+        }
+        section.alt .seg { background: var(--cream-dark); }
+        .seg-btn {
+            font-family: var(--sans);
+            font-size: 12.5px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            background: transparent;
+            border: 0;
+            padding: 12px 26px;
+            cursor: pointer;
+            transition: background 0.25s, color 0.25s;
+        }
+        .seg-btn:hover { color: var(--moss); }
+        .seg-btn[aria-selected="true"] { background: var(--moss); color: var(--cream); }
+        .seg-note { font-size: 13px; font-weight: 300; color: var(--muted); }
+
+        .voie-panel[hidden] { display: none; }
+
+        /* Bloc explicatif encadré (Notion, périmètre…) */
+        .explain {
+            border-left: 2px solid var(--moss);
+            padding: 2px 0 2px 26px;
+            margin-bottom: 34px;
+            max-width: 840px;
+        }
+        .explain-title {
+            font-family: var(--serif);
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--ink);
+            margin-bottom: 12px;
+        }
+        .explain p {
+            font-size: 14px;
+            font-weight: 300;
+            color: var(--ink-soft);
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+        .explain p:last-child { margin-bottom: 0; }
+        .explain strong { font-weight: 500; color: var(--ink); }
+        .explain em { font-style: italic; color: var(--moss); }
+
+        .explain-figure {
+            display: flex;
+            align-items: baseline;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin: 18px 0;
+            padding: 16px 20px;
+            background: rgba(58,74,46,0.06);
+        }
+        .explain-figure-num {
+            font-family: var(--serif);
+            font-size: clamp(28px, 3.4vw, 40px);
+            font-weight: 500;
+            color: var(--moss);
+            line-height: 1;
+            letter-spacing: -0.03em;
+        }
+        .explain-figure-txt { font-size: 13px; font-weight: 300; color: var(--ink-soft); line-height: 1.65; flex: 1; min-width: 200px; }
+
+        /* Échelle de paliers */
+        .ladder {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(238px, 1fr));
+            gap: 1px;
+        }
+        .tier {
+            background: var(--cream);
+            box-shadow: 0 0 0 1px var(--border);
+            padding: 30px 26px 32px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        section.alt .tier { background: var(--cream-dark); }
+        .tier.is-reco, section.alt .tier.is-reco { background: rgba(58,74,46,0.08); box-shadow: 0 0 0 1px var(--moss); z-index: 1; }
+        .tier.is-quote, section.alt .tier.is-quote { background: rgba(140,106,74,0.07); }
+
+        .tier-badge {
+            font-family: var(--sans);
+            font-size: 10.5px;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--moss-light);
+        }
+        .tier-reco-tag {
+            display: inline-block;
+            font-family: var(--sans);
+            font-size: 9.5px;
+            font-weight: 500;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--cream);
+            background: var(--moss);
+            padding: 4px 10px;
+            margin-bottom: 12px;
+        }
+        .tier-name {
+            font-family: var(--serif);
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--ink);
+            line-height: 1.25;
+            margin-top: 10px;
+        }
+        .tier-price {
+            font-family: var(--serif);
+            font-size: clamp(28px, 3vw, 34px);
+            font-weight: 500;
+            color: var(--moss);
+            line-height: 1;
+            letter-spacing: -0.03em;
+            margin-top: 16px;
+            white-space: nowrap;
+        }
+        .tier-price.is-quote { font-size: clamp(21px, 2.2vw, 25px); white-space: normal; }
+        .tier-price .ttc {
+            display: block;
+            font-family: var(--sans);
+            font-size: 10.5px;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 9px;
+            white-space: normal;
+        }
+        .tier-save {
+            display: inline-block;
+            margin-top: 10px;
+            font-family: var(--sans);
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            color: var(--earth);
+        }
+        .tier-goal {
+            font-size: 13.5px;
+            font-weight: 300;
+            color: var(--ink-soft);
+            line-height: 1.7;
+            margin: 18px 0 0;
+        }
+        .tier-inherit {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--earth);
+            margin: 20px 0 10px;
+            letter-spacing: 0.02em;
+        }
+        .tier-list { margin-top: 18px; display: flex; flex-direction: column; gap: 8px; list-style: none; }
+        .tier-inherit + .tier-list { margin-top: 0; }
+        .tier-list li {
+            position: relative;
+            padding-left: 15px;
+            font-size: 12.8px;
+            font-weight: 300;
+            color: var(--ink-soft);
+            line-height: 1.6;
+        }
+        .tier-list li::before { content: ''; position: absolute; left: 0; top: 9px; width: 6px; height: 1px; background: var(--earth); }
+        .tier-foot {
+            margin-top: auto;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+            font-size: 12px;
+            font-weight: 300;
+            color: var(--muted);
+            line-height: 1.65;
+        }
+        .tier-list + .tier-foot { margin-top: 20px; }
+        .tier-foot strong { font-weight: 500; color: var(--ink-soft); }
+
+        /* Options communes */
+        .opt-note {
+            margin-top: 14px;
+            border: 1px dashed var(--border);
+            padding: 22px 26px;
+            font-size: 13.5px;
+            font-weight: 300;
+            color: var(--ink-soft);
+            line-height: 1.8;
+        }
+        .opt-note strong { font-weight: 500; color: var(--ink); }
+
+        @media (max-width: 860px) {
+            .voies-compare { grid-template-columns: 1fr; }
+            .voie-row { grid-template-columns: 1fr; gap: 4px; }
+        }
+        @media (max-width: 700px) {
+            .seg { width: 100%; }
+            .seg-btn { flex: 1; padding: 12px 8px; font-size: 11.5px; }
+            .voie-card { padding: 28px 24px; }
+            .tier { padding: 26px 22px; }
+            .explain { padding-left: 18px; }
+        }
+        @media print {
+            .seg-wrap { display: none; }
+            .voie-panel[hidden] { display: block !important; }
+            .tier, .voie-card, .explain { break-inside: avoid; }
+        }
     </style>
 </head>
 
@@ -2357,7 +2473,7 @@
         <a href="#experience">Expérience</a>
         <a href="#contact">Contact</a>
     </div>
-    <a class="nav-cta" href="mailto:samuelgaliere.pro@gmail.com?subject=Audit%20Notion%20PME%20logistique">Réserver un audit</a>
+    <a class="nav-cta" href="mailto:samuelgaliere.pro@gmail.com?subject=Audit%20gratuit%20-%20num%C3%A9risation%20des%20op%C3%A9rations">Réserver un audit</a>
 </nav>
 
 <button class="print-btn" id="printBtn" onclick="window.print()">Télécharger le CV</button>
@@ -2389,21 +2505,21 @@
             <span class="text"><strong>CEVA Logistics</strong> me fait confiance</span>
         </div>
 
-        <h1 class="hero-h1">Systèmes digitaux, <em>IA &amp; Data</em> pour les opérations logistiques</h1>
+        <h1 class="hero-h1">Je numérise les opérations des <em>PME logistiques</em></h1>
 
         <p class="hero-sub">
-            J'aide les PME logistiques à transformer leurs fichiers, procédures et suivis dispersés en systèmes opérationnels clairs : Notion, automatisations, dashboards et intégrations métier.
+            Depuis 2021, je ne fais que ça : de la logistique et du numérique. Chez CEVA Logistics et CMA CGM, puis en mission. Je transforme fichiers dispersés, procédures introuvables et suivis à la main en outils que vos équipes utilisent vraiment.
         </p>
 
         <p class="hero-support">
-            Architecture logicielle, analyse métier, product ownership et intégration IA/Data — au service d'organisations qui fonctionnent encore à l'Excel, au mail et à l'oral.
+            Deux façons d'y arriver : <strong>un outil développé sur mesure</strong> pour votre métier, ou <strong>une mise en place express</strong> quand la vitesse et le budget priment. Même méthode, même exigence — deux vitesses, et je vous dis laquelle est la vôtre.
             <span class="stack">Pas d'IA magique. Pas de POC gadget. Un système utilisable dès les premières semaines, adopté par les équipes terrain.</span>
         </p>
 
         <div class="hero-ctas">
             <a class="btn btn-primary" href="#presentation" data-launch-deck>Lancer la présentation</a>
-            <a class="btn btn-ghost" href="#offres">Voir les offres</a>
-            <a class="btn-text" href="mailto:samuelgaliere.pro@gmail.com?subject=Audit%20Notion%20PME%20logistique">Réserver un audit gratuit</a>
+            <a class="btn btn-ghost" href="#offres">Voir les deux offres</a>
+            <a class="btn-text" href="mailto:samuelgaliere.pro@gmail.com?subject=Audit%20gratuit%20-%20num%C3%A9risation%20des%20op%C3%A9rations">Réserver un audit gratuit</a>
         </div>
 
         <div class="proof-line">
@@ -2425,7 +2541,7 @@
         <div class="pres-grid">
             <div>
                 <p class="pres-lead reveal">
-                    Une présentation de 13 slides, pensée pour un rendez-vous : <strong>ce que coûte une organisation qui fonctionne à l'oral et aux fichiers</strong>, ce qu'un cockpit opérationnel change concrètement, et comment on le met en place sans lancer un chantier IT.
+                    Une présentation de 14 slides, pensée pour un rendez-vous : <strong>ce que coûte une organisation qui fonctionne à l'oral et aux fichiers</strong>, ce qu'un cockpit opérationnel change concrètement, et les deux voies possibles pour y arriver — sur mesure ou express.
                 </p>
                 <p class="pres-note reveal">
                     Elle s'ouvre en plein écran, directement dans le navigateur — rien à télécharger, rien à installer. Utilisable telle quelle en visio comme en salle de réunion.
@@ -2448,13 +2564,14 @@
             <div class="pres-chapters reveal">
                 <div class="pres-chapter"><span class="pres-chapter-num">01</span><span class="pres-chapter-name">Le vrai problème n'est pas le manque d'outils</span></div>
                 <div class="pres-chapter"><span class="pres-chapter-num">02</span><span class="pres-chapter-name">Ce que coûte le désordre opérationnel</span></div>
-                <div class="pres-chapter"><span class="pres-chapter-num">03</span><span class="pres-chapter-name">Notion, simplement : pages, bases, vues</span></div>
-                <div class="pres-chapter"><span class="pres-chapter-num">04</span><span class="pres-chapter-name">Des irritants terrain convertis en modules</span></div>
-                <div class="pres-chapter"><span class="pres-chapter-num">05</span><span class="pres-chapter-name">Avant / après : une entreprise pilotable</span></div>
-                <div class="pres-chapter"><span class="pres-chapter-num">06</span><span class="pres-chapter-name">Ce que Notion remplace — et ce qu'il ne remplace pas</span></div>
-                <div class="pres-chapter"><span class="pres-chapter-num">07</span><span class="pres-chapter-name">La méthode, en cinq étapes</span></div>
-                <div class="pres-chapter"><span class="pres-chapter-num">08</span><span class="pres-chapter-name">Ce que vous gagnez en 30 jours</span></div>
-                <div class="pres-chapter"><span class="pres-chapter-num">09</span><span class="pres-chapter-name">Les offres et la prochaine étape</span></div>
+                <div class="pres-chapter"><span class="pres-chapter-num">03</span><span class="pres-chapter-name">Deux façons de construire : sur mesure ou express</span></div>
+                <div class="pres-chapter"><span class="pres-chapter-num">04</span><span class="pres-chapter-name">L'express, c'est Notion — et pourquoi c'est 5 à 10× plus rapide</span></div>
+                <div class="pres-chapter"><span class="pres-chapter-num">05</span><span class="pres-chapter-name">Des irritants terrain convertis en modules</span></div>
+                <div class="pres-chapter"><span class="pres-chapter-num">06</span><span class="pres-chapter-name">Avant / après : une entreprise pilotable</span></div>
+                <div class="pres-chapter"><span class="pres-chapter-num">07</span><span class="pres-chapter-name">Ce que je remplace — et ce que je ne remplace pas</span></div>
+                <div class="pres-chapter"><span class="pres-chapter-num">08</span><span class="pres-chapter-name">La méthode : 4 étapes gratuites, puis 3 de réalisation</span></div>
+                <div class="pres-chapter"><span class="pres-chapter-num">09</span><span class="pres-chapter-name">Ce que vous gagnez en 30 jours</span></div>
+                <div class="pres-chapter"><span class="pres-chapter-num">10</span><span class="pres-chapter-name">Les deux grilles tarifaires et la prochaine étape</span></div>
             </div>
         </div>
     </div>
@@ -2468,7 +2585,7 @@
         <span class="line-draw section-separator reveal"></span>
 
         <p class="section-intro reveal">
-            Je n'arrive pas avec un outil. J'arrive avec une méthode pour identifier ce qui vous coûte réellement du temps, puis pour le transformer en système clair, documenté et tenu par vos équipes.
+            Je n'arrive pas avec un outil. J'arrive avec une méthode pour identifier ce qui vous coûte réellement du temps, puis pour le transformer en système clair, documenté et tenu par vos équipes. Le choix de la technologie vient en dernier — et il se justifie devant vous.
         </p>
 
         <div class="cards">
@@ -2484,13 +2601,13 @@
             </div>
             <div class="card reveal">
                 <span class="card-idx">03</span>
-                <h3 class="card-title">Construction du workspace Notion</h3>
-                <p class="card-desc">Architecture, bases liées, vues par rôle, formulaires, procédures, dashboards. Un cockpit opérationnel utilisable dès la première semaine de mise en service.</p>
+                <h3 class="card-title">Développement sur mesure</h3>
+                <p class="card-desc">Une application écrite pour votre métier : base de données propre, écrans de saisie et de suivi, droits par rôle, mise en ligne. Quand rien sur le marché ne fait le travail.</p>
             </div>
             <div class="card reveal">
                 <span class="card-idx">04</span>
-                <h3 class="card-title">Numérisation de processus</h3>
-                <p class="card-desc">Un processus manuel ou dispersé — litiges, anomalies, demandes internes — repensé, simplifié, puis transformé en workflow numérique documenté.</p>
+                <h3 class="card-title">Mise en place express</h3>
+                <p class="card-desc">Le même résultat opérationnel monté sur un outil du marché : structure, tableaux reliés, vues par rôle, formulaires, tableaux de bord. En service en quelques journées.</p>
             </div>
             <div class="card reveal">
                 <span class="card-idx">05</span>
@@ -2541,44 +2658,58 @@
 <section id="methode">
     <div class="section-inner">
         <span class="section-label reveal">Méthode</span>
-        <h2 class="section-title reveal">Une mise en place <em>progressive</em></h2>
+        <h2 class="section-title reveal">La même méthode, <em>quelle que soit la voie</em></h2>
         <span class="line-draw section-separator reveal"></span>
 
         <p class="section-intro reveal">
-            L'usine à gaz ne vient jamais du manque d'ambition. Elle vient d'un système conçu loin du terrain, puis imposé d'un bloc. Je fais l'inverse.
+            L'usine à gaz ne vient jamais du manque d'ambition. Elle vient d'un système conçu loin du terrain, puis imposé d'un bloc. Je fais l'inverse — et les quatre premières étapes ne vous coûtent rien.
         </p>
 
         <div class="steps">
             <div class="step reveal">
+                <span class="step-num">A</span>
+                <div>
+                    <h3 class="step-title">Découverte <span style="font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--earth)">— gratuit</span></h3>
+                    <p class="step-desc">20 à 30 minutes pour comprendre votre activité, ce qui coince et ce que vous avez déjà. Si je ne suis pas la bonne personne, je vous le dis là.</p>
+                </div>
+            </div>
+            <div class="step reveal">
+                <span class="step-num">B</span>
+                <div>
+                    <h3 class="step-title">Audit <span style="font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--earth)">— gratuit</span></h3>
+                    <p class="step-desc">45 minutes avec les personnes qui font le travail. Ce que dit l'organigramme compte moins que ce qui circule réellement entre les mails, les fichiers et les habitudes.</p>
+                </div>
+            </div>
+            <div class="step reveal">
+                <span class="step-num">C</span>
+                <div>
+                    <h3 class="step-title">Plan de route <span style="font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--earth)">— gratuit</span></h3>
+                    <p class="step-desc">Ce qu'on traite d'abord, ce qui attend, ce qui n'a pas besoin d'outil du tout. C'est ici qu'on tranche entre le sur mesure et l'express, avec les arguments posés.</p>
+                </div>
+            </div>
+            <div class="step reveal">
+                <span class="step-num">D</span>
+                <div>
+                    <h3 class="step-title">Devis à valider <span style="font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--earth)">— gratuit</span></h3>
+                    <p class="step-desc">Livrables, budget, planning et limites, écrits noir sur blanc. Rien ne démarre tant que vous n'avez pas signé, et le prix ne bouge plus après.</p>
+                </div>
+            </div>
+            <div class="step reveal">
                 <span class="step-num">01</span>
                 <div>
-                    <h3 class="step-title">Comprendre</h3>
-                    <p class="step-desc">Entretiens courts avec les personnes qui font le travail. Ce que dit l'organigramme compte moins que ce qui circule réellement entre les mails, les fichiers et les habitudes.</p>
+                    <h3 class="step-title">Construire</h3>
+                    <p class="step-desc">On livre d'abord ce qui a le plus d'irritant et le moins de complexité : un résultat visible vite, qui crédibilise la suite auprès des équipes. Une première version utile en quelques jours, pas en quelques mois.</p>
                 </div>
             </div>
             <div class="step reveal">
                 <span class="step-num">02</span>
-                <div>
-                    <h3 class="step-title">Prioriser</h3>
-                    <p class="step-desc">On choisit un ou deux processus à fort irritant et à faible complexité. C'est ce qui donne un résultat visible vite, et qui crédibilise la suite auprès des équipes.</p>
-                </div>
-            </div>
-            <div class="step reveal">
-                <span class="step-num">03</span>
-                <div>
-                    <h3 class="step-title">Construire</h3>
-                    <p class="step-desc">Architecture du workspace, bases opérationnelles, relations, vues par rôle, formulaires et dashboards. Une première version utile en quelques jours, pas en quelques mois.</p>
-                </div>
-            </div>
-            <div class="step reveal">
-                <span class="step-num">04</span>
                 <div>
                     <h3 class="step-title">Former</h3>
                     <p class="step-desc">Formation des utilisateurs et des référents internes, règles d'usage explicites, documentation d'administration. L'adoption se joue ici, pas dans la qualité du schéma.</p>
                 </div>
             </div>
             <div class="step reveal">
-                <span class="step-num">05</span>
+                <span class="step-num">03</span>
                 <div>
                     <h3 class="step-title">Améliorer &amp; automatiser</h3>
                     <p class="step-desc">Une fois le système vivant et les données propres, on automatise les relances, on branche les outils métier, on ajoute de l'IA là où elle supprime du travail répétitif.</p>
@@ -2587,7 +2718,7 @@
         </div>
 
         <p class="engagement-note reveal">
-            <strong>Notion ne remplace pas forcément votre ERP, WMS ou TMS.</strong> En revanche, il peut devenir la couche qui relie vos informations, vos procédures, vos suivis et vos décisions — celle qui manque aujourd'hui entre vos outils.
+            <strong>Je ne remplace pas forcément votre ERP, WMS ou TMS.</strong> Ce que je construis, c'est la couche qui relie vos informations, vos procédures, vos suivis et vos décisions — celle qui manque aujourd'hui entre vos outils. Et quand un outil du marché fait déjà le travail, je vous le dis plutôt que de vous vendre un projet.
         </p>
     </div>
 </section>
@@ -2596,242 +2727,305 @@
 <section class="alt" id="offres">
     <div class="section-inner">
         <span class="section-label reveal">Offres &amp; tarifs</span>
-        <h2 class="section-title reveal">Des offres packagées pour <em>numériser vos opérations</em></h2>
+        <h2 class="section-title reveal">Deux façons de numériser <em>vos opérations</em></h2>
         <span class="line-draw section-separator reveal"></span>
 
         <p class="section-intro reveal">
-            On ne commence pas par l'outil. On commence par vos irritants : fichiers dispersés, procédures introuvables, relances manuelles, manque de visibilité, dépendance aux personnes clés.
+            On ne commence jamais par l'outil. On commence par ce qui vous coûte du temps : fichiers dispersés, procédures introuvables, relances à la main, aucune visibilité, et deux ou trois personnes dont tout dépend. Ensuite seulement, on choisit la voie la plus rapide pour le régler.
         </p>
 
-        <!-- Parcours gratuit -->
-        <p class="offer-block-label reveal">Avant tout engagement — gratuit</p>
+        <!-- ─── LES DEUX VOIES : ORIENTATION ─── -->
+        <p class="offer-block-label reveal">Laquelle est faite pour vous</p>
         <p class="offer-block-intro reveal">
-            Aucun budget engagé tant que le périmètre n'est pas clair. Ces quatre étapes servent à vérifier qu'il y a un vrai sujet, et que je suis la bonne personne pour le traiter.
+            Les deux voies suivent exactement la même méthode, les mêmes étapes gratuites avant engagement et les mêmes options à la carte. La seule différence : ce avec quoi votre outil est construit — et donc le délai et le budget.
+        </p>
+
+        <div class="voies-compare">
+            <div class="voie-card reveal">
+                <span class="voie-tag">Voie 1</span>
+                <h3 class="voie-name">Sur mesure</h3>
+                <p class="voie-pitch">Un logiciel développé pour votre métier. Vos règles, vos écrans, vos volumes — rien à contourner.</p>
+                <div class="voie-row"><span class="voie-row-k">Délai</span><span class="voie-row-v"><strong>1 à 3 semaines</strong> de développement, parfois plus</span></div>
+                <div class="voie-row"><span class="voie-row-k">Budget</span><span class="voie-row-v">À partir de <strong>4 000 €</strong></span></div>
+                <div class="voie-row"><span class="voie-row-k">Le bon choix si</span><span class="voie-row-v">Votre métier a des règles qu'aucun outil du marché ne sait faire, vos volumes sont importants, ou vos clients doivent y accéder</span></div>
+                <div class="voie-row"><span class="voie-row-k">Ensuite</span><span class="voie-row-v">Les évolutions passent par moi ou par une équipe technique</span></div>
+                <div class="voie-row"><span class="voie-row-k">Coût récurrent</span><span class="voie-row-v">L'hébergement et la maintenance</span></div>
+            </div>
+
+            <div class="voie-card reveal">
+                <span class="voie-tag">Voie 2</span>
+                <h3 class="voie-name">Express</h3>
+                <p class="voie-pitch">Le même résultat opérationnel, monté sur un outil du marché que je maîtrise. Livré en jours, pas en mois.</p>
+                <div class="voie-row"><span class="voie-row-k">Délai</span><span class="voie-row-v"><strong>3 à 8 journées</strong> de travail, étalées sur 2 à 4 semaines</span></div>
+                <div class="voie-row"><span class="voie-row-k">Budget</span><span class="voie-row-v">À partir de <strong>2 600 €</strong></span></div>
+                <div class="voie-row"><span class="voie-row-k">Le bon choix si</span><span class="voie-row-v">Vous voulez régler vos irritants vite, sans lancer un chantier informatique, et le besoin va encore bouger</span></div>
+                <div class="voie-row"><span class="voie-row-k">Ensuite</span><span class="voie-row-v">Vos référents internes font évoluer l'outil eux-mêmes, sans développeur</span></div>
+                <div class="voie-row"><span class="voie-row-k">Coût récurrent</span><span class="voie-row-v">Une licence par utilisateur actif</span></div>
+            </div>
+        </div>
+
+        <p class="opt-note reveal">
+            <strong>Vous n'avez pas à choisir seul, ni maintenant.</strong> La voie se décide à la fin des quatre étapes gratuites ci-dessous, une fois le besoin posé noir sur blanc. Et les deux se combinent très bien : beaucoup de missions démarrent en Express pour prouver la valeur en quelques semaines, puis basculent en sur mesure les processus qui le méritent vraiment.
+        </p>
+
+        <!-- ─── SOCLE COMMUN GRATUIT ─── -->
+        <p class="offer-block-label reveal">Le socle commun — gratuit, quelle que soit la voie</p>
+        <p class="offer-block-intro reveal">
+            Aucun budget engagé tant que le périmètre n'est pas clair. Ces quatre étapes servent à vérifier qu'il y a un vrai sujet, à choisir la bonne voie, et à ce que je sois la bonne personne pour le traiter.
         </p>
 
         <div class="free-track">
             <div class="free-step reveal">
-                <span class="free-badge">Gratuit · Étape 1</span>
-                <p class="free-name">Premier contact</p>
-                <p class="free-meta">20 à 30 min · visio ou téléphone</p>
+                <span class="free-badge">Gratuit · Étape A</span>
+                <p class="free-name">Découverte</p>
+                <p class="free-meta">20 à 30 min · visio ou téléphone. Votre activité, ce qui coince, ce que vous avez déjà.</p>
             </div>
             <div class="free-step reveal">
-                <span class="free-badge">Gratuit · Étape 2</span>
-                <p class="free-name">Présentation des outils</p>
-                <p class="free-meta">30 à 45 min · démonstration concrète</p>
+                <span class="free-badge">Gratuit · Étape B</span>
+                <p class="free-name">Audit</p>
+                <p class="free-meta">45 min avec vos équipes · on regarde où l'information se perd réellement.</p>
             </div>
             <div class="free-step reveal">
-                <span class="free-badge">Gratuit · Étape 3</span>
-                <p class="free-name">Audit rapide en réunion</p>
-                <p class="free-meta">45 min · avec vos équipes</p>
+                <span class="free-badge">Gratuit · Étape C</span>
+                <p class="free-name">Plan de route</p>
+                <p class="free-meta">Ce qu'on traite d'abord, ce qui attend, ce qui n'a pas besoin d'outil — et quelle voie.</p>
             </div>
             <div class="free-step reveal">
-                <span class="free-badge">Gratuit · Étape 4</span>
-                <p class="free-name">Proposition commerciale</p>
-                <p class="free-meta">Livrables, budget, planning, limites</p>
+                <span class="free-badge">Gratuit · Étape D</span>
+                <p class="free-name">Devis à valider</p>
+                <p class="free-meta">Livrables, budget, planning et limites, écrits. Vous validez, on démarre.</p>
             </div>
         </div>
 
-        <!-- Packs -->
-        <p class="offer-block-label reveal">Les packs</p>
+        <!-- ─── LES PALIERS, PAR VOIE ─── -->
+        <p class="offer-block-label reveal">Les paliers</p>
         <p class="offer-block-intro reveal">
-            Chaque pack a un objectif unique et des livrables listés : vous achetez un résultat, à prix ferme, connu avant de commencer. Le comparatif ci-dessous montre exactement ce que chaque palier ajoute au précédent.
+            Quatre paliers par voie, sur le même principe : chacun reprend le précédent et l'étend, vous ne rachetez jamais ce que vous avez déjà. Tout se compte en journées de travail à <strong>800 € la journée</strong>, et les paliers les plus larges vous les font payer moins cher que prises à l'unité.
         </p>
 
-        <div class="cmp-scroll">
-            <p class="cmp-hint">Faites défiler le tableau horizontalement pour comparer les paliers.</p>
-            <table class="cmp">
-                <thead>
-                    <tr>
-                        <th class="cmp-corner"></th>
-                        <th class="cmp-head"><p class="cmp-head-name">Diagnostic numérique express</p><p class="cmp-head-price">1 800 €<span class="ttc">TTC</span></p><p class="cmp-head-goal">Savoir quoi numériser en priorité.</p></th>
-                        <th class="cmp-head"><p class="cmp-head-name">Workspace Starter</p><p class="cmp-head-price">2 600 €<span class="ttc">TTC</span></p><p class="cmp-head-goal">Une première base propre, utilisable vite.</p></th>
-                        <th class="cmp-head is-reco"><span class="cmp-badge">Recommandé</span><p class="cmp-head-name">Workspace Business</p><p class="cmp-head-price">4 000 €<span class="ttc">TTC</span></p><p class="cmp-head-goal">Plusieurs processus structurés et pilotés.</p></th>
-                        <th class="cmp-head"><p class="cmp-head-name">Cockpit Opérations Logistiques</p><p class="cmp-head-price">6 500 €<span class="ttc">TTC</span></p><p class="cmp-head-goal">Le pilotage complet, autonomie comprise.</p></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="cmp-group"><th colspan="5">Cadrage</th></tr>
-                    <tr>
-                        <th class="cmp-crit">Entretiens terrain et compréhension de l'existant</th>
-                        <td class="cmp-val"><span class="cmp-yes">✓</span></td>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val is-reco">Ciblés</td>
-                        <td class="cmp-val"><span class="cmp-yes">✓</span></td>
-                    </tr>
-                    <tr>
-                        <th class="cmp-crit">Cartographie des processus</th>
-                        <td class="cmp-val"><span class="cmp-yes">✓</span></td>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val is-reco">Ciblée</td>
-                        <td class="cmp-val"><span class="cmp-yes">✓</span></td>
-                    </tr>
-                    <tr>
-                        <th class="cmp-crit">Priorisation impact / faisabilité</th>
-                        <td class="cmp-val"><span class="cmp-yes">✓</span></td>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val is-reco"><span class="cmp-yes">✓</span></td>
-                        <td class="cmp-val"><span class="cmp-yes">✓</span></td>
-                    </tr>
-                    <tr>
-                        <th class="cmp-crit">Plan d'action 30 / 60 / 90 jours</th>
-                        <td class="cmp-val"><span class="cmp-yes">✓</span></td>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val is-reco"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val"><span class="cmp-yes">✓</span></td>
-                    </tr>
-                    <tr class="cmp-group"><th colspan="5">Construction</th></tr>
-                    <tr>
-                        <th class="cmp-crit">Architecture du workspace</th>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val">Simple</td>
-                        <td class="cmp-val is-reco">Complète</td>
-                        <td class="cmp-val">Complète</td>
-                    </tr>
-                    <tr>
-                        <th class="cmp-crit">Bases opérationnelles</th>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val">2 à 3</td>
-                        <td class="cmp-val is-reco">4 à 6</td>
-                        <td class="cmp-val">8 et plus, liées</td>
-                    </tr>
-                    <tr>
-                        <th class="cmp-crit">Relations entre bases</th>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val is-reco"><span class="cmp-yes">✓</span></td>
-                        <td class="cmp-val"><span class="cmp-yes">✓</span></td>
-                    </tr>
-                    <tr>
-                        <th class="cmp-crit">Vues par équipe ou par rôle</th>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val is-reco"><span class="cmp-yes">✓</span></td>
-                        <td class="cmp-val"><span class="cmp-yes">✓</span></td>
-                    </tr>
-                    <tr>
-                        <th class="cmp-crit">Formulaires internes</th>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val is-reco"><span class="cmp-yes">✓</span></td>
-                        <td class="cmp-val"><span class="cmp-yes">✓</span></td>
-                    </tr>
-                    <tr>
-                        <th class="cmp-crit">Tableaux de bord</th>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val">Mini-dashboard</td>
-                        <td class="cmp-val is-reco"><span class="cmp-yes">✓</span></td>
-                        <td class="cmp-val">Par rôle</td>
-                    </tr>
-                    <tr>
-                        <th class="cmp-crit">Modèles de procédures, actions, réunions</th>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val"><span class="cmp-yes">✓</span></td>
-                        <td class="cmp-val is-reco"><span class="cmp-yes">✓</span></td>
-                        <td class="cmp-val"><span class="cmp-yes">✓</span></td>
-                    </tr>
-                    <tr>
-                        <th class="cmp-crit">Espaces équipe</th>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val is-reco"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val"><span class="cmp-yes">✓</span></td>
-                    </tr>
-                    <tr class="cmp-group"><th colspan="5">Processus</th></tr>
-                    <tr>
-                        <th class="cmp-crit">Numérisation d'un processus de bout en bout</th>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val is-reco"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val">1 processus inclus</td>
-                    </tr>
-                    <tr>
-                        <th class="cmp-crit">Simplification et workflows de suivi</th>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val is-reco"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val"><span class="cmp-yes">✓</span></td>
-                    </tr>
-                    <tr class="cmp-group"><th colspan="5">Adoption et autonomie</th></tr>
-                    <tr>
-                        <th class="cmp-crit">Droits et règles d'usage</th>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val is-reco"><span class="cmp-yes">✓</span></td>
-                        <td class="cmp-val"><span class="cmp-yes">✓</span></td>
-                    </tr>
-                    <tr>
-                        <th class="cmp-crit">Formation</th>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val">Référents</td>
-                        <td class="cmp-val is-reco">Utilisateurs clés</td>
-                        <td class="cmp-val">Complète</td>
-                    </tr>
-                    <tr>
-                        <th class="cmp-crit">Documentation d'administration</th>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val is-reco"><span class="cmp-yes">✓</span></td>
-                        <td class="cmp-val"><span class="cmp-yes">✓</span></td>
-                    </tr>
-                    <tr>
-                        <th class="cmp-crit">Ajustements post-déploiement</th>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val is-reco"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val"><span class="cmp-yes">✓</span></td>
-                    </tr>
-                    <tr>
-                        <th class="cmp-crit">Transfert d'autonomie et plan d'évolution</th>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val is-reco"><span class="cmp-no">—</span></td>
-                        <td class="cmp-val"><span class="cmp-yes">✓</span></td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="seg-wrap reveal">
+            <div class="seg" role="tablist" aria-label="Choisir une voie">
+                <button class="seg-btn" type="button" role="tab" id="tab-custom" aria-controls="panel-custom" aria-selected="true">Sur mesure</button>
+                <button class="seg-btn" type="button" role="tab" id="tab-express" aria-controls="panel-express" aria-selected="false">Express</button>
+            </div>
+            <p class="seg-note">Les options, compléments et étapes gratuites sont identiques dans les deux cas.</p>
         </div>
 
-        <p class="cmp-note reveal">
-            <strong>Starter, Business et Cockpit s'emboîtent</strong> : chaque palier reprend le précédent et l'étend, vous ne rachetez jamais ce que vous avez déjà. Le diagnostic reste une étude à part entière — Business n'en fait qu'une version ciblée, là où le Cockpit le réintègre en totalité.
-        </p>
-        <p class="cmp-note reveal">
-            <strong>Cockpit Opérations Logistiques — 6 500 €.</strong> Le même périmètre reconstitué à la carte — diagnostic express (1 800 €) + Workspace Business (4 000 €) + une grande numérisation (2 299 €) — représente 8 099 €. Le Cockpit les réunit pour 1 599 € de moins, et y ajoute les espaces équipe, les dashboards par rôle et le transfert d'autonomie.
-        </p>
+        <!-- PANEL : SUR MESURE -->
+        <div class="voie-panel" id="panel-custom" role="tabpanel" aria-labelledby="tab-custom">
 
-        <!-- Pack recommandé -->
-        <div class="reco reveal">
-            <div>
-                <span class="reco-tag">Pack recommandé</span>
-                <h3 class="reco-title">Workspace Business : le palier où le périmètre double sans que le budget suive.</h3>
-                <p class="reco-desc">
-                    Entre Starter et Business, l'écart est de 1 400 €. Ce que vous gagnez : deux fois plus de bases, les relations entre elles, les vues par rôle, les formulaires internes, les tableaux de bord, la gestion des droits et la documentation d'administration.
+            <div class="explain reveal">
+                <h3 class="explain-title">Le sur mesure, concrètement</h3>
+                <p>
+                    J'écris un logiciel qui n'existe pas encore : une base de données pensée pour vos données, les écrans dont vos équipes ont besoin, vos règles métier appliquées automatiquement. Il s'ouvre dans un navigateur, sur ordinateur comme sur téléphone, et il vous appartient.
                 </p>
-                <p class="reco-desc" style="margin-top:14px">
-                    C'est le pack qui fait passer d'un espace bien rangé à un véritable outil de pilotage. En dessous, vous rangez. À partir d'ici, vous pilotez.
+                <p>
+                    C'est la bonne voie quand votre besoin est <em>spécifique</em> : un calcul propre à votre activité, des volumes qu'un outil généraliste ne tient pas, un accès à ouvrir à vos clients ou à vos transporteurs, ou une connexion profonde à votre ERP, WMS ou TMS.
                 </p>
             </div>
-            <div class="reco-right">
-                <p class="reco-price">4 000 €<span class="ttc">TTC</span></p>
-                <div class="reco-calc">
-                    <span>Workspace Starter — 2 600 €</span>
-                    <span><span class="plus">+</span> 1 400 € seulement</span>
-                    <span class="reco-gain">= périmètre doublé</span>
+
+            <div class="ladder">
+                <div class="tier reveal">
+                    <span class="tier-badge">1 semaine · 5 journées</span>
+                    <h3 class="tier-name">Outil ciblé</h3>
+                    <p class="tier-price">4 000 €<span class="ttc">TTC · forfait</span></p>
+                    <p class="tier-goal">Un besoin précis, réglé pour de bon.</p>
+                    <ul class="tier-list">
+                        <li>Une application accessible depuis un navigateur</li>
+                        <li>Une base de données propre et à vous</li>
+                        <li>Les écrans de saisie et de suivi</li>
+                        <li>Mise en ligne et prise en main de l'équipe</li>
+                    </ul>
+                    <p class="tier-foot"><strong>Exemples :</strong> suivi des litiges transport · portail de demandes internes · calculateur de tarifs</p>
+                </div>
+
+                <div class="tier is-reco reveal">
+                    <span class="tier-reco-tag">Recommandé</span>
+                    <span class="tier-badge">2 semaines · 10 journées</span>
+                    <h3 class="tier-name">Outil métier</h3>
+                    <p class="tier-price">7 500 €<span class="ttc">TTC · forfait</span></p>
+                    <span class="tier-save">— 500 € vs 10 journées à l'unité</span>
+                    <p class="tier-goal">Plusieurs rôles, plusieurs étapes : un vrai flux de travail.</p>
+                    <p class="tier-inherit">Tout le palier précédent, plus :</p>
+                    <ul class="tier-list">
+                        <li>Comptes et droits par rôle</li>
+                        <li>Workflow à étapes, statuts et validations</li>
+                        <li>Notifications et relances automatiques</li>
+                        <li>Un tableau de bord de suivi</li>
+                        <li>Reprise de vos données existantes</li>
+                    </ul>
+                    <p class="tier-foot"><strong>Exemples :</strong> gestion des non-conformités · planification d'interventions · suivi qualité multi-sites</p>
+                </div>
+
+                <div class="tier reveal">
+                    <span class="tier-badge">3 semaines · 15 journées</span>
+                    <h3 class="tier-name">Outil complet</h3>
+                    <p class="tier-price">11 000 €<span class="ttc">TTC · forfait</span></p>
+                    <span class="tier-save">— 1 000 € vs 15 journées à l'unité</span>
+                    <p class="tier-goal">L'outil que tout un service utilise chaque jour.</p>
+                    <p class="tier-inherit">Tout le palier précédent, plus :</p>
+                    <ul class="tier-list">
+                        <li>Plusieurs modules reliés entre eux</li>
+                        <li>Tableaux de bord par rôle et exports</li>
+                        <li>Documentation technique et fonctionnelle</li>
+                        <li>Formation des équipes et des référents</li>
+                        <li>Un mois d'ajustements après la mise en ligne</li>
+                    </ul>
+                    <p class="tier-foot"><strong>Exemples :</strong> cockpit d'exploitation · portail client · gestion documentaire réglementaire</p>
+                </div>
+
+                <div class="tier is-quote reveal">
+                    <span class="tier-badge">Au-delà de 3 semaines</span>
+                    <h3 class="tier-name">Sur devis</h3>
+                    <p class="tier-price is-quote">Devis gratuit<span class="ttc">Analyse comprise</span></p>
+                    <p class="tier-goal">Plusieurs modules imbriqués, une connexion profonde à vos outils, ou des exigences de sécurité et de conformité.</p>
+                    <p class="tier-foot"><strong>Vous recevez :</strong> une analyse du projet, un périmètre écrit et un chiffrage daté — sans engagement. Au-delà des paliers, on reste sur la même base de 800 € la journée.</p>
+                </div>
+            </div>
+
+            <div class="reco reveal">
+                <div>
+                    <span class="reco-tag">Palier recommandé — sur mesure</span>
+                    <h3 class="reco-title">Outil métier : le palier où l'outil devient un flux de travail, pas un écran de plus.</h3>
+                    <p class="reco-desc">
+                        Une semaine de plus que le palier d'entrée, et vous ne livrez plus un écran utile : vous livrez un processus complet. Les droits par rôle, les étapes de validation, les relances automatiques et le tableau de bord — c'est là que ça se joue.
+                    </p>
+                    <p class="reco-desc" style="margin-top:14px">
+                        C'est aussi le palier le plus sûr : dix journées laissent la place de reprendre vos données existantes et d'ajuster avec les équipes avant la mise en ligne, au lieu de livrer au chausse-pied.
+                    </p>
+                </div>
+                <div class="reco-right">
+                    <p class="reco-price">7 500 €<span class="ttc">TTC</span></p>
+                    <div class="reco-calc">
+                        <span>10 journées à l'unité — 8 000 €</span>
+                        <span><span class="plus">−</span> 500 € en package</span>
+                        <span class="reco-gain">= le workflow complet</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Numérisation de processus -->
-        <p class="offer-block-label reveal">Numériser un processus — trois formats</p>
+        <!-- PANEL : EXPRESS -->
+        <div class="voie-panel" id="panel-express" role="tabpanel" aria-labelledby="tab-express" hidden>
+
+            <div class="explain reveal">
+                <h3 class="explain-title">L'Express, c'est quoi ? C'est Notion — et j'en suis expert.</h3>
+                <p>
+                    Notion est un outil du marché sur lequel on peut construire de vrais outils internes : tableaux de suivi reliés entre eux, formulaires d'entrée, vues par équipe, tableaux de bord, procédures. Je le pratique depuis des années, en environnement logistique. Résultat : je ne développe rien — je monte votre outil directement dedans.
+                </p>
+                <div class="explain-figure">
+                    <span class="explain-figure-num">5 à 10 ×</span>
+                    <span class="explain-figure-txt">
+                        Un outil interne développé sur mesure pour une PME demande en général <strong>3 à 6 mois</strong>. Le même besoin monté dans Notion est en service en <strong>1 à 2 semaines</strong> : c'est le même problème réglé cinq à dix fois plus vite, pour un budget d'entrée deux fois moindre.
+                    </span>
+                </div>
+                <p>
+                    Ce que vous économisez ne s'arrête pas au premier chèque : <strong>pas de serveur à payer, pas de code à maintenir</strong>, et vos référents internes font évoluer l'outil eux-mêmes — ajouter un statut, une vue ou un champ ne nécessite plus de faire appel à un développeur.
+                </p>
+                <p>
+                    Ce que ça coûte en plus, et je le dis avant de commencer : une licence par utilisateur actif (voir plus bas), et certaines choses restent hors périmètre — stock en temps réel, facturation, transactions critiques, très gros volumes. Dans ces cas-là, la bonne réponse est le sur mesure, et je vous le dirai.
+                </p>
+            </div>
+
+            <div class="ladder">
+                <div class="tier reveal">
+                    <span class="tier-badge">≈ 3 journées</span>
+                    <h3 class="tier-name">Socle</h3>
+                    <p class="tier-price">2 600 €<span class="ttc">TTC · forfait</span></p>
+                    <p class="tier-goal">Une première base propre, utilisable dès la première semaine.</p>
+                    <ul class="tier-list">
+                        <li>Un espace de travail structuré</li>
+                        <li>2 à 3 tableaux de suivi opérationnels</li>
+                        <li>Un premier tableau de bord</li>
+                        <li>Modèles de procédures, actions et réunions</li>
+                        <li>Formation des référents internes</li>
+                    </ul>
+                    <p class="tier-foot"><strong>Pour :</strong> arrêter les fichiers dupliqués et remettre l'information à un seul endroit.</p>
+                </div>
+
+                <div class="tier is-reco reveal">
+                    <span class="tier-reco-tag">Recommandé</span>
+                    <span class="tier-badge">≈ 5 journées</span>
+                    <h3 class="tier-name">Pilotage</h3>
+                    <p class="tier-price">4 000 €<span class="ttc">TTC · forfait</span></p>
+                    <p class="tier-goal">Plusieurs processus structurés et réellement pilotés.</p>
+                    <p class="tier-inherit">Tout le palier précédent, plus :</p>
+                    <ul class="tier-list">
+                        <li>4 à 6 tableaux reliés entre eux</li>
+                        <li>Vues par équipe et par rôle</li>
+                        <li>Formulaires d'entrée internes</li>
+                        <li>Tableaux de bord complets</li>
+                        <li>Droits d'accès et règles d'usage</li>
+                        <li>Documentation d'administration</li>
+                    </ul>
+                    <p class="tier-foot"><strong>Pour :</strong> passer d'un espace bien rangé à un outil de pilotage.</p>
+                </div>
+
+                <div class="tier reveal">
+                    <span class="tier-badge">≈ 8 journées</span>
+                    <h3 class="tier-name">Cockpit</h3>
+                    <p class="tier-price">6 500 €<span class="ttc">TTC · forfait</span></p>
+                    <span class="tier-save">— 1 400 € vs le même périmètre à la carte</span>
+                    <p class="tier-goal">Le pilotage complet de vos opérations, autonomie comprise.</p>
+                    <p class="tier-inherit">Tout le palier précédent, plus :</p>
+                    <ul class="tier-list">
+                        <li>8 tableaux et plus, tous reliés</li>
+                        <li>Un espace par équipe</li>
+                        <li>Tableaux de bord par rôle</li>
+                        <li>Un processus numérisé de bout en bout</li>
+                        <li>Plan d'action 30 / 60 / 90 jours</li>
+                        <li>Formation complète et transfert d'autonomie</li>
+                        <li>Ajustements après le déploiement</li>
+                    </ul>
+                    <p class="tier-foot"><strong>Pour :</strong> ne plus dépendre de deux ou trois personnes qui savent comment ça marche.</p>
+                </div>
+
+                <div class="tier is-quote reveal">
+                    <span class="tier-badge">Au-delà</span>
+                    <h3 class="tier-name">Sur devis</h3>
+                    <p class="tier-price is-quote">Devis gratuit<span class="ttc">Analyse comprise</span></p>
+                    <p class="tier-goal">Plusieurs sites, gros volumes, ou une connexion à vos outils métier — ERP, WMS, TMS, paie.</p>
+                    <p class="tier-foot"><strong>Vous recevez :</strong> une analyse du projet, un périmètre écrit et un chiffrage daté — sans engagement. Même base : 800 € la journée.</p>
+                </div>
+            </div>
+
+            <div class="reco reveal">
+                <div>
+                    <span class="reco-tag">Palier recommandé — express</span>
+                    <h3 class="reco-title">Pilotage : le palier où le périmètre double sans que le budget suive.</h3>
+                    <p class="reco-desc">
+                        Entre le Socle et le Pilotage, l'écart est de 1 400 €. Ce que vous gagnez : deux fois plus de tableaux, les liens entre eux, les vues par rôle, les formulaires internes, les tableaux de bord, la gestion des droits et la documentation d'administration.
+                    </p>
+                    <p class="reco-desc" style="margin-top:14px">
+                        En dessous, vous rangez vos informations. À partir d'ici, vous pilotez votre activité — et pour la moitié du budget d'entrée du sur mesure.
+                    </p>
+                </div>
+                <div class="reco-right">
+                    <p class="reco-price">4 000 €<span class="ttc">TTC</span></p>
+                    <div class="reco-calc">
+                        <span>Socle — 2 600 €</span>
+                        <span><span class="plus">+</span> 1 400 € seulement</span>
+                        <span class="reco-gain">= périmètre doublé</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="opt-note reveal">
+            <strong>Ce que « une journée » veut dire :</strong> une journée de travail effectif de ma part — cadrage, mise en service et prise en main de l'équipe comprises — et non une journée mobilisée chez vous. Elle sert à situer l'ampleur, pas à facturer du temps passé : <strong>le prix est ferme, annoncé avant de commencer</strong>. S'il faut une journée de plus, vous l'apprenez avant, jamais sur la facture.
+        </p>
+
+        <!-- ─── OPTIONS COMMUNES ─── -->
+        <p class="offer-block-label reveal">Les options — identiques dans les deux voies</p>
         <p class="offer-block-intro reveal">
-            Ces formats se greffent sur un palier, sur votre workspace existant, ou se prennent seuls. L'ampleur est déterminée avant de commencer, pendant les échanges gratuits : vous savez ce que vous payez et en combien de temps c'est livré.
+            Ces options se greffent sur n'importe quel palier, sur un outil que vous avez déjà, ou se prennent seules. Elles se comptent en journées à 800 €, et l'ampleur est fixée avant de commencer, pendant les étapes gratuites.
         </p>
 
         <div class="num-grid">
             <div class="num-card reveal">
                 <span class="num-badge">1 journée</span>
-                <h3 class="num-name">Petite numérisation</h3>
-                <p class="num-price">799 €<span class="ttc">TTC · forfait</span></p>
+                <h3 class="num-name">Numériser un petit processus</h3>
+                <p class="num-price">800 €<span class="ttc">TTC · forfait</span></p>
                 <p class="num-desc">
                     Une demande qui circule encore par mail ou par tableur : un formulaire d'entrée, la base de suivi derrière, une vue de traitement. Saisie une fois, visible de tous, sans relance.
                 </p>
@@ -2840,57 +3034,79 @@
 
             <div class="num-card reveal">
                 <span class="num-badge">2 journées</span>
-                <h3 class="num-name">Moyenne numérisation</h3>
-                <p class="num-price">1 599 €<span class="ttc">TTC · forfait</span></p>
+                <h3 class="num-name">Numériser un processus moyen</h3>
+                <p class="num-price">1 600 €<span class="ttc">TTC · forfait</span></p>
                 <p class="num-desc">
-                    Un processus à plusieurs étapes et plusieurs rôles : bases reliées entre elles, statuts, vues par rôle, relances automatiques et un tableau de bord de suivi.
+                    Un processus à plusieurs étapes et plusieurs rôles : données reliées entre elles, statuts, vues par rôle, relances automatiques et un tableau de bord de suivi.
                 </p>
                 <p class="num-ex"><strong>Exemples :</strong> litiges transport · onboarding client · demandes d'intervention · actions qualité · non-conformités</p>
             </div>
 
             <div class="num-card reveal">
                 <span class="num-badge">3 journées</span>
-                <h3 class="num-name">Grande numérisation</h3>
-                <p class="num-price">2 299 €<span class="ttc">TTC · forfait</span></p>
+                <h3 class="num-name">Numériser un gros processus</h3>
+                <p class="num-price">2 300 €<span class="ttc">TTC · forfait</span></p>
+                <span class="tier-save">— 100 € vs 3 journées à l'unité</span>
                 <p class="num-desc">
-                    Un processus repris de bout en bout et simplifié <em>avant</em> d'être numérisé : plusieurs bases liées, gestion des droits, tableaux de bord, documentation et formation de l'équipe.
+                    Un processus repris de bout en bout et simplifié <em>avant</em> d'être numérisé : plusieurs sources de données reliées, gestion des droits, tableaux de bord, documentation et formation de l'équipe.
                 </p>
                 <p class="num-ex"><strong>Exemples :</strong> gestion documentaire · audits et plans d'action · reporting hebdomadaire multi-sites · cycle de traitement complet</p>
             </div>
 
             <div class="num-card is-custom reveal">
                 <span class="num-badge">Au-delà</span>
-                <h3 class="num-name">Sur mesure</h3>
+                <h3 class="num-name">Intégration à vos outils</h3>
                 <p class="num-price is-quote">Devis gratuit<span class="ttc">Analyse comprise</span></p>
                 <p class="num-desc">
-                    Plus de trois journées, plusieurs processus imbriqués, ou une API en jeu — ERP, WMS, TMS, logiciel de paie. Là, le prix ne s'annonce pas à l'avance : accès, droits, sécurité et qualité des données changent tout.
+                    Connecter votre outil à l'existant — ERP, WMS, TMS, logiciel de paie, CRM. Là, le prix ne s'annonce pas à l'avance : accès techniques, droits, sécurité et qualité des données changent tout.
                 </p>
-                <p class="num-ex"><strong>Vous recevez :</strong> une analyse du projet, un périmètre écrit et un chiffrage daté — sans engagement</p>
+                <p class="num-ex"><strong>Vous recevez :</strong> une vérification technique, un périmètre écrit et un chiffrage daté — sans engagement</p>
             </div>
         </div>
 
-        <p class="num-note reveal">
-            <strong>Ce que « une journée » veut dire :</strong> une journée de travail effectif de ma part — cadrage, mise en service et prise en main de l'équipe comprises — et non une journée mobilisée chez vous. Elle sert à situer l'ampleur, pas à facturer du temps passé : le prix est ferme, annoncé avant de commencer. S'il faut une journée de plus, vous l'apprenez avant, jamais sur la facture.
-        </p>
-
-        <!-- Compléments -->
+        <!-- ─── COMPLÉMENTS ─── -->
         <p class="offer-block-label reveal">Compléments</p>
 
         <div class="addon-grid">
 
             <div class="addon reveal">
-                <h3 class="addon-title">Formations</h3>
-                <p class="addon-desc">En présentiel ou à distance, sur votre propre workspace — pas sur un exemple générique.</p>
+                <h3 class="addon-title">Audit approfondi</h3>
+                <p class="addon-desc">Quand l'audit gratuit de 45 minutes ne suffit plus : une étude complète, livrée en tant que telle, même si vous ne me confiez pas la suite.</p>
                 <div class="addon-row">
-                    <span class="addon-row-name">Formation Notion — équipe réduite<span class="addon-row-meta">1 journée · jusqu'à 8 participants</span></span>
-                    <span class="addon-row-price">799 €</span>
+                    <span class="addon-row-name">Diagnostic numérique complet<span class="addon-row-meta">Entretiens terrain, cartographie des processus, priorisation impact / faisabilité, plan 30 / 60 / 90 jours</span></span>
+                    <span class="addon-row-price">1 800 €</span>
+                </div>
+                <p class="addon-desc" style="margin:16px 0 0">
+                    Il s'impute intégralement sur le palier que vous choisissez ensuite, dans l'une ou l'autre voie.
+                </p>
+            </div>
+
+            <div class="addon reveal">
+                <h3 class="addon-title">Formations</h3>
+                <p class="addon-desc">En présentiel ou à distance, sur votre propre outil — pas sur un exemple générique.</p>
+                <div class="addon-row">
+                    <span class="addon-row-name">Formation équipe réduite<span class="addon-row-meta">1 journée · jusqu'à 8 participants</span></span>
+                    <span class="addon-row-price">800 €</span>
                 </div>
                 <div class="addon-row">
                     <span class="addon-row-name">Formation référents internes<span class="addon-row-meta">2 journées · jusqu'à 5 participants</span></span>
-                    <span class="addon-row-price">1 599 €</span>
+                    <span class="addon-row-price">1 600 €</span>
                 </div>
                 <div class="addon-row">
                     <span class="addon-row-name">Formation +20 personnes<span class="addon-row-meta">Format et sessions à définir</span></span>
+                    <span class="addon-row-price">Devis gratuit</span>
+                </div>
+            </div>
+
+            <div class="addon reveal">
+                <h3 class="addon-title">Automatisations</h3>
+                <p class="addon-desc">Une fois le socle stable et les données fiables — jamais avant. On n'automatise pas un processus qui n'est pas encore clair : on automatiserait le désordre.</p>
+                <div class="addon-row">
+                    <span class="addon-row-name">Automatisation légère<span class="addon-row-meta">1 journée · relances, notifications, synchronisations simples</span></span>
+                    <span class="addon-row-price">800 €</span>
+                </div>
+                <div class="addon-row">
+                    <span class="addon-row-name">IA appliquée<span class="addon-row-meta">Extraction documentaire, reporting automatisé, assistant interne à sources vérifiables</span></span>
                     <span class="addon-row-price">Devis gratuit</span>
                 </div>
             </div>
@@ -2912,54 +3128,38 @@
                 </div>
             </div>
 
-            <div class="addon reveal">
-                <h3 class="addon-title">Automatisations &amp; intégrations</h3>
-                <p class="addon-desc">Une fois le socle stable et les données fiables — jamais avant.</p>
-                <div class="addon-row">
-                    <span class="addon-row-name">Automatisation légère<span class="addon-row-meta">1 journée · relances, notifications, synchronisations simples</span></span>
-                    <span class="addon-row-price">799 €</span>
-                </div>
-                <div class="addon-row">
-                    <span class="addon-row-name">Intégration métier<span class="addon-row-meta">Connexion à un outil existant via API</span></span>
-                    <span class="addon-row-price">Devis gratuit</span>
-                </div>
-                <p class="addon-desc" style="margin:16px 0 0">
-                    Les intégrations avec ERP, WMS, TMS ou outils internes nécessitent une vérification technique préalable : accès API, sécurité, droits, qualité des données et contraintes IT.
-                </p>
-            </div>
-
         </div>
 
-        <!-- Abonnement Notion -->
+        <!-- ─── À PRÉVOIR EN PLUS ─── -->
         <p class="offer-block-label reveal">À prévoir en plus</p>
 
         <div class="notion-cost reveal">
-            <h3 class="notion-cost-title">L'abonnement Notion</h3>
+            <h3 class="notion-cost-title">Les coûts qui ne passent pas par moi</h3>
             <p class="notion-cost-desc">
-                Mes tarifs couvrent la conception, la construction, la formation et le suivi. La licence Notion, elle, est facturée directement par l'éditeur et reste à votre charge. Elle se paie par utilisateur actif, ce qui reste modeste au regard d'un projet logiciel classique.
+                Mes tarifs couvrent la conception, la construction, la formation et le suivi. Restent à votre charge, facturés directement par les prestataires concernés : en <strong>sur mesure</strong>, l'hébergement de l'application — comptez de l'ordre de 20 à 100 € par mois pour une PME, selon les volumes. En <strong>Express</strong>, la licence Notion, facturée par utilisateur actif.
             </p>
 
             <div class="notion-tiers">
                 <div class="notion-tier">
-                    <p class="notion-tier-name">Free</p>
+                    <p class="notion-tier-name">Notion Free</p>
                     <p class="notion-tier-price">0 €</p>
                 </div>
                 <div class="notion-tier">
-                    <p class="notion-tier-name">Plus</p>
+                    <p class="notion-tier-name">Notion Plus</p>
                     <p class="notion-tier-price">≈ 10–12 $ / utilisateur / mois</p>
                 </div>
                 <div class="notion-tier">
-                    <p class="notion-tier-name">Business</p>
+                    <p class="notion-tier-name">Notion Business</p>
                     <p class="notion-tier-price">≈ 20–24 $ / utilisateur / mois</p>
                 </div>
                 <div class="notion-tier">
-                    <p class="notion-tier-name">Enterprise</p>
+                    <p class="notion-tier-name">Notion Enterprise</p>
                     <p class="notion-tier-price">Sur devis</p>
                 </div>
             </div>
 
             <p class="offer-disclaimer">
-                Tarifs à vérifier au moment de la signature, car Notion peut les faire évoluer. Le choix du plan se décide lors du cadrage, en fonction du nombre d'utilisateurs réels et de vos exigences de droits et de sécurité.
+                Tarifs à vérifier au moment de la signature, car l'éditeur peut les faire évoluer. Le choix du plan se décide lors du cadrage, en fonction du nombre d'utilisateurs réels et de vos exigences de droits et de sécurité.
             </p>
         </div>
 
@@ -2967,7 +3167,7 @@
         <div class="offer-cta-wrap reveal">
             <p class="offer-cta-text">Le premier échange ne coûte <em>rien</em>.</p>
             <div class="offer-cta">
-            <a class="btn btn-primary" href="mailto:samuelgaliere.pro@gmail.com?subject=Audit%20Notion%20PME%20logistique">Réserver un audit gratuit</a>
+            <a class="btn btn-primary" href="mailto:samuelgaliere.pro@gmail.com?subject=Audit%20gratuit%20-%20num%C3%A9risation%20des%20op%C3%A9rations">Réserver un audit gratuit</a>
             <button class="btn btn-ghost" data-launch-deck>Revoir la présentation</button>
             </div>
         </div>
@@ -2982,19 +3182,20 @@
         <span class="line-draw section-separator reveal"></span>
 
         <div class="why-body reveal">
-            <p>Ma valeur vient d'un profil hybride : <strong>architecture logicielle, IA/Data, analyse métier, product ownership et mise en œuvre concrète</strong>.</p>
+            <p>Ma spécialité tient en une phrase : <strong>depuis 2021, je travaille à la frontière de la logistique et du numérique</strong>, et nulle part ailleurs.</p>
+            <p>Ce n'est pas un profil de généraliste qui découvre votre métier : je connais les flux, le vocabulaire, les contraintes de mise en production et ce qui fait qu'un outil est réellement utilisé sur le terrain — ou abandonné en trois semaines.</p>
             <p>J'ai travaillé dans des environnements logistiques et supply chain exigeants, dont <strong>CEVA Logistics</strong> et <strong>CMA CGM</strong> : flux de données opérationnels, middleware, APIs, reporting, tracking, modélisation, gouvernance et contraintes de mise en production.</p>
             <p>J'enseigne également le Big Data et l'Intelligence Artificielle en Master à <strong>Epitech</strong>, et je construis des systèmes IA/Data au sein de mon activité indépendante.</p>
             <p>Concrètement, cela veut dire que je sais faire la différence entre un besoin réel et une envie d'outil, et que je sais dire quand une automatisation ne vaut pas encore le coup.</p>
         </div>
 
         <ul class="why-points">
-            <li class="reveal">Expérience logistique et supply chain de terrain</li>
+            <li class="reveal">Cinq ans de logistique et de supply chain, de terrain comme de système</li>
             <li class="reveal">Architecture logicielle et culture de la mise en production</li>
             <li class="reveal">Analyse métier et product ownership</li>
             <li class="reveal">Modélisation de données, APIs, reporting, gouvernance</li>
             <li class="reveal">Intégration IA/Data et prototypage rapide</li>
-            <li class="reveal">Systèmes Notion conçus pour être adoptés, pas pour être beaux</li>
+            <li class="reveal">Développement sur mesure et mise en place express : je maîtrise les deux, et je choisis selon votre besoin</li>
             <li class="reveal">Enseignement en Big Data et IA</li>
             <li class="reveal">Expérience entrepreneuriale avec Lumière</li>
         </ul>
@@ -3089,11 +3290,12 @@
                 </div>
                 <div class="exp-right">
                     <h3 class="exp-role">Architecte logiciel &amp; intégrateur IA/Data</h3>
-                    <p class="exp-context">Activité indépendante dédiée aux solutions digitales sur mesure : workflows IA/Data, applications SaaS, systèmes Notion et outils métier.</p>
+                    <p class="exp-context">Activité indépendante dédiée à la numérisation des opérations logistiques : applications métier développées sur mesure, mises en place express, workflows IA/Data et automatisations.</p>
                     <ul class="exp-bullets">
                         <li>cadrage et architecture</li>
                         <li>workflows basés sur des LLM</li>
-                        <li>workspaces Notion et numérisation de processus</li>
+                        <li>développement d'applications métier sur mesure</li>
+                        <li>mises en place Notion et numérisation de processus</li>
                         <li>automatisations et dashboards</li>
                         <li>déploiement et maintenabilité</li>
                     </ul>
@@ -3140,7 +3342,7 @@
         <div class="tech-grid">
             <div class="tech-group reveal">
                 <h3 class="tech-group-name">Systèmes opérationnels</h3>
-                <p class="tech-list">Notion <span class="sep">·</span> Architecture de workspace <span class="sep">·</span> Bases relationnelles <span class="sep">·</span> Dashboards <span class="sep">·</span> Formulaires <span class="sep">·</span> Numérisation de processus <span class="sep">·</span> Documentation</p>
+                <p class="tech-list">Applications métier sur mesure <span class="sep">·</span> Notion <span class="sep">·</span> Architecture de workspace <span class="sep">·</span> Bases relationnelles <span class="sep">·</span> Dashboards <span class="sep">·</span> Formulaires <span class="sep">·</span> Numérisation de processus <span class="sep">·</span> Documentation</p>
             </div>
             <div class="tech-group reveal">
                 <h3 class="tech-group-name">Automatisation &amp; intégration</h3>
@@ -3221,7 +3423,7 @@
         </ul>
 
         <div class="contact-actions reveal">
-            <a class="btn-contact" href="mailto:samuelgaliere.pro@gmail.com?subject=Audit%20Notion%20PME%20logistique">Réserver un audit gratuit</a>
+            <a class="btn-contact" href="mailto:samuelgaliere.pro@gmail.com?subject=Audit%20gratuit%20-%20num%C3%A9risation%20des%20op%C3%A9rations">Réserver un audit gratuit</a>
             <button class="btn-contact" data-launch-deck style="background:transparent;color:var(--cream);border-color:rgba(245,242,235,0.3)">Lancer la présentation</button>
             <button class="btn-contact" onclick="window.print()" style="background:transparent;color:var(--cream);border-color:rgba(245,242,235,0.3)">Télécharger le CV (PDF)</button>
         </div>
@@ -3245,7 +3447,7 @@
 <!-- ══════════════════════════════════════════════════════════════
      DIAPORAMA — OVERLAY PLEIN ÉCRAN
      ══════════════════════════════════════════════════════════════ -->
-<div class="deck" id="deck" role="dialog" aria-modal="true" aria-label="Présentation — Notion pour structurer vos opérations" aria-hidden="true">
+<div class="deck" id="deck" role="dialog" aria-modal="true" aria-label="Présentation — Numériser vos opérations logistiques" aria-hidden="true">
 
     <div class="deck-progress" id="deckProgress"></div>
     <button class="deck-close" id="deckClose" aria-label="Fermer la présentation">Fermer ✕</button>
@@ -3255,15 +3457,16 @@
         <!-- 01 — TITRE -->
         <section class="slide s-moss">
             <div class="slide-inner">
-                <span class="s-eyebrow">Samuel Galiere · Systèmes opérationnels</span>
-                <h2 class="s-title-xl">Notion pour structurer vos <em>opérations</em></h2>
+                <span class="s-eyebrow">Samuel Galiere · Expert numérique pour la logistique</span>
+                <h2 class="s-title-xl">Numériser vos <em>opérations</em></h2>
                 <p class="s-lead">
-                    Transformer fichiers, procédures et suivis dispersés en cockpit opérationnel clair, adopté par les équipes terrain.
+                    Transformer fichiers, procédures et suivis dispersés en outils que les équipes terrain utilisent vraiment. Deux voies possibles — sur mesure ou express — et je vous dis laquelle est la vôtre.
                 </p>
                 <div class="s-brand">
-                    <span>PME logistiques</span><span class="dot">·</span>
-                    <span>Numérisation de processus</span><span class="dot">·</span>
-                    <span>IA &amp; Data appliquées</span>
+                    <span>Depuis 2021 dans la logistique</span><span class="dot">·</span>
+                    <span>CEVA Logistics</span><span class="dot">·</span>
+                    <span>CMA CGM</span><span class="dot">·</span>
+                    <span>Epitech</span>
                 </div>
             </div>
         </section>
@@ -3302,49 +3505,59 @@
             </div>
         </section>
 
-        <!-- 04 — C'EST QUOI NOTION -->
-        <section class="slide">
+        <!-- 04 — LES DEUX VOIES -->
+        <section class="slide s-alt">
             <div class="slide-inner">
-                <span class="s-eyebrow">Comprendre l'outil</span>
-                <h2 class="s-title">Notion, simplement : <em>pages + bases + vues</em></h2>
-                <div class="s-cols s-cols-3">
+                <span class="s-eyebrow">Mon offre</span>
+                <h2 class="s-title">Deux façons de construire. <em>Une seule méthode.</em></h2>
+                <div class="s-cols s-cols-2">
                     <div class="s-card">
-                        <span class="s-card-tag">Pages</span>
-                        <h3 class="s-card-title">L'écrit qui reste</h3>
-                        <p class="s-card-desc">Procédures, comptes-rendus, guides, décisions. Une base documentaire vivante, versionnée, réellement consultée.</p>
+                        <span class="s-card-tag">Voie 1 · Sur mesure</span>
+                        <h3 class="s-card-title">Un logiciel écrit pour votre métier</h3>
+                        <ul class="s-card-list">
+                            <li>1 à 3 semaines de développement</li>
+                            <li>À partir de 4 000 €</li>
+                            <li>Vos règles, vos volumes, vos écrans</li>
+                            <li>Accès possible pour vos clients</li>
+                            <li>L'outil vous appartient</li>
+                        </ul>
                     </div>
                     <div class="s-card">
-                        <span class="s-card-tag">Bases</span>
-                        <h3 class="s-card-title">Le suivi structuré</h3>
-                        <p class="s-card-desc">Incidents, actions, clients, transporteurs, litiges. Chaque ligne a un statut, un responsable et une date.</p>
-                    </div>
-                    <div class="s-card">
-                        <span class="s-card-tag">Vues</span>
-                        <h3 class="s-card-title">La lecture par rôle</h3>
-                        <p class="s-card-desc">Tableaux, kanban, dashboards par équipe ou par priorité. Chacun voit sa part, sans dupliquer la donnée.</p>
+                        <span class="s-card-tag">Voie 2 · Express</span>
+                        <h3 class="s-card-title">Le même résultat, en jours plutôt qu'en mois</h3>
+                        <ul class="s-card-list">
+                            <li>3 à 8 journées de travail</li>
+                            <li>À partir de 2 600 €</li>
+                            <li>Vos équipes le font évoluer seules</li>
+                            <li>Pas de code à maintenir</li>
+                            <li>Idéal quand le besoin va encore bouger</li>
+                        </ul>
                     </div>
                 </div>
                 <p class="s-footnote">
-                    Trois briques, une seule règle : une information n'existe qu'à un seul endroit, et tout le reste n'en est qu'une vue.
+                    Mêmes étapes gratuites avant engagement, même méthode de mise en œuvre, mêmes options à la carte à 800 € la journée. La voie se décide ensemble, une fois le besoin posé — et les deux se combinent très bien.
                 </p>
             </div>
         </section>
 
-        <!-- 05 — POURQUOI ADAPTÉ AUX PME -->
-        <section class="slide s-alt">
+        <!-- 05 — NOTION, LE SEUL SLIDE -->
+        <section class="slide s-moss">
             <div class="slide-inner">
-                <span class="s-eyebrow">Pertinence</span>
-                <h2 class="s-title">Structurer vite, <em>sans lancer un gros projet IT</em></h2>
-                <ul class="s-list two">
-                    <li>Une première version utile en quelques jours</li>
-                    <li>Flexible : le système suit vos usages, pas l'inverse</li>
-                    <li>Facile à faire évoluer sans développeur</li>
-                    <li>Compréhensible par les équipes terrain</li>
-                    <li>Coût d'entrée très inférieur à un projet logiciel</li>
-                    <li>Bon outil de transition avant automatisation</li>
-                </ul>
+                <span class="s-eyebrow">La voie express</span>
+                <h2 class="s-title">L'express, c'est Notion — et j'en suis <em>expert</em></h2>
+                <p class="s-lead" style="margin-top:calc(var(--u) * 1.2)">
+                    Notion est un outil du marché sur lequel on construit de vrais outils internes : tableaux de suivi reliés, formulaires, vues par équipe, tableaux de bord, procédures. Je ne développe rien — je monte votre outil directement dedans.
+                </p>
+                <div class="s-hero-price">
+                    <div>
+                        <span class="s-card-tag">Le délai avant de pouvoir s'en servir</span>
+                        <h3 class="s-card-title" style="font-size:var(--t-lg)">3 à 6 mois de développement sur mesure &nbsp;→&nbsp; 1 à 2 semaines</h3>
+                        <p class="s-card-desc">Même besoin, même résultat opérationnel. Moins d'attente, moins de budget d'entrée, et aucun code à maintenir derrière.</p>
+                    </div>
+                    <p class="s-hero-price-num">5 à 10×<span class="ttc">plus rapide</span></p>
+                </div>
                 <p class="s-footnote">
-                    L'objectif n'est pas d'installer un outil de plus. C'est de rendre visible, en quelques semaines, ce qui se perd aujourd'hui entre vos outils.
+                    Ce que je dis avant de commencer : il reste une licence par utilisateur à votre charge, et certaines choses sortent du périmètre — stock en temps réel, facturation, transactions critiques, très gros volumes. Dans ces cas-là, la bonne réponse est le sur mesure, et je vous le dirai.
                 </p>
             </div>
         </section>
@@ -3356,12 +3569,12 @@
                 <h2 class="s-title">Des irritants terrain convertis en <em>modules utiles</em></h2>
                 <div class="s-table">
                     <div class="s-table-head">
-                        <span>Irritant</span><span></span><span>Module Notion</span>
+                        <span>Irritant</span><span></span><span>Ce qu'on met en place</span>
                     </div>
                     <div class="s-table-row">
                         <span class="from">Anomalies suivies par mail</span>
                         <span class="arrow">→</span>
-                        <span class="to">Base Incidents : statut, client, transporteur, responsable</span>
+                        <span class="to">Suivi des incidents : statut, client, transporteur, responsable</span>
                     </div>
                     <div class="s-table-row">
                         <span class="from">Procédures introuvables</span>
@@ -3384,6 +3597,9 @@
                         <span class="to">Formulaire d'entrée et suivi par statut</span>
                     </div>
                 </div>
+                <p class="s-footnote">
+                    Chacun de ces modules se construit dans l'une ou l'autre voie. Le choix se fait sur le délai, le budget et la complexité de vos règles — pas sur une préférence de technologie.
+                </p>
             </div>
         </section>
 
@@ -3417,14 +3633,14 @@
             </div>
         </section>
 
-        <!-- 08 — PAS UN ERP MAGIQUE -->
+        <!-- 08 — PÉRIMÈTRE HONNÊTE -->
         <section class="slide">
             <div class="slide-inner">
                 <span class="s-eyebrow">Honnêteté sur le périmètre</span>
-                <h2 class="s-title">Notion ne remplace pas tout. Il relie <em>ce qui se perd entre vos outils</em>.</h2>
+                <h2 class="s-title">Je ne remplace pas tout. Je relie <em>ce qui se perd entre vos outils</em>.</h2>
                 <div class="s-cols s-cols-3">
                     <div class="s-card">
-                        <span class="s-card-tag">Remplace ou simplifie</span>
+                        <span class="s-card-tag">Je remplace ou simplifie</span>
                         <ul class="s-card-list">
                             <li>Suivis Excel non critiques</li>
                             <li>Procédures en Word dispersées</li>
@@ -3433,7 +3649,7 @@
                         </ul>
                     </div>
                     <div class="s-card">
-                        <span class="s-card-tag">Complète</span>
+                        <span class="s-card-tag">Je complète</span>
                         <ul class="s-card-list">
                             <li>ERP, WMS, TMS</li>
                             <li>CRM et outils commerciaux</li>
@@ -3452,51 +3668,43 @@
                     </div>
                 </div>
                 <p class="s-footnote">
-                    Notion ne remplace pas forcément votre ERP, WMS ou TMS. En revanche, il peut devenir la couche qui relie vos informations, vos procédures, vos suivis et vos décisions.
+                    La troisième colonne est celle qui tranche entre les deux voies : dès qu'un sujet y tombe, on part sur du sur mesure plutôt que sur de l'express.
                 </p>
             </div>
         </section>
 
         <!-- 09 — MÉTHODE -->
-        <section class="slide s-moss">
+        <section class="slide s-ink">
             <div class="slide-inner">
                 <span class="s-eyebrow">Méthode</span>
-                <h2 class="s-title">Une mise en place progressive pour <em>éviter l'usine à gaz</em></h2>
-                <div class="s-steps">
-                    <div class="s-step">
-                        <span class="s-step-num">1</span>
-                        <h3 class="s-step-name">Comprendre</h3>
-                        <p class="s-step-desc">Entretiens terrain et lecture des flux réels.</p>
+                <h2 class="s-title">Quatre étapes gratuites, <em>puis seulement on construit</em></h2>
+                <div class="s-cols s-cols-2">
+                    <div class="s-card">
+                        <span class="s-card-tag">Avant tout engagement · gratuit</span>
+                        <ul class="s-card-list">
+                            <li><strong>A · Découverte</strong> — 20 à 30 min : votre activité, ce qui coince</li>
+                            <li><strong>B · Audit</strong> — 45 min avec vos équipes, sur le terrain</li>
+                            <li><strong>C · Plan de route</strong> — priorités, périmètre, et le choix de la voie</li>
+                            <li><strong>D · Devis à valider</strong> — livrables, budget, planning, limites</li>
+                        </ul>
                     </div>
-                    <div class="s-step">
-                        <span class="s-step-num">2</span>
-                        <h3 class="s-step-name">Prioriser</h3>
-                        <p class="s-step-desc">Fort irritant, faible complexité, résultat visible.</p>
-                    </div>
-                    <div class="s-step">
-                        <span class="s-step-num">3</span>
-                        <h3 class="s-step-name">Construire</h3>
-                        <p class="s-step-desc">Bases, vues, formulaires, dashboards utiles.</p>
-                    </div>
-                    <div class="s-step">
-                        <span class="s-step-num">4</span>
-                        <h3 class="s-step-name">Former</h3>
-                        <p class="s-step-desc">Référents internes, règles d'usage, documentation.</p>
-                    </div>
-                    <div class="s-step">
-                        <span class="s-step-num">5</span>
-                        <h3 class="s-step-name">Améliorer</h3>
-                        <p class="s-step-desc">Automatisations et intégrations, une fois le socle stable.</p>
+                    <div class="s-card">
+                        <span class="s-card-tag">Après validation · la réalisation</span>
+                        <ul class="s-card-list">
+                            <li><strong>1 · Construire</strong> — fort irritant, faible complexité d'abord</li>
+                            <li><strong>2 · Former</strong> — référents internes, règles d'usage, documentation</li>
+                            <li><strong>3 · Améliorer</strong> — automatisations et intégrations, socle stable</li>
+                        </ul>
                     </div>
                 </div>
                 <p class="s-footnote">
-                    On ne branche jamais l'automatisation sur un processus qui n'est pas encore clair : on automatiserait le désordre.
+                    On ne branche jamais l'automatisation sur un processus qui n'est pas encore clair : on automatiserait le désordre. Et rien n'est facturé tant que le devis n'est pas signé.
                 </p>
             </div>
         </section>
 
         <!-- 10 — 30 JOURS -->
-        <section class="slide s-ink">
+        <section class="slide">
             <div class="slide-inner">
                 <span class="s-eyebrow">Horizon court</span>
                 <h2 class="s-title">En 30 jours, vous pouvez déjà <em>reprendre le contrôle</em></h2>
@@ -3504,8 +3712,8 @@
                     <li>Une source de vérité identifiée et en service</li>
                     <li>Un processus prioritaire entièrement numérisé</li>
                     <li>Des responsabilités visibles par tous</li>
-                    <li>Une équipe formée sur son propre workspace</li>
-                    <li>Des dashboards simples et lus chaque semaine</li>
+                    <li>Une équipe formée sur son propre outil</li>
+                    <li>Des tableaux de bord simples et lus chaque semaine</li>
                     <li>Un backlog d'automatisations priorisé</li>
                 </ul>
                 <p class="s-footnote">
@@ -3514,92 +3722,113 @@
             </div>
         </section>
 
-        <!-- 11 — OFFRES -->
-        <section class="slide">
-            <div class="slide-inner">
-                <span class="s-eyebrow">Offres</span>
-                <h2 class="s-title">Des packs clairs, <em>orientés résultat</em></h2>
-                <div class="s-packs">
-                    <div class="s-pack">
-                        <h3 class="s-pack-name">Diagnostic numérique express</h3>
-                        <p class="s-pack-goal">Savoir quoi numériser en priorité.</p>
-                        <p class="s-pack-price">1 800 €<span class="ttc">TTC</span></p>
-                    </div>
-                    <div class="s-pack">
-                        <h3 class="s-pack-name">Workspace Starter</h3>
-                        <p class="s-pack-goal">Une première base propre, utilisable vite.</p>
-                        <p class="s-pack-price">2 600 €<span class="ttc">TTC</span></p>
-                    </div>
-                    <div class="s-pack is-reco">
-                        <span class="s-pack-badge">Recommandé</span>
-                        <h3 class="s-pack-name">Workspace Business</h3>
-                        <p class="s-pack-goal">Plusieurs processus structurés et pilotés.</p>
-                        <p class="s-pack-price">4 000 €<span class="ttc">TTC</span></p>
-                    </div>
-                    <div class="s-pack">
-                        <h3 class="s-pack-name">Cockpit Opérations Logistiques</h3>
-                        <p class="s-pack-goal">Le pilotage complet, autonomie comprise.</p>
-                        <p class="s-pack-price">6 500 €<span class="ttc">TTC</span></p>
-                    </div>
-                </div>
-                <p class="s-footnote">
-                    Starter, Business et Cockpit s'emboîtent : chaque palier reprend le précédent et l'étend. À greffer sur celui de votre choix : la numérisation d'un processus, détaillée page suivante, déjà comprise dans le Cockpit. Formations, suivi mensuel et automatisations à la carte.
-                </p>
-            </div>
-        </section>
-
-        <!-- 12 — NUMÉRISER UN PROCESSUS -->
+        <!-- 11 — OFFRES SUR MESURE -->
         <section class="slide s-alt">
             <div class="slide-inner">
-                <span class="s-eyebrow">Offres — à la carte</span>
-                <h2 class="s-title">Numériser un processus : <em>trois formats</em></h2>
+                <span class="s-eyebrow">Offres · Voie 1</span>
+                <h2 class="s-title">Sur mesure : <em>quatre paliers</em></h2>
                 <div class="s-packs">
                     <div class="s-pack">
-                        <span class="s-pack-badge">1 journée</span>
-                        <h3 class="s-pack-name">Petite numérisation</h3>
-                        <p class="s-pack-goal">Un formulaire d'entrée, sa base de suivi, une vue de traitement.</p>
-                        <p class="s-pack-price">799 €<span class="ttc">TTC · forfait</span></p>
+                        <span class="s-pack-badge">1 semaine · 5 j</span>
+                        <h3 class="s-pack-name">Outil ciblé</h3>
+                        <p class="s-pack-goal">Un besoin précis, réglé pour de bon : base de données, écrans, mise en ligne.</p>
+                        <p class="s-pack-price">4 000 €<span class="ttc">TTC</span></p>
+                    </div>
+                    <div class="s-pack is-reco">
+                        <span class="s-pack-badge">Recommandé · 2 semaines · 10 j</span>
+                        <h3 class="s-pack-name">Outil métier</h3>
+                        <p class="s-pack-goal">Rôles, droits, workflow à étapes, relances automatiques, tableau de bord.</p>
+                        <p class="s-pack-price">7 500 €<span class="ttc">TTC · −500 €</span></p>
                     </div>
                     <div class="s-pack">
-                        <span class="s-pack-badge">2 journées</span>
-                        <h3 class="s-pack-name">Moyenne numérisation</h3>
-                        <p class="s-pack-goal">Plusieurs étapes et plusieurs rôles : bases liées, statuts, relances, tableau de bord.</p>
-                        <p class="s-pack-price">1 599 €<span class="ttc">TTC · forfait</span></p>
-                    </div>
-                    <div class="s-pack">
-                        <span class="s-pack-badge">3 journées</span>
-                        <h3 class="s-pack-name">Grande numérisation</h3>
-                        <p class="s-pack-goal">Le processus de bout en bout, simplifié avant d'être numérisé, équipe formée.</p>
-                        <p class="s-pack-price">2 299 €<span class="ttc">TTC · forfait</span></p>
+                        <span class="s-pack-badge">3 semaines · 15 j</span>
+                        <h3 class="s-pack-name">Outil complet</h3>
+                        <p class="s-pack-goal">Plusieurs modules, dashboards par rôle, documentation, formation, un mois d'ajustements.</p>
+                        <p class="s-pack-price">11 000 €<span class="ttc">TTC · −1 000 €</span></p>
                     </div>
                     <div class="s-pack">
                         <span class="s-pack-badge">Au-delà</span>
-                        <h3 class="s-pack-name">Sur mesure</h3>
-                        <p class="s-pack-goal">Plusieurs processus imbriqués, ou une API en jeu : ERP, WMS, TMS, paie.</p>
+                        <h3 class="s-pack-name">Sur devis</h3>
+                        <p class="s-pack-goal">Modules imbriqués, connexion profonde à vos outils, exigences de sécurité.</p>
                         <p class="s-pack-price is-quote">Devis gratuit<span class="ttc">Analyse comprise</span></p>
                     </div>
                 </div>
                 <p class="s-footnote">
-                    La journée situe l'ampleur, elle ne facture pas du temps passé : le prix est ferme et annoncé avant de commencer. Ces formats se greffent sur un pack, sur un workspace existant, ou se prennent seuls.
+                    Chaque palier reprend le précédent et l'étend — vous ne rachetez jamais ce que vous avez déjà. Base de calcul : 800 € la journée, avec une remise dès qu'on package plusieurs semaines.
                 </p>
             </div>
         </section>
 
-        <!-- 13 — PACK RECOMMANDÉ -->
-        <section class="slide s-moss">
+        <!-- 12 — OFFRES EXPRESS -->
+        <section class="slide s-alt">
             <div class="slide-inner">
-                <span class="s-eyebrow">Recommandation</span>
-                <h2 class="s-title">Le vrai sujet : reprendre le contrôle de <em>vos opérations</em></h2>
-                <div class="s-hero-price">
-                    <div>
-                        <span class="s-card-tag">Pack recommandé — Workspace Business</span>
-                        <h3 class="s-card-title" style="font-size:var(--t-lg)">4 à 6 bases liées, vues par rôle, tableaux de bord, formulaires, droits et documentation</h3>
-                        <p class="s-card-desc">Cadrer le bon système, livrer vite et ancrer l'adoption terrain.</p>
+                <span class="s-eyebrow">Offres · Voie 2</span>
+                <h2 class="s-title">Express : <em>quatre paliers</em></h2>
+                <div class="s-packs">
+                    <div class="s-pack">
+                        <span class="s-pack-badge">≈ 3 journées</span>
+                        <h3 class="s-pack-name">Socle</h3>
+                        <p class="s-pack-goal">Un espace structuré, 2 à 3 tableaux de suivi, un premier tableau de bord.</p>
+                        <p class="s-pack-price">2 600 €<span class="ttc">TTC</span></p>
                     </div>
-                    <p class="s-hero-price-num">4 000 €<span class="ttc">TTC</span></p>
+                    <div class="s-pack is-reco">
+                        <span class="s-pack-badge">Recommandé · ≈ 5 journées</span>
+                        <h3 class="s-pack-name">Pilotage</h3>
+                        <p class="s-pack-goal">4 à 6 tableaux reliés, vues par rôle, formulaires, dashboards, droits, documentation.</p>
+                        <p class="s-pack-price">4 000 €<span class="ttc">TTC</span></p>
+                    </div>
+                    <div class="s-pack">
+                        <span class="s-pack-badge">≈ 8 journées</span>
+                        <h3 class="s-pack-name">Cockpit</h3>
+                        <p class="s-pack-goal">Espaces par équipe, dashboards par rôle, un processus de bout en bout, autonomie.</p>
+                        <p class="s-pack-price">6 500 €<span class="ttc">TTC · −1 400 €</span></p>
+                    </div>
+                    <div class="s-pack">
+                        <span class="s-pack-badge">Au-delà</span>
+                        <h3 class="s-pack-name">Sur devis</h3>
+                        <p class="s-pack-goal">Plusieurs sites, gros volumes, connexion à vos outils métier.</p>
+                        <p class="s-pack-price is-quote">Devis gratuit<span class="ttc">Analyse comprise</span></p>
+                    </div>
                 </div>
                 <p class="s-footnote">
-                    1 400 € de plus que le Starter, pour un périmètre doublé. En dessous, vous rangez vos informations. À partir d'ici, vous pilotez votre activité.
+                    Même logique d'emboîtement, même base de 800 € la journée. Reste à votre charge la licence par utilisateur, facturée directement par l'éditeur.
+                </p>
+            </div>
+        </section>
+
+        <!-- 13 — OPTIONS COMMUNES -->
+        <section class="slide s-moss">
+            <div class="slide-inner">
+                <span class="s-eyebrow">Options · identiques dans les deux voies</span>
+                <h2 class="s-title">Tout se compte en journées à <em>800 €</em></h2>
+                <div class="s-packs">
+                    <div class="s-pack">
+                        <span class="s-pack-badge">1 journée</span>
+                        <h3 class="s-pack-name">Petit processus</h3>
+                        <p class="s-pack-goal">Un formulaire d'entrée, sa base de suivi, une vue de traitement.</p>
+                        <p class="s-pack-price">800 €<span class="ttc">TTC</span></p>
+                    </div>
+                    <div class="s-pack">
+                        <span class="s-pack-badge">2 journées</span>
+                        <h3 class="s-pack-name">Processus moyen</h3>
+                        <p class="s-pack-goal">Plusieurs étapes et plusieurs rôles : statuts, relances, tableau de bord.</p>
+                        <p class="s-pack-price">1 600 €<span class="ttc">TTC</span></p>
+                    </div>
+                    <div class="s-pack">
+                        <span class="s-pack-badge">3 journées</span>
+                        <h3 class="s-pack-name">Gros processus</h3>
+                        <p class="s-pack-goal">Le processus de bout en bout, simplifié avant d'être numérisé, équipe formée.</p>
+                        <p class="s-pack-price">2 300 €<span class="ttc">TTC</span></p>
+                    </div>
+                    <div class="s-pack">
+                        <span class="s-pack-badge">Sur devis</span>
+                        <h3 class="s-pack-name">Intégrations</h3>
+                        <p class="s-pack-goal">Connexion à l'ERP, au WMS, au TMS, à la paie ou au CRM.</p>
+                        <p class="s-pack-price is-quote">Devis gratuit<span class="ttc">Analyse comprise</span></p>
+                    </div>
+                </div>
+                <p class="s-footnote">
+                    S'y ajoutent, au même tarif journalier : audit approfondi (1 800 €), formations (800 € la journée), automatisations (800 € la journée) et suivi mensuel (400 à 1 600 € par mois, sans engagement). La journée situe l'ampleur — elle ne facture pas du temps passé : le prix est ferme et annoncé avant de commencer.
                 </p>
             </div>
         </section>
@@ -3611,22 +3840,22 @@
                 <h2 class="s-title">Transformer le flou opérationnel en <em>système pilotable</em></h2>
                 <div class="s-cols s-cols-3">
                     <div class="s-card">
-                        <span class="s-card-tag">Étape 1 · Gratuit</span>
-                        <h3 class="s-card-title">Audit rapide</h3>
-                        <p class="s-card-desc">45 minutes avec vos équipes pour voir où l'information se perd réellement.</p>
+                        <span class="s-card-tag">Étapes A &amp; B · Gratuit</span>
+                        <h3 class="s-card-title">Découverte et audit</h3>
+                        <p class="s-card-desc">Une heure et quart au total, avec vos équipes, pour voir où l'information se perd réellement.</p>
                     </div>
                     <div class="s-card">
-                        <span class="s-card-tag">Étape 2 · Gratuit</span>
-                        <h3 class="s-card-title">Priorités et périmètre</h3>
-                        <p class="s-card-desc">Ce qu'on traite d'abord, ce qui attend, et ce qui n'a pas besoin d'un outil.</p>
+                        <span class="s-card-tag">Étape C · Gratuit</span>
+                        <h3 class="s-card-title">Plan de route et voie</h3>
+                        <p class="s-card-desc">Ce qu'on traite d'abord, ce qui attend, ce qui n'a pas besoin d'outil — et sur mesure ou express.</p>
                     </div>
                     <div class="s-card">
-                        <span class="s-card-tag">Étape 3 · Gratuit</span>
-                        <h3 class="s-card-title">Proposition claire</h3>
-                        <p class="s-card-desc">Livrables, budget, planning et limites annoncées. Sans zone grise.</p>
+                        <span class="s-card-tag">Étape D · Gratuit</span>
+                        <h3 class="s-card-title">Devis à valider</h3>
+                        <p class="s-card-desc">Livrables, budget, planning et limites annoncées. Sans zone grise, et le prix ne bouge plus après.</p>
                     </div>
                 </div>
-                <a class="s-cta" href="mailto:samuelgaliere.pro@gmail.com?subject=Audit%20Notion%20PME%20logistique">Réserver un audit gratuit</a>
+                <a class="s-cta" href="mailto:samuelgaliere.pro@gmail.com?subject=Audit%20gratuit%20-%20num%C3%A9risation%20des%20op%C3%A9rations">Réserver un audit gratuit</a>
                 <p class="s-footnote" style="margin-top:calc(var(--u) * 1.4)">
                     Samuel Galiere · samuelgaliere.pro@gmail.com · +33 7 82 56 74 56 · Marseille
                 </p>
@@ -3637,7 +3866,7 @@
 
     <div class="deck-bar">
         <button class="deck-btn" id="deckPrev" aria-label="Slide précédente">←</button>
-        <span class="deck-counter"><span id="deckCurrent">1</span><span class="total"> / <span id="deckTotal">13</span></span></span>
+        <span class="deck-counter"><span id="deckCurrent">1</span><span class="total"> / <span id="deckTotal">14</span></span></span>
         <button class="deck-btn" id="deckNext" aria-label="Slide suivante">→</button>
         <div class="deck-dots" id="deckDots"></div>
     </div>
@@ -3771,6 +4000,35 @@
     }, { threshold: 0.5 });
 
     document.querySelectorAll('.line-draw').forEach(el => lineObserver.observe(el));
+    // ─── SÉLECTEUR DE VOIE (sur mesure / express)
+    (function () {
+        const tabs = [...document.querySelectorAll('.seg-btn[role="tab"]')];
+        if (!tabs.length) return;
+
+        function select(tab) {
+            tabs.forEach(t => {
+                const on = t === tab;
+                t.setAttribute('aria-selected', on ? 'true' : 'false');
+                const panel = document.getElementById(t.getAttribute('aria-controls'));
+                if (!panel) return;
+                panel.hidden = !on;
+                // Une voie révélée après coup ne doit pas rester invisible
+                if (on) panel.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+            });
+        }
+
+        tabs.forEach((tab, i) => {
+            tab.addEventListener('click', () => select(tab));
+            tab.addEventListener('keydown', e => {
+                if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+                e.preventDefault();
+                const next = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+                next.focus();
+                select(next);
+            });
+        });
+    })();
+
     // ─── DIAPORAMA
     (function () {
         const deck = document.getElementById('deck');
@@ -3909,8 +4167,8 @@
       "@type": "ProfilePage",
       "@id": "https://samuelgaliere.tech/#webpage",
       "url": "https://samuelgaliere.tech/",
-      "name": "Consultant Notion, IA & Data pour la logistique — Samuel Galiere",
-      "description": "Consultant freelance à Marseille : je structure les opérations des PME logistiques avec Notion, des automatisations et des dashboards.",
+      "name": "Numériser les opérations logistiques — Samuel Galiere",
+      "description": "Expert numérique pour la logistique depuis 2021. Deux voies pour numériser vos opérations : un outil développé sur mesure, ou une mise en place express sur Notion.",
       "isPartOf": { "@id": "https://samuelgaliere.tech/#website" },
       "about": { "@id": "https://samuelgaliere.tech/#samuel" },
       "mainEntity": { "@id": "https://samuelgaliere.tech/#samuel" },
@@ -3932,8 +4190,8 @@
       "image": "https://samuelgaliere.tech/og-image.png",
       "email": "mailto:samuelgaliere.pro@gmail.com",
       "telephone": "+33782567456",
-      "jobTitle": "Architecte logiciel & consultant IA / Data pour les opérations logistiques",
-      "description": "J'aide les PME logistiques à transformer leurs fichiers, procédures et suivis dispersés en systèmes opérationnels clairs : Notion, automatisations, dashboards et intégrations métier.",
+      "jobTitle": "Expert numérique pour la logistique — architecte logiciel & consultant IA / Data",
+      "description": "Depuis 2021 à la frontière de la logistique et du numérique. Je numérise les opérations des PME logistiques par deux voies : développement sur mesure, ou mise en place express sur Notion.",
       "nationality": { "@type": "Country", "name": "France" },
       "address": {
         "@type": "PostalAddress",
@@ -3951,6 +4209,8 @@
         { "@type": "Language", "name": "Espagnol", "alternateName": "es" }
       ],
       "knowsAbout": [
+        "Numérisation des opérations logistiques",
+        "Développement logiciel sur mesure",
         "Notion",
         "Numérisation de processus",
         "Architecture de workspace Notion",
@@ -4005,7 +4265,7 @@
         "@type": "Occupation",
         "name": "Consultant en numérisation des opérations",
         "occupationLocation": { "@type": "City", "name": "Marseille" },
-        "skills": "Notion, automatisation, IA & Data, architecture logicielle, business analysis"
+        "skills": "Développement sur mesure, Notion, automatisation, IA & Data, architecture logicielle, business analysis, logistique"
       }
     },
     {
@@ -4015,11 +4275,11 @@
       "alternateName": "Samuel Galiere",
       "url": "https://samuelgaliere.tech/",
       "image": "https://samuelgaliere.tech/og-image.png",
-      "description": "Numérisation des opérations pour les PME logistiques : audit, workspace Notion, automatisations, dashboards et intégrations métier.",
+      "description": "Numérisation des opérations pour les PME logistiques : audit gratuit, développement sur mesure ou mise en place express sur Notion, automatisations, dashboards et intégrations métier.",
       "founder": { "@id": "https://samuelgaliere.tech/#samuel" },
       "email": "samuelgaliere.pro@gmail.com",
       "telephone": "+33782567456",
-      "priceRange": "799 € – 6 500 €",
+      "priceRange": "800 € – 11 000 €",
       "currenciesAccepted": "EUR",
       "address": {
         "@type": "PostalAddress",
@@ -4035,11 +4295,12 @@
       ],
       "availableLanguage": ["fr", "en", "es"],
       "serviceType": [
-        "Numérisation de processus",
-        "Conseil Notion",
+        "Numérisation des opérations logistiques",
+        "Développement logiciel sur mesure",
+        "Conseil et mise en place Notion",
         "Automatisation des processus",
         "Intégration IA & Data",
-        "Formation Notion"
+        "Formation"
       ],
       "sameAs": [
         "https://www.linkedin.com/in/samuel-galiere/",
@@ -4051,42 +4312,68 @@
         "itemListElement": [
           {
             "@type": "OfferCatalog",
-            "name": "Les packs",
+            "name": "Voie 1 — Sur mesure",
             "itemListElement": [
               {
                 "@type": "Offer",
-                "name": "Diagnostic numérique express",
-                "description": "Savoir quoi numériser en priorité : entretiens terrain, cartographie des processus, priorisation impact / faisabilité et plan d'action 30 / 60 / 90 jours.",
-                "price": "1800",
-                "priceCurrency": "EUR",
-                "valueAddedTaxIncluded": true,
-                "availability": "https://schema.org/InStock",
-                "itemOffered": { "@type": "Service", "name": "Diagnostic numérique express", "serviceType": "Audit et cadrage des opérations" }
-              },
-              {
-                "@type": "Offer",
-                "name": "Workspace Starter",
-                "description": "Une première base Notion propre et utilisable vite : architecture simple, 2 à 3 bases opérationnelles, mini-dashboard et modèles de procédures.",
-                "price": "2600",
-                "priceCurrency": "EUR",
-                "valueAddedTaxIncluded": true,
-                "availability": "https://schema.org/InStock",
-                "itemOffered": { "@type": "Service", "name": "Workspace Starter", "serviceType": "Construction de workspace Notion" }
-              },
-              {
-                "@type": "Offer",
-                "name": "Workspace Business",
-                "description": "Plusieurs processus structurés et pilotés : 4 à 6 bases liées, vues par rôle, formulaires internes, tableaux de bord, droits et documentation.",
+                "name": "Outil ciblé — 1 semaine",
+                "description": "Cinq journées de développement : une application accessible depuis un navigateur, une base de données propre, les écrans de saisie et de suivi, mise en ligne et prise en main.",
                 "price": "4000",
                 "priceCurrency": "EUR",
                 "valueAddedTaxIncluded": true,
                 "availability": "https://schema.org/InStock",
-                "itemOffered": { "@type": "Service", "name": "Workspace Business", "serviceType": "Construction de workspace Notion" }
+                "itemOffered": { "@type": "Service", "name": "Outil ciblé sur mesure", "serviceType": "Développement logiciel sur mesure" }
               },
               {
                 "@type": "Offer",
-                "name": "Cockpit Opérations Logistiques",
-                "description": "Le pilotage complet, autonomie comprise : 8 bases et plus, tableaux de bord par rôle, automatisations, formation et transfert d'autonomie.",
+                "name": "Outil métier — 2 semaines",
+                "description": "Dix journées de développement : comptes et droits par rôle, workflow à étapes et validations, notifications et relances automatiques, tableau de bord, reprise des données existantes.",
+                "price": "7500",
+                "priceCurrency": "EUR",
+                "valueAddedTaxIncluded": true,
+                "availability": "https://schema.org/InStock",
+                "itemOffered": { "@type": "Service", "name": "Outil métier sur mesure", "serviceType": "Développement logiciel sur mesure" }
+              },
+              {
+                "@type": "Offer",
+                "name": "Outil complet — 3 semaines",
+                "description": "Quinze journées de développement : plusieurs modules reliés, tableaux de bord par rôle et exports, documentation, formation des équipes et un mois d'ajustements après la mise en ligne.",
+                "price": "11000",
+                "priceCurrency": "EUR",
+                "valueAddedTaxIncluded": true,
+                "availability": "https://schema.org/InStock",
+                "itemOffered": { "@type": "Service", "name": "Outil complet sur mesure", "serviceType": "Développement logiciel sur mesure" }
+              }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Voie 2 — Express (Notion)",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "name": "Socle",
+                "description": "Environ trois journées : un espace de travail structuré, 2 à 3 tableaux de suivi, un premier tableau de bord, modèles de procédures et formation des référents.",
+                "price": "2600",
+                "priceCurrency": "EUR",
+                "valueAddedTaxIncluded": true,
+                "availability": "https://schema.org/InStock",
+                "itemOffered": { "@type": "Service", "name": "Socle Notion", "serviceType": "Mise en place Notion" }
+              },
+              {
+                "@type": "Offer",
+                "name": "Pilotage",
+                "description": "Environ cinq journées : 4 à 6 tableaux reliés, vues par équipe et par rôle, formulaires internes, tableaux de bord, droits d'accès et documentation d'administration.",
+                "price": "4000",
+                "priceCurrency": "EUR",
+                "valueAddedTaxIncluded": true,
+                "availability": "https://schema.org/InStock",
+                "itemOffered": { "@type": "Service", "name": "Pilotage Notion", "serviceType": "Mise en place Notion" }
+              },
+              {
+                "@type": "Offer",
+                "name": "Cockpit",
+                "description": "Environ huit journées : 8 tableaux et plus tous reliés, espaces par équipe, tableaux de bord par rôle, un processus numérisé de bout en bout, formation complète et transfert d'autonomie.",
                 "price": "6500",
                 "priceCurrency": "EUR",
                 "valueAddedTaxIncluded": true,
@@ -4097,58 +4384,70 @@
           },
           {
             "@type": "OfferCatalog",
-            "name": "Numériser un processus",
+            "name": "Options communes aux deux voies",
             "itemListElement": [
               {
                 "@type": "Offer",
-                "name": "Petite numérisation",
+                "name": "Numériser un petit processus",
                 "description": "Une journée : un formulaire d'entrée, la base de suivi derrière et une vue de traitement. Congés, demandes d'achat, remontées d'anomalie.",
-                "price": "799",
+                "price": "800",
                 "priceCurrency": "EUR",
                 "valueAddedTaxIncluded": true,
-                "itemOffered": { "@type": "Service", "name": "Petite numérisation de processus" }
+                "itemOffered": { "@type": "Service", "name": "Numérisation d'un petit processus" }
               },
               {
                 "@type": "Offer",
-                "name": "Moyenne numérisation",
-                "description": "Deux journées : bases reliées, statuts, vues par rôle, relances automatiques et tableau de bord. Litiges transport, onboarding client, non-conformités.",
-                "price": "1599",
+                "name": "Numériser un processus moyen",
+                "description": "Deux journées : données reliées, statuts, vues par rôle, relances automatiques et tableau de bord. Litiges transport, onboarding client, non-conformités.",
+                "price": "1600",
                 "priceCurrency": "EUR",
                 "valueAddedTaxIncluded": true,
-                "itemOffered": { "@type": "Service", "name": "Moyenne numérisation de processus" }
+                "itemOffered": { "@type": "Service", "name": "Numérisation d'un processus moyen" }
               },
               {
                 "@type": "Offer",
-                "name": "Grande numérisation",
-                "description": "Trois journées : processus repris de bout en bout et simplifié, bases liées, gestion des droits, tableaux de bord, documentation et formation.",
-                "price": "2299",
+                "name": "Numériser un gros processus",
+                "description": "Trois journées : processus repris de bout en bout et simplifié, données reliées, gestion des droits, tableaux de bord, documentation et formation.",
+                "price": "2300",
                 "priceCurrency": "EUR",
                 "valueAddedTaxIncluded": true,
-                "itemOffered": { "@type": "Service", "name": "Grande numérisation de processus" }
-              }
-            ]
-          },
-          {
-            "@type": "OfferCatalog",
-            "name": "Compléments",
-            "itemListElement": [
+                "itemOffered": { "@type": "Service", "name": "Numérisation d'un gros processus" }
+              },
               {
                 "@type": "Offer",
-                "name": "Formation Notion — équipe réduite",
-                "description": "Une journée, jusqu'à 8 participants, sur votre propre workspace.",
-                "price": "799",
+                "name": "Diagnostic numérique complet",
+                "description": "Entretiens terrain, cartographie des processus, priorisation impact / faisabilité et plan d'action 30 / 60 / 90 jours. Imputé sur le palier choisi ensuite.",
+                "price": "1800",
                 "priceCurrency": "EUR",
                 "valueAddedTaxIncluded": true,
-                "itemOffered": { "@type": "Service", "name": "Formation Notion", "serviceType": "Formation professionnelle" }
+                "itemOffered": { "@type": "Service", "name": "Diagnostic numérique complet", "serviceType": "Audit et cadrage des opérations" }
+              },
+              {
+                "@type": "Offer",
+                "name": "Formation équipe réduite",
+                "description": "Une journée, jusqu'à 8 participants, sur votre propre outil.",
+                "price": "800",
+                "priceCurrency": "EUR",
+                "valueAddedTaxIncluded": true,
+                "itemOffered": { "@type": "Service", "name": "Formation équipe réduite", "serviceType": "Formation professionnelle" }
               },
               {
                 "@type": "Offer",
                 "name": "Formation référents internes",
-                "description": "Deux journées, jusqu'à 5 participants, pour rendre l'équipe autonome sur son workspace.",
-                "price": "1599",
+                "description": "Deux journées, jusqu'à 5 participants, pour rendre l'équipe autonome sur son outil.",
+                "price": "1600",
                 "priceCurrency": "EUR",
                 "valueAddedTaxIncluded": true,
-                "itemOffered": { "@type": "Service", "name": "Formation référents Notion", "serviceType": "Formation professionnelle" }
+                "itemOffered": { "@type": "Service", "name": "Formation référents internes", "serviceType": "Formation professionnelle" }
+              },
+              {
+                "@type": "Offer",
+                "name": "Automatisation légère",
+                "description": "Une journée : relances, notifications et synchronisations simples.",
+                "price": "800",
+                "priceCurrency": "EUR",
+                "valueAddedTaxIncluded": true,
+                "itemOffered": { "@type": "Service", "name": "Automatisation légère", "serviceType": "Automatisation des processus" }
               },
               {
                 "@type": "Offer",
@@ -4197,15 +4496,6 @@
                   "billingIncrement": 1
                 },
                 "itemOffered": { "@type": "Service", "name": "Suivi mensuel Croissance", "serviceType": "Maintenance et support" }
-              },
-              {
-                "@type": "Offer",
-                "name": "Automatisation légère",
-                "description": "Une journée : relances, notifications et synchronisations simples.",
-                "price": "799",
-                "priceCurrency": "EUR",
-                "valueAddedTaxIncluded": true,
-                "itemOffered": { "@type": "Service", "name": "Automatisation légère", "serviceType": "Automatisation des processus" }
               }
             ]
           }
