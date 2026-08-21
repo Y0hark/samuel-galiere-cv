@@ -2391,6 +2391,16 @@
             letter-spacing: 0.08em;
             color: var(--earth);
         }
+        .tier-delay {
+            display: block;
+            margin-top: 10px;
+            font-family: var(--sans);
+            font-size: 11.5px;
+            font-weight: 400;
+            color: var(--ink-soft);
+        }
+        .tier-delay strong { font-weight: 500; color: var(--moss); }
+
         .tier-goal {
             font-size: 13.5px;
             font-weight: 300;
@@ -2607,7 +2617,7 @@
             <div class="card reveal">
                 <span class="card-idx">04</span>
                 <h3 class="card-title">Mise en place express</h3>
-                <p class="card-desc">Le même résultat opérationnel monté sur un outil du marché : structure, tableaux reliés, vues par rôle, formulaires, tableaux de bord. En service en quelques journées.</p>
+                <p class="card-desc">Le même résultat opérationnel monté sur un outil du marché : structure, tableaux reliés, vues par rôle, formulaires, tableaux de bord. En service en deux à quatre semaines.</p>
             </div>
             <div class="card reveal">
                 <span class="card-idx">05</span>
@@ -2745,7 +2755,8 @@
                 <span class="voie-tag">Voie 1</span>
                 <h3 class="voie-name">Sur mesure</h3>
                 <p class="voie-pitch">Un logiciel développé pour votre métier. Vos règles, vos écrans, vos volumes — rien à contourner.</p>
-                <div class="voie-row"><span class="voie-row-k">Délai</span><span class="voie-row-v"><strong>1 à 3 semaines</strong> de développement, parfois plus</span></div>
+                <div class="voie-row"><span class="voie-row-k">Charge</span><span class="voie-row-v"><strong>5 à 15 journées</strong> de développement, parfois plus</span></div>
+                <div class="voie-row"><span class="voie-row-k">En service</span><span class="voie-row-v">Sous <strong>3 à 8 semaines</strong> après validation du devis</span></div>
                 <div class="voie-row"><span class="voie-row-k">Budget</span><span class="voie-row-v">À partir de <strong>4 000 €</strong></span></div>
                 <div class="voie-row"><span class="voie-row-k">Le bon choix si</span><span class="voie-row-v">Votre métier a des règles qu'aucun outil du marché ne sait faire, vos volumes sont importants, ou vos clients doivent y accéder</span></div>
                 <div class="voie-row"><span class="voie-row-k">Ensuite</span><span class="voie-row-v">Les évolutions passent par moi ou par une équipe technique</span></div>
@@ -2756,7 +2767,8 @@
                 <span class="voie-tag">Voie 2</span>
                 <h3 class="voie-name">Express</h3>
                 <p class="voie-pitch">Le même résultat opérationnel, monté sur un outil du marché que je maîtrise. Livré en jours, pas en mois.</p>
-                <div class="voie-row"><span class="voie-row-k">Délai</span><span class="voie-row-v"><strong>3 à 8 journées</strong> de travail, étalées sur 2 à 4 semaines</span></div>
+                <div class="voie-row"><span class="voie-row-k">Charge</span><span class="voie-row-v"><strong>3 à 8 journées</strong> de travail</span></div>
+                <div class="voie-row"><span class="voie-row-k">En service</span><span class="voie-row-v">Sous <strong>2 à 4 semaines</strong> après validation du devis</span></div>
                 <div class="voie-row"><span class="voie-row-k">Budget</span><span class="voie-row-v">À partir de <strong>2 600 €</strong></span></div>
                 <div class="voie-row"><span class="voie-row-k">Le bon choix si</span><span class="voie-row-v">Vous voulez régler vos irritants vite, sans lancer un chantier informatique, et le besoin va encore bouger</span></div>
                 <div class="voie-row"><span class="voie-row-k">Ensuite</span><span class="voie-row-v">Vos référents internes font évoluer l'outil eux-mêmes, sans développeur</span></div>
@@ -2800,7 +2812,7 @@
         <!-- ─── LES PALIERS, PAR VOIE ─── -->
         <p class="offer-block-label reveal">Les paliers</p>
         <p class="offer-block-intro reveal">
-            Quatre paliers par voie, sur le même principe : chacun reprend le précédent et l'étend, vous ne rachetez jamais ce que vous avez déjà. Tout se compte en journées de travail à <strong>800 € la journée</strong>, et les paliers les plus larges vous les font payer moins cher que prises à l'unité.
+            Quatre paliers par voie, sur le même principe : chacun reprend le précédent et l'étend, vous ne rachetez jamais ce que vous avez déjà. Tout se compte en journées de travail à <strong>800 € la journée</strong>, et les paliers les plus larges vous les font payer moins cher que prises à l'unité. Attention à ne pas confondre les deux durées affichées : le nombre de <strong>journées</strong> est ma charge de travail, la <strong>mise en service</strong> est le délai calendaire — celui qui vous intéresse.
         </p>
 
         <div class="seg-wrap reveal">
@@ -2826,9 +2838,10 @@
 
             <div class="ladder">
                 <div class="tier reveal">
-                    <span class="tier-badge">1 semaine · 5 journées</span>
+                    <span class="tier-badge">5 journées de développement</span>
                     <h3 class="tier-name">Outil ciblé</h3>
                     <p class="tier-price">4 000 €<span class="ttc">TTC · forfait</span></p>
+                    <span class="tier-delay">En service sous <strong>≈ 3 semaines</strong></span>
                     <p class="tier-goal">Un besoin précis, réglé pour de bon.</p>
                     <ul class="tier-list">
                         <li>Une application accessible depuis un navigateur</li>
@@ -2841,10 +2854,11 @@
 
                 <div class="tier is-reco reveal">
                     <span class="tier-reco-tag">Recommandé</span>
-                    <span class="tier-badge">2 semaines · 10 journées</span>
+                    <span class="tier-badge">10 journées de développement</span>
                     <h3 class="tier-name">Outil métier</h3>
                     <p class="tier-price">7 500 €<span class="ttc">TTC · forfait</span></p>
                     <span class="tier-save">— 500 € vs 10 journées à l'unité</span>
+                    <span class="tier-delay">En service sous <strong>≈ 5 semaines</strong></span>
                     <p class="tier-goal">Plusieurs rôles, plusieurs étapes : un vrai flux de travail.</p>
                     <p class="tier-inherit">Tout le palier précédent, plus :</p>
                     <ul class="tier-list">
@@ -2858,10 +2872,11 @@
                 </div>
 
                 <div class="tier reveal">
-                    <span class="tier-badge">3 semaines · 15 journées</span>
+                    <span class="tier-badge">15 journées de développement</span>
                     <h3 class="tier-name">Outil complet</h3>
                     <p class="tier-price">11 000 €<span class="ttc">TTC · forfait</span></p>
                     <span class="tier-save">— 1 000 € vs 15 journées à l'unité</span>
+                    <span class="tier-delay">En service sous <strong>≈ 8 semaines</strong></span>
                     <p class="tier-goal">L'outil que tout un service utilise chaque jour.</p>
                     <p class="tier-inherit">Tout le palier précédent, plus :</p>
                     <ul class="tier-list">
@@ -2875,7 +2890,7 @@
                 </div>
 
                 <div class="tier is-quote reveal">
-                    <span class="tier-badge">Au-delà de 3 semaines</span>
+                    <span class="tier-badge">Au-delà de 15 journées</span>
                     <h3 class="tier-name">Sur devis</h3>
                     <p class="tier-price is-quote">Devis gratuit<span class="ttc">Analyse comprise</span></p>
                     <p class="tier-goal">Plusieurs modules imbriqués, une connexion profonde à vos outils, ou des exigences de sécurité et de conformité.</p>
@@ -2888,7 +2903,7 @@
                     <span class="reco-tag">Palier recommandé — sur mesure</span>
                     <h3 class="reco-title">Outil métier : le palier où l'outil devient un flux de travail, pas un écran de plus.</h3>
                     <p class="reco-desc">
-                        Une semaine de plus que le palier d'entrée, et vous ne livrez plus un écran utile : vous livrez un processus complet. Les droits par rôle, les étapes de validation, les relances automatiques et le tableau de bord — c'est là que ça se joue.
+                        Cinq journées de développement de plus que le palier d'entrée, et vous ne livrez plus un écran utile : vous livrez un processus complet. Les droits par rôle, les étapes de validation, les relances automatiques et le tableau de bord — c'est là que ça se joue.
                     </p>
                     <p class="reco-desc" style="margin-top:14px">
                         C'est aussi le palier le plus sûr : dix journées laissent la place de reprendre vos données existantes et d'ajuster avec les équipes avant la mise en ligne, au lieu de livrer au chausse-pied.
@@ -2916,9 +2931,12 @@
                 <div class="explain-figure">
                     <span class="explain-figure-num">5 à 10 ×</span>
                     <span class="explain-figure-txt">
-                        Un outil interne développé sur mesure pour une PME demande en général <strong>3 à 6 mois</strong>. Le même besoin monté dans Notion est en service en <strong>1 à 2 semaines</strong> : c'est le même problème réglé cinq à dix fois plus vite, pour un budget d'entrée deux fois moindre.
+                        Confié à une équipe ou à une ESN, avec cahier des charges et cycle complet, un outil interne de PME demande en général <strong>3 à 6 mois</strong> avant d'être utilisable. Le même besoin monté dans Notion est en service en <strong>2 à 4 semaines</strong> : cinq à dix fois plus vite.
                     </span>
                 </div>
+                <p>
+                    Pour être tout à fait juste : <strong>mon sur mesure n'est pas non plus à 3 ou 6 mois</strong> — je livre en 3 à 8 semaines, parce que le périmètre est figé avant d'écrire la première ligne. Face à lui, l'Express reste environ <em>deux fois plus rapide et deux fois moins cher</em>. Le facteur 5 à 10, lui, c'est ce que vous économisez par rapport au projet informatique classique qu'on vous a peut-être déjà chiffré.
+                </p>
                 <p>
                     Ce que vous économisez ne s'arrête pas au premier chèque : <strong>pas de serveur à payer, pas de code à maintenir</strong>, et vos référents internes font évoluer l'outil eux-mêmes — ajouter un statut, une vue ou un champ ne nécessite plus de faire appel à un développeur.
                 </p>
@@ -2929,10 +2947,11 @@
 
             <div class="ladder">
                 <div class="tier reveal">
-                    <span class="tier-badge">≈ 3 journées</span>
+                    <span class="tier-badge">≈ 3 journées de travail</span>
                     <h3 class="tier-name">Socle</h3>
                     <p class="tier-price">2 600 €<span class="ttc">TTC · forfait</span></p>
-                    <p class="tier-goal">Une première base propre, utilisable dès la première semaine.</p>
+                    <span class="tier-delay">En service sous <strong>≈ 2 semaines</strong></span>
+                    <p class="tier-goal">Une première base propre, opérationnelle dès la mise en service.</p>
                     <ul class="tier-list">
                         <li>Un espace de travail structuré</li>
                         <li>2 à 3 tableaux de suivi opérationnels</li>
@@ -2945,9 +2964,10 @@
 
                 <div class="tier is-reco reveal">
                     <span class="tier-reco-tag">Recommandé</span>
-                    <span class="tier-badge">≈ 5 journées</span>
+                    <span class="tier-badge">≈ 5 journées de travail</span>
                     <h3 class="tier-name">Pilotage</h3>
                     <p class="tier-price">4 000 €<span class="ttc">TTC · forfait</span></p>
+                    <span class="tier-delay">En service sous <strong>≈ 3 semaines</strong></span>
                     <p class="tier-goal">Plusieurs processus structurés et réellement pilotés.</p>
                     <p class="tier-inherit">Tout le palier précédent, plus :</p>
                     <ul class="tier-list">
@@ -2962,10 +2982,11 @@
                 </div>
 
                 <div class="tier reveal">
-                    <span class="tier-badge">≈ 8 journées</span>
+                    <span class="tier-badge">≈ 8 journées de travail</span>
                     <h3 class="tier-name">Cockpit</h3>
                     <p class="tier-price">6 500 €<span class="ttc">TTC · forfait</span></p>
                     <span class="tier-save">— 1 400 € vs le même périmètre à la carte</span>
+                    <span class="tier-delay">En service sous <strong>≈ 4 semaines</strong></span>
                     <p class="tier-goal">Le pilotage complet de vos opérations, autonomie comprise.</p>
                     <p class="tier-inherit">Tout le palier précédent, plus :</p>
                     <ul class="tier-list">
@@ -3515,7 +3536,8 @@
                         <span class="s-card-tag">Voie 1 · Sur mesure</span>
                         <h3 class="s-card-title">Un logiciel écrit pour votre métier</h3>
                         <ul class="s-card-list">
-                            <li>1 à 3 semaines de développement</li>
+                            <li>5 à 15 journées de développement</li>
+                            <li>En service sous 3 à 8 semaines</li>
                             <li>À partir de 4 000 €</li>
                             <li>Vos règles, vos volumes, vos écrans</li>
                             <li>Accès possible pour vos clients</li>
@@ -3527,6 +3549,7 @@
                         <h3 class="s-card-title">Le même résultat, en jours plutôt qu'en mois</h3>
                         <ul class="s-card-list">
                             <li>3 à 8 journées de travail</li>
+                            <li>En service sous 2 à 4 semaines</li>
                             <li>À partir de 2 600 €</li>
                             <li>Vos équipes le font évoluer seules</li>
                             <li>Pas de code à maintenir</li>
@@ -3551,13 +3574,13 @@
                 <div class="s-hero-price">
                     <div>
                         <span class="s-card-tag">Le délai avant de pouvoir s'en servir</span>
-                        <h3 class="s-card-title" style="font-size:var(--t-lg)">3 à 6 mois de développement sur mesure &nbsp;→&nbsp; 1 à 2 semaines</h3>
+                        <h3 class="s-card-title" style="font-size:var(--t-lg)">Projet informatique classique : 3 à 6 mois &nbsp;→&nbsp; Express : 2 à 4 semaines</h3>
                         <p class="s-card-desc">Même besoin, même résultat opérationnel. Moins d'attente, moins de budget d'entrée, et aucun code à maintenir derrière.</p>
                     </div>
                     <p class="s-hero-price-num">5 à 10×<span class="ttc">plus rapide</span></p>
                 </div>
                 <p class="s-footnote">
-                    Ce que je dis avant de commencer : il reste une licence par utilisateur à votre charge, et certaines choses sortent du périmètre — stock en temps réel, facturation, transactions critiques, très gros volumes. Dans ces cas-là, la bonne réponse est le sur mesure, et je vous le dirai.
+                    Mon sur mesure, lui, livre en 3 à 8 semaines : le facteur 5 à 10 se mesure face au projet informatique classique, pas face à mon autre voie — face à elle, l'Express est environ deux fois plus rapide et deux fois moins cher. Et il reste une licence par utilisateur à votre charge, plus quelques sujets hors périmètre : stock en temps réel, facturation, transactions critiques, très gros volumes.
                 </p>
             </div>
         </section>
@@ -3729,19 +3752,19 @@
                 <h2 class="s-title">Sur mesure : <em>quatre paliers</em></h2>
                 <div class="s-packs">
                     <div class="s-pack">
-                        <span class="s-pack-badge">1 semaine · 5 j</span>
+                        <span class="s-pack-badge">5 journées · en service ≈ 3 sem.</span>
                         <h3 class="s-pack-name">Outil ciblé</h3>
                         <p class="s-pack-goal">Un besoin précis, réglé pour de bon : base de données, écrans, mise en ligne.</p>
                         <p class="s-pack-price">4 000 €<span class="ttc">TTC</span></p>
                     </div>
                     <div class="s-pack is-reco">
-                        <span class="s-pack-badge">Recommandé · 2 semaines · 10 j</span>
+                        <span class="s-pack-badge">Recommandé · 10 journées · ≈ 5 sem.</span>
                         <h3 class="s-pack-name">Outil métier</h3>
                         <p class="s-pack-goal">Rôles, droits, workflow à étapes, relances automatiques, tableau de bord.</p>
                         <p class="s-pack-price">7 500 €<span class="ttc">TTC · −500 €</span></p>
                     </div>
                     <div class="s-pack">
-                        <span class="s-pack-badge">3 semaines · 15 j</span>
+                        <span class="s-pack-badge">15 journées · en service ≈ 8 sem.</span>
                         <h3 class="s-pack-name">Outil complet</h3>
                         <p class="s-pack-goal">Plusieurs modules, dashboards par rôle, documentation, formation, un mois d'ajustements.</p>
                         <p class="s-pack-price">11 000 €<span class="ttc">TTC · −1 000 €</span></p>
@@ -3766,19 +3789,19 @@
                 <h2 class="s-title">Express : <em>quatre paliers</em></h2>
                 <div class="s-packs">
                     <div class="s-pack">
-                        <span class="s-pack-badge">≈ 3 journées</span>
+                        <span class="s-pack-badge">3 journées · en service ≈ 2 sem.</span>
                         <h3 class="s-pack-name">Socle</h3>
                         <p class="s-pack-goal">Un espace structuré, 2 à 3 tableaux de suivi, un premier tableau de bord.</p>
                         <p class="s-pack-price">2 600 €<span class="ttc">TTC</span></p>
                     </div>
                     <div class="s-pack is-reco">
-                        <span class="s-pack-badge">Recommandé · ≈ 5 journées</span>
+                        <span class="s-pack-badge">Recommandé · 5 journées · ≈ 3 sem.</span>
                         <h3 class="s-pack-name">Pilotage</h3>
                         <p class="s-pack-goal">4 à 6 tableaux reliés, vues par rôle, formulaires, dashboards, droits, documentation.</p>
                         <p class="s-pack-price">4 000 €<span class="ttc">TTC</span></p>
                     </div>
                     <div class="s-pack">
-                        <span class="s-pack-badge">≈ 8 journées</span>
+                        <span class="s-pack-badge">8 journées · en service ≈ 4 sem.</span>
                         <h3 class="s-pack-name">Cockpit</h3>
                         <p class="s-pack-goal">Espaces par équipe, dashboards par rôle, un processus de bout en bout, autonomie.</p>
                         <p class="s-pack-price">6 500 €<span class="ttc">TTC · −1 400 €</span></p>
@@ -4316,7 +4339,7 @@
             "itemListElement": [
               {
                 "@type": "Offer",
-                "name": "Outil ciblé — 1 semaine",
+                "name": "Outil ciblé — 5 journées",
                 "description": "Cinq journées de développement : une application accessible depuis un navigateur, une base de données propre, les écrans de saisie et de suivi, mise en ligne et prise en main.",
                 "price": "4000",
                 "priceCurrency": "EUR",
@@ -4326,7 +4349,7 @@
               },
               {
                 "@type": "Offer",
-                "name": "Outil métier — 2 semaines",
+                "name": "Outil métier — 10 journées",
                 "description": "Dix journées de développement : comptes et droits par rôle, workflow à étapes et validations, notifications et relances automatiques, tableau de bord, reprise des données existantes.",
                 "price": "7500",
                 "priceCurrency": "EUR",
@@ -4336,7 +4359,7 @@
               },
               {
                 "@type": "Offer",
-                "name": "Outil complet — 3 semaines",
+                "name": "Outil complet — 15 journées",
                 "description": "Quinze journées de développement : plusieurs modules reliés, tableaux de bord par rôle et exports, documentation, formation des équipes et un mois d'ajustements après la mise en ligne.",
                 "price": "11000",
                 "priceCurrency": "EUR",
