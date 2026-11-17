@@ -7,13 +7,16 @@ const other = LANGS.find((l) => l !== lang)!;
 <header class="site-header">
   <div class="wrap bar">
     <a class="brand" href={pagePath(lang, '')}>{site.name}</a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">{t.menu}</button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars" aria-hidden="true"></span><span class="sr">{t.menu}</span></button>
     <nav id="nav" aria-label={t.navLabel}>
       <ul>
         {NAV_SLUGS.map((s) => (
-          <li><a href={pagePath(lang, s)} aria-current={s === slug ? 'page' : undefined}>{t.nav[s]}</a></li>
+          <li><a class="navlink" href={pagePath(lang, s)} aria-current={s === slug ? 'page' : undefined}>{t.nav[s]}</a></li>
         ))}
-        <li><a class="lang" href={pagePath(other, slug)} hreflang={other} lang={other} title={t.langSwitchTitle}>{t.langLabel}</a></li>
+        <li class="nav-tools">
+          <a class="lang" href={pagePath(other, slug)} hreflang={other} lang={other} title={t.langSwitchTitle}>{other.toUpperCase()}</a>
+          <a class="btn small" href={`tel:${site.phone}`}>{t.ctaCall}</a>
+        </li>
       </ul>
     </nav>
   </div>

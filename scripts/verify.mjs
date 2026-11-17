@@ -1,4 +1,4 @@
-// Vérifie dist/ : 12 pages, hreflang, h1 unique, poids, JS, sitemap/robots, mailto, assets, contraste AA.
+// Vérifie dist/ (script inline unique < 6 Ko) : 12 pages, hreflang, h1 unique, poids, JS, sitemap/robots, mailto, assets, contraste AA.
 import fs from 'node:fs';
 import path from 'node:path';
 const slugs = ['', 'services', 'cas', 'a-propos', 'contact', 'mentions-legales'];
@@ -15,7 +15,7 @@ for (const p of pages) {
   if ((h.match(/<h1[ >]/g) || []).length !== 1) fail(`${f}: h1 count`);
   if (fs.statSync(f).size > 150 * 1024) fail(`${f}: >150Ko`);
   const scripts = [...h.matchAll(/<script(?![^>]*ld\+json)[^>]*>([\s\S]*?)<\/script>/g)];
-  if (scripts.length !== 1 || scripts[0][1].length > 2048) fail(`${f}: script count/size`);
+  if (scripts.length !== 1 || scripts[0][1].length > 6144) fail(`${f}: script count/size`);
   if (!/hreflang="(en|fr)" lang=/.test(h)) fail(`${f}: language switch link`);
   if (/\[(À REMPLACER|REPLACE)\]/.test(h)) warning(`${f}: placeholder [À REMPLACER] présent`);
   if (/\[(À COMPLÉTER|TO COMPLETE)/.test(h)) warning(`${f}: texte à compléter présent`);
@@ -37,7 +37,7 @@ const v = Object.fromEntries([...css.matchAll(/--([a-z-]+):\s*(#[0-9A-Fa-f]{6})/
 const lum = (hex) => { const c = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255).map((x) => (x <= 0.03928 ? x / 12.92 : ((x + 0.055) / 1.055) ** 2.4)); return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]; };
 const ratio = (a, b) => { const [x, y] = [lum(v[a]), lum(v[b])].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
 // paires texte/fond réellement utilisées dans global.css ; min 4.5 (texte courant)
-const pairs = [['ink', 'cream'], ['ink-soft', 'cream'], ['moss', 'cream'], ['moss', 'cream-dark'], ['ink-soft', 'cream-dark'], ['ink', 'cream-dark'],
+const pairs = [['earth-text', 'cream'], ['earth-text', 'cream-dark'], ['on-moss', 'moss'], ['on-moss-soft', 'moss'], ['on-moss', 'ink'], ['on-moss-soft', 'ink'], ['cream', 'ink'], ['ink', 'cream'], ['ink-soft', 'cream'], ['moss', 'cream'], ['moss', 'cream-dark'], ['ink-soft', 'cream-dark'], ['ink', 'cream-dark'],
   ['cream', 'moss'], ['moss-light', 'cream'], ['moss-light', 'cream-dark']];
 for (const [fg, bg] of pairs) { const r = ratio(fg, bg); console.log(`contraste ${fg} sur ${bg} : ${r.toFixed(2)}`); if (r < 4.5) fail(`contraste ${fg}/${bg} ${r.toFixed(2)} < 4.5`); }
 const rm = ratio('muted', 'cream'); console.log(`contraste muted sur cream : ${rm.toFixed(2)} (non utilisé pour du texte)`);

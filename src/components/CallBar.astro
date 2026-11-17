@@ -1,0 +1,8 @@
+---
+import { ui, site, type Lang } from '../lib/content';
+const { lang } = Astro.props as { lang: Lang };
+const t = ui(lang);
+---
+<div class="callbar">
+  <a class="btn" href={`tel:${site.phone}`}>{t.ctaCall} {site.phoneDisplay}</a>
+</div>

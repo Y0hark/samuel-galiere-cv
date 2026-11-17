@@ -1,7 +1,15 @@
 ---
-const { title, text } = Astro.props as { title: string; text: string };
+const { title, text, delivers, excludes, entry, n, labels } = Astro.props as Record<string, any>;
 ---
-<article class="card">
-  <h2>{title}</h2>
+<article class="numcard" data-reveal style={`--d:${(n - 1) * 0.1}s`}>
+  <span class="num" aria-hidden="true">{String(n).padStart(2, '0')}</span>
+  {entry && labels && <span class="tag">{labels.entry}</span>}
+  <h3>{title}</h3>
   <p>{text}</p>
+  {delivers && (
+    <dl>
+      <dt>{labels.delivers}</dt><dd>{delivers}</dd>
+      <dt>{labels.excludes}</dt><dd>{excludes}</dd>
+    </dl>
+  )}
 </article>

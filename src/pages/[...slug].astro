@@ -6,6 +6,8 @@ import CaseCard from '../components/CaseCard.astro';
 import ContactBlock from '../components/ContactBlock.astro';
 import Portrait from '../components/Portrait.astro';
 import LegalBlock from '../components/LegalBlock.astro';
+import CtaBand from '../components/CtaBand.astro';
+import Eyebrow from '../components/Eyebrow.astro';
 import { LANGS, SLUGS, DEFAULT_LANG, getPage, ui, type Lang } from '../lib/content';
 
 export function getStaticPaths() {
@@ -19,23 +21,49 @@ export function getStaticPaths() {
 const { lang, s } = Astro.props as { lang: Lang; s: string };
 const { data, Content } = getPage(lang, s);
 const t = ui(lang);
+const labels = { entry: t.entry, delivers: t.delivers, excludes: t.excludes };
+const eyebrow: Record<string, string> = { services: t.servicesEyebrow, cas: t.casEyebrow, 'a-propos': t.aboutEyebrow, contact: t.contactEyebrow, 'mentions-legales': t.legalEyebrow };
 ---
 <Base lang={lang} slug={s} title={data.title} description={data.description}>
   {s === '' ? (
     <>
-      <Hero title={data.heroTitle} text={data.heroText} />
-      <div class="wrap section"><Content /></div>
-      <div class="wrap grid">{data.services.map((x: any) => <ServiceCard {...x} />)}</div>
+      <Hero title={data.heroTitle} text={data.heroText} lang={lang} />
+      <section class="statement"><div class="wrap"><div class="quote" data-reveal><Content /></div></div></section>
+      <section class="section">
+        <div class="wrap">
+          <Eyebrow text={t.approachEyebrow} />
+          <h2 data-reveal>{t.approachTitle}</h2>
+          <div class="numgrid">{data.services.map((x: any, i: number) => <ServiceCard {...x} n={i + 1} />)}</div>
+        </div>
+      </section>
+      <section class="section alt">
+        <div class="wrap">
+          <Eyebrow text={t.refsEyebrow} />
+          <h2 data-reveal>{t.refsTitle}</h2>
+          <ul class="refs">{data.refs.map((r: any, i: number) => (
+            <li data-reveal style={`--d:${i * 0.08}s`}><strong>{r.name}</strong><span>{r.text}</span></li>
+          ))}</ul>
+        </div>
+      </section>
+      <CtaBand lang={lang} title={data.ctaTitle} />
     </>
   ) : (
-    <div class="wrap section">
-      <h1>{data.title}</h1>
-      {s === 'a-propos' && <Portrait lang={lang} />}
-      {s === 'mentions-legales' && <LegalBlock lang={lang} />}
-      <Content />
-      {s === 'services' && <div class="grid">{data.services.map((x: any) => <ServiceCard {...x} />)}</div>}
-      {s === 'cas' && <div class="grid">{data.cases.map((x: any) => <CaseCard {...x} contextLabel={t.casLabel} resultLabel={t.resultLabel} />)}</div>}
-      {s === 'contact' && <ContactBlock lang={lang} />}
-    </div>
+    <>
+      <header class="page-head">
+        <div class="wrap">
+          <Eyebrow text={eyebrow[s]} />
+          <h1 class="fade" style="--d:.1s">{data.heading ?? data.title}</h1>
+        </div>
+      </header>
+      <div class="wrap section prose">
+        {s === 'a-propos' && <div class="about"><div class="about-text"><Content /></div><Portrait lang={lang} /></div>}
+        {s === 'mentions-legales' && <LegalBlock lang={lang} />}
+        {s !== 'a-propos' && <div class="prose-body" data-reveal><Content /></div>}
+        {s === 'services' && <div class="numgrid">{data.services.map((x: any, i: number) => <ServiceCard {...x} n={i + 1} labels={labels} />)}</div>}
+        {s === 'cas' && <div class="cases">{data.cases.map((x: any) => <CaseCard {...x} contextLabel={t.casLabel} resultLabel={t.resultLabel} />)}</div>}
+        {s === 'contact' && <ContactBlock lang={lang} />}
+      </div>
+      {(s === 'services' || s === 'cas' || s === 'a-propos') && <CtaBand lang={lang} title={lang === 'fr' ? 'Parlons de votre cas : 30 minutes au téléphone.' : "Let's talk about your case: a 30-minute call."} />}
+    </>
   )}
 </Base>

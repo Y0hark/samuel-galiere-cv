@@ -1,5 +1,6 @@
 ---
 title: "Legal notice"
+heading: "Legal notice"
 description: "Legal notice for samuelgaliere.tech."
 ---
 

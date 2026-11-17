@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import CallBar from '../components/CallBar.astro';
 import '../styles/global.css';
 import { LANGS, DEFAULT_LANG, pagePath, ui, site, type Lang } from '../lib/content';
 interface Props { lang: Lang; slug: string; title: string; description: string; }
@@ -51,10 +52,25 @@ const ld = {
     <Header lang={lang} slug={slug} />
     <main id="main"><slot /></main>
     <Footer lang={lang} />
+    <CallBar lang={lang} />
     <script is:inline>
-      (function(){var b=document.querySelector('.menu-btn'),n=document.getElementById('nav');
-      if(!b||!n)return;document.documentElement.classList.add('js');
-      b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});})();
+(function(){var d=document,r=d.documentElement,m=window.matchMedia,red=m('(prefers-reduced-motion: reduce)').matches;
+r.classList.add('js');
+var h=d.querySelector('.site-header'),b=d.querySelector('.menu-btn'),n=d.getElementById('nav');
+function sc(){h&&h.classList.toggle('scrolled',window.scrollY>8);r.classList.toggle('past',window.scrollY>360)}sc();addEventListener('scroll',sc,{passive:true});
+function cl(){n.classList.remove('open');r.classList.remove('menu-open');b.setAttribute('aria-expanded','false')}
+if(b&&n){b.addEventListener('click',function(){var o=n.classList.toggle('open');r.classList.toggle('menu-open',o);b.setAttribute('aria-expanded',o)});
+n.addEventListener('click',function(e){if(e.target.closest('a'))cl()});d.addEventListener('keydown',function(e){if(e.key==='Escape')cl()})}
+var els=d.querySelectorAll('[data-reveal]');
+if(red||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')})}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});els.forEach(function(e){io.observe(e)})}
+if(!red&&m('(hover: hover) and (pointer: fine)').matches){var c=d.createElement('div');c.className='cursor';c.setAttribute('aria-hidden','true');d.body.appendChild(c);
+var x=0,y=0,cx=0,cy=0,on=false;
+addEventListener('mousemove',function(e){x=e.clientX;y=e.clientY;if(!on){on=true;cx=x;cy=y;c.classList.add('show')}});
+d.addEventListener('mouseover',function(e){c.classList.toggle('big',!!e.target.closest('a,button'))});
+d.addEventListener('mouseleave',function(){c.classList.remove('show');on=false});
+(function f(){cx+=(x-cx)*.18;cy+=(y-cy)*.18;c.style.transform='translate('+cx+'px,'+cy+'px)';requestAnimationFrame(f)})()}
+})();
     </script>
   </body>
 </html>

@@ -6,10 +6,12 @@ const subject = (site.callbackSubject as Record<string, string>)[lang];
 const body = (site.callbackBody as Record<string, string>)[lang];
 const callback = `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 ---
-<section class="contact-block">
+<section class="contact-block" data-reveal>
+  <a class="bigphone" href={`tel:${site.phone}`}>{site.phoneDisplay}</a>
+  <p class="hint">{t.phoneHint}</p>
   <ul class="actions">
-    <li><a class="btn" href={`tel:${site.phone}`}>{t.callLabel} {site.phoneDisplay}</a></li>
+    <li><a class="btn" href={`tel:${site.phone}`}>{t.callLabel} {site.phoneDisplay}<span class="arr" aria-hidden="true">→</span></a></li>
     <li><a class="btn alt" href={callback}>{t.callbackLabel}</a></li>
-    <li><a class="btn alt" href={`mailto:${site.email}`}>{t.mailLabel} : {site.email}</a></li>
+    <li><a class="btn alt" href={`mailto:${site.email}`}>{t.mailLabel}</a></li>
   </ul>
 </section>

@@ -1,9 +1,25 @@
 ---
-const { title, text } = Astro.props as { title: string; text: string };
+import { ui, site, type Lang } from '../lib/content';
+const { title, text, lang } = Astro.props as { title: string; text: string; lang: Lang };
+const t = ui(lang);
+const parts = title.split('*');
 ---
 <section class="hero">
-  <div class="wrap">
-    <h1>{title}</h1>
-    <p class="lead">{text}</p>
+  <div class="hero-rings" aria-hidden="true"><span></span><span></span></div>
+  <div class="wrap hero-inner">
+    <p class="status fade" style="--d:.1s">
+      <span class="dot" aria-hidden="true"></span><span>{t.status}</span>
+      <i aria-hidden="true">/</i><span class="loc">{t.location}</span>
+    </p>
+    <p class="now fade" style="--d:.25s">
+      <span class="pulse" aria-hidden="true"></span>
+      <b>{t.nowLabel}</b><span>{t.nowText}</span>
+    </p>
+    <h1 class="fade" style="--d:.4s">{parts.map((p, i) => (i % 2 ? <em>{p}</em> : p))}</h1>
+    <p class="lead fade" style="--d:.6s">{text}</p>
+    <ul class="hero-actions fade" style="--d:.8s">
+      <li><a class="btn" href={`tel:${site.phone}`}>{t.ctaCall} {site.phoneDisplay}<span class="arr" aria-hidden="true">→</span></a></li>
+      <li><a class="btn alt" href={lang === 'fr' ? '/contact/' : '/en/contact/'}>{t.ctaTalk}</a></li>
+    </ul>
   </div>
 </section>

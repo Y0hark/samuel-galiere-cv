@@ -1,5 +1,6 @@
 ---
 title: "Mentions légales"
+heading: "Mentions légales"
 description: "Mentions légales du site samuelgaliere.tech."
 ---
 

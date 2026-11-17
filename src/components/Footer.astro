@@ -4,8 +4,16 @@ const { lang } = Astro.props as { lang: Lang };
 const t = ui(lang);
 ---
 <footer class="site-footer">
-  <div class="wrap">
-    <p>© {site.name}</p>
-    <p><a href={pagePath(lang, 'mentions-legales')}>{t.legalLabel}</a></p>
+  <div class="wrap foot">
+    <div>
+      <p class="fname">{site.name}</p>
+      <p class="fsub">{(site.jobTitle as any)[lang]}</p>
+    </div>
+    <ul>
+      <li><a href={`tel:${site.phone}`}>{site.phoneDisplay}</a></li>
+      <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
+      <li><a href={pagePath(lang, 'mentions-legales')}>{t.legalLabel}</a></li>
+    </ul>
   </div>
+  <p class="wrap copy">© {new Date().getFullYear()} {site.name} · {t.location}</p>
 </footer>

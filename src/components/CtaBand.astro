@@ -1,0 +1,17 @@
+---
+import { ui, site, type Lang } from '../lib/content';
+const { lang, title } = Astro.props as { lang: Lang; title: string };
+const t = ui(lang);
+const subject = (site.callbackSubject as Record<string, string>)[lang];
+const body = (site.callbackBody as Record<string, string>)[lang];
+const callback = `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+---
+<section class="dark cta">
+  <div class="wrap">
+    <h2 data-reveal>{title}</h2>
+    <ul class="actions" data-reveal style="--d:.15s">
+      <li><a class="btn light" href={`tel:${site.phone}`}>{t.callLabel} {site.phoneDisplay}<span class="arr" aria-hidden="true">→</span></a></li>
+      <li><a class="btn ghost" href={callback}>{t.callbackLabel}</a></li>
+    </ul>
+  </div>
+</section>
