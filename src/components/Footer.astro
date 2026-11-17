@@ -1,0 +1,11 @@
+---
+import { ui, site, pagePath, type Lang } from '../lib/content';
+const { lang } = Astro.props as { lang: Lang };
+const t = ui(lang);
+---
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© {site.name}</p>
+    <p><a href={pagePath(lang, 'mentions-legales')}>{t.legalLabel}</a></p>
+  </div>
+</footer>

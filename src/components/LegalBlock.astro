@@ -1,0 +1,19 @@
+---
+import { ui, site, type Lang } from '../lib/content';
+const { lang } = Astro.props as { lang: Lang };
+const t = ui(lang);
+---
+<section class="legal">
+  <h2>{t.publisher}</h2>
+  <ul>
+    <li>{site.name}, {t.statusLine}</li>
+    <li>{t.siretLabel} : {site.siret}</li>
+    <li>{t.addressLabel} : {site.address}</li>
+    <li>{t.phoneLabel} : <a href={`tel:${site.phone}`}>{site.phoneDisplay}</a></li>
+    <li>{t.mailLabel2} : <a href={`mailto:${site.email}`}>{site.email}</a></li>
+    <li>{t.vatNote}</li>
+    <li>{t.directorLabel} : {site.name}</li>
+  </ul>
+  <h2>{t.hostLabel}</h2>
+  <p>{site.host}</p>
+</section>

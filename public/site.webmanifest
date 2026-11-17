@@ -1,0 +1,28 @@
+{
+  "name": "Samuel Galiere — Consultant IA et Data pour la logistique",
+  "short_name": "S. Galiere",
+  "description": "Cadrage, architecture et pilotage produit pour des cas d'usage IA et data en logistique.",
+  "lang": "fr-FR",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#F5F2EB",
+  "theme_color": "#F5F2EB",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

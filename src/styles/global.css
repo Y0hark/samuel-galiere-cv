@@ -1,0 +1,52 @@
+/* Polices auto-hébergées (Lora, DM Sans : licence OFL, voir public/fonts). */
+@font-face { font-family: 'Lora'; src: url('/fonts/Lora-Variable.woff2') format('woff2'); font-weight: 400 700; font-display: swap; }
+@font-face { font-family: 'DM Sans'; src: url('/fonts/DMSans-Variable.woff2') format('woff2'); font-weight: 400 700; font-display: swap; }
+
+:root {
+  --cream: #F5F2EB; --cream-dark: #EDE9DF; --moss: #3A4A2E; --moss-light: #5A6E48;
+  --earth: #8C6A4A; --earth-light: #B08A6A; --ink: #1E1E1A; --ink-soft: #3D3D38; --muted: #7A7770;
+  --radius: 6px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--cream); color: var(--ink); line-height: 1.6;
+  font-family: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+h1, h2, h3 { font-family: 'Lora', Georgia, 'Times New Roman', serif; color: var(--moss); line-height: 1.2; }
+p { color: var(--ink-soft); }
+a { color: var(--moss); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--earth); outline-offset: 2px; }
+.wrap { max-width: 68rem; margin: 0 auto; padding: 0 1rem; }
+.section { padding-top: 2rem; padding-bottom: 2rem; }
+.skip { position: absolute; left: -999px; background: var(--moss); color: var(--cream); padding: .5rem 1rem; z-index: 10; }
+.skip:focus { left: 0; }
+.site-header { background: var(--cream-dark); border-bottom: 1px solid var(--earth-light); }
+.bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem; padding-top: .75rem; padding-bottom: .75rem; }
+.brand { font-family: 'Lora', Georgia, serif; font-weight: 700; text-decoration: none; color: var(--moss); }
+nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: .25rem 1rem; margin: 0; padding: 0; }
+nav a { display: inline-block; padding: .4rem .2rem; text-decoration: none; color: var(--ink); }
+nav a[aria-current='page'] { border-bottom: 2px solid var(--earth); }
+nav a:hover { color: var(--moss-light); }
+.menu-btn { display: none; background: var(--moss); color: var(--cream); border: 0; padding: .5rem 1rem; border-radius: 4px; font: inherit; cursor: pointer; }
+@media (max-width: 40rem) {
+  .js .menu-btn { display: inline-block; }
+  .js nav { display: none; width: 100%; }
+  .js nav.open { display: block; }
+  nav ul { flex-direction: column; }
+}
+.hero { background: var(--moss); padding: 3rem 0; }
+.hero h1, .hero .lead { color: var(--cream); margin: 0 0 .5rem; }
+.hero h1 { font-size: clamp(1.75rem, 5vw, 3rem); }
+.hero .lead { font-size: 1.15rem; }
+.grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); margin: 1.5rem 0; }
+.wrap.grid { margin-top: 0; padding-bottom: 2rem; }
+.card { background: var(--cream-dark); border-left: 4px solid var(--earth); padding: 1rem 1.25rem; border-radius: 4px; }
+.card h2 { margin-top: 0; font-size: 1.3rem; }
+.portrait { float: right; width: min(40%, 20rem); aspect-ratio: 1 / 1; height: auto; margin: 0 0 1rem 1.5rem; border-radius: var(--radius); object-fit: cover; }
+@media (max-width: 40rem) { .portrait { float: none; display: block; width: 100%; max-width: 20rem; margin: 0 0 1rem; } }
+.legal h2 { font-size: 1.2rem; }
+.legal ul { padding-left: 1.2rem; }
+.site-footer a { color: var(--moss); }
+.actions { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .75rem; }
+.btn { display: inline-block; padding: .7rem 1.1rem; background: var(--moss); color: var(--cream); text-decoration: none; border-radius: 4px; overflow-wrap: anywhere; }
+.btn.alt { background: transparent; color: var(--moss); border: 2px solid var(--moss); }
+.site-footer { background: var(--cream-dark); margin-top: 2rem; padding: 1.5rem 0; }
+.site-footer p { margin: .25rem 0; color: var(--ink-soft); }

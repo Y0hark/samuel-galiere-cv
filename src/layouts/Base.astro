@@ -1,0 +1,60 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+import { LANGS, DEFAULT_LANG, pagePath, ui, site, type Lang } from '../lib/content';
+interface Props { lang: Lang; slug: string; title: string; description: string; }
+const { lang, slug, title, description } = Astro.props;
+const t = ui(lang);
+const abs = (p: string) => new URL(p, Astro.site).href;
+const canonical = abs(pagePath(lang, slug));
+const fullTitle = slug === '' ? title : `${title} | ${site.name}`;
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: site.name,
+  jobTitle: (site.jobTitle as any)[lang],
+  email: `mailto:${site.email}`,
+  telephone: site.phone,
+  url: canonical,
+  image: abs(site.portrait),
+};
+---
+<!doctype html>
+<html lang={t.htmlLang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    {LANGS.map((l) => <link rel="alternate" hreflang={l} href={abs(pagePath(l, slug))} />)}
+    <link rel="alternate" hreflang="x-default" href={abs(pagePath(DEFAULT_LANG, slug))} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={t.ogLocale} />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:image" content={abs(site.portrait)} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+  </head>
+  <body>
+    <a class="skip" href="#main">{t.skip}</a>
+    <Header lang={lang} slug={slug} />
+    <main id="main"><slot /></main>
+    <Footer lang={lang} />
+    <script is:inline>
+      (function(){var b=document.querySelector('.menu-btn'),n=document.getElementById('nav');
+      if(!b||!n)return;document.documentElement.classList.add('js');
+      b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});})();
+    </script>
+  </body>
+</html>

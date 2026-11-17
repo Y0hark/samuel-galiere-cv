@@ -1,0 +1,8 @@
+---
+const { title, context, result, contextLabel, resultLabel } = Astro.props as Record<string, string>;
+---
+<article class="card case">
+  <h2>{title}</h2>
+  <p><strong>{contextLabel} :</strong> {context}</p>
+  <p><strong>{resultLabel} :</strong> {result}</p>
+</article>

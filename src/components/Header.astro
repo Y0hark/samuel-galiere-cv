@@ -1,0 +1,20 @@
+---
+import { NAV_SLUGS, LANGS, pagePath, ui, site, type Lang } from '../lib/content';
+const { lang, slug } = Astro.props as { lang: Lang; slug: string };
+const t = ui(lang);
+const other = LANGS.find((l) => l !== lang)!;
+---
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href={pagePath(lang, '')}>{site.name}</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">{t.menu}</button>
+    <nav id="nav" aria-label={t.navLabel}>
+      <ul>
+        {NAV_SLUGS.map((s) => (
+          <li><a href={pagePath(lang, s)} aria-current={s === slug ? 'page' : undefined}>{t.nav[s]}</a></li>
+        ))}
+        <li><a class="lang" href={pagePath(other, slug)} hreflang={other} lang={other} title={t.langSwitchTitle}>{t.langLabel}</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

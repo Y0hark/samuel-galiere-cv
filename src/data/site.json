@@ -1,0 +1,92 @@
+{
+  "name": "Samuel Galiere",
+  "jobTitle": {
+    "fr": "Consultant IA et Data pour la logistique",
+    "en": "AI and Data Consultant for Logistics"
+  },
+  "phone": "+33782567456",
+  "phoneDisplay": "07 82 56 74 56",
+  "email": "samuelgaliere.pro@gmail.com",
+  "portrait": "/img/portrait-800.jpg",
+  "ui": {
+    "fr": {
+      "htmlLang": "fr",
+      "ogLocale": "fr_FR",
+      "langLabel": "English",
+      "langSwitchTitle": "Read this page in English",
+      "menu": "Menu",
+      "navLabel": "Navigation principale",
+      "skip": "Aller au contenu",
+      "nav": {
+        "": "Accueil",
+        "services": "Services",
+        "cas": "Cas clients",
+        "a-propos": "À propos",
+        "contact": "Contact"
+      },
+      "callLabel": "Appeler",
+      "callbackLabel": "Me faire rappeler",
+      "mailLabel": "Écrire un e-mail",
+      "portraitAlt": "Portrait de Samuel Galiere",
+      "casLabel": "Contexte",
+      "resultLabel": "Résultat",
+      "legalLabel": "Mentions légales",
+      "legalNav": "Mentions légales",
+      "vatNote": "TVA non applicable, art. 293 B du CGI",
+      "publisher": "Éditeur",
+      "statusLine": "Entrepreneur individuel (micro-entrepreneur)",
+      "siretLabel": "SIRET",
+      "addressLabel": "Adresse",
+      "phoneLabel": "Téléphone",
+      "mailLabel2": "E-mail",
+      "hostLabel": "Hébergeur",
+      "directorLabel": "Directeur de la publication"
+    },
+    "en": {
+      "htmlLang": "en",
+      "ogLocale": "en_GB",
+      "langLabel": "Français",
+      "langSwitchTitle": "Lire cette page en français",
+      "menu": "Menu",
+      "navLabel": "Main navigation",
+      "skip": "Skip to content",
+      "nav": {
+        "": "Home",
+        "services": "Services",
+        "cas": "Case studies",
+        "a-propos": "About",
+        "contact": "Contact"
+      },
+      "callLabel": "Call",
+      "callbackLabel": "Request a call back",
+      "mailLabel": "Send an e-mail",
+      "portraitAlt": "Portrait of Samuel Galiere",
+      "casLabel": "Context",
+      "resultLabel": "Outcome",
+      "legalLabel": "Legal notice",
+      "legalNav": "Legal notice",
+      "vatNote": "VAT not applicable, art. 293 B of the French Tax Code",
+      "publisher": "Publisher",
+      "statusLine": "Sole trader (micro-entrepreneur)",
+      "siretLabel": "SIRET",
+      "addressLabel": "Address",
+      "phoneLabel": "Phone",
+      "mailLabel2": "E-mail",
+      "hostLabel": "Host",
+      "directorLabel": "Publication director"
+    }
+  },
+  "siret": "898 240 973 00039",
+  "address": "2 avenue de Garlaban, 13012 Marseille",
+  "host": "GitHub Pages, GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis",
+  "callbackSubject": {
+    "fr": "Demande de rappel",
+    "en": "Call back request"
+  },
+  "callbackBody": {
+    "fr": "Bonjour Samuel,\n\nMerci de me rappeler au : \nMeilleurs créneaux : \nSujet : \n",
+    "en": "Hello Samuel,\n\nPlease call me back on: \nBest times: \nTopic: \n"
+  },
+  "portraitWebp": "/img/portrait-800.webp",
+  "portrait400": "/img/portrait-400.jpg"
+}

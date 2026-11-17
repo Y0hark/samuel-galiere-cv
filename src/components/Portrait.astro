@@ -1,0 +1,8 @@
+---
+import { ui, site, type Lang } from '../lib/content';
+const { lang } = Astro.props as { lang: Lang };
+---
+<picture>
+  <source type="image/webp" srcset={`${site.portraitWebp} 800w`} sizes="(max-width: 40rem) 100vw, 320px" />
+  <img class="portrait" src={site.portrait} srcset={`${site.portrait400} 400w, ${site.portrait} 800w`} sizes="(max-width: 40rem) 100vw, 320px" alt={ui(lang).portraitAlt} width="800" height="800" loading="lazy" decoding="async" />
+</picture>

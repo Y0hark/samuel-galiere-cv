@@ -1,0 +1,9 @@
+---
+const { title, text } = Astro.props as { title: string; text: string };
+---
+<section class="hero">
+  <div class="wrap">
+    <h1>{title}</h1>
+    <p class="lead">{text}</p>
+  </div>
+</section>
