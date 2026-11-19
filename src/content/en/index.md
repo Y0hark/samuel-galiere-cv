@@ -19,7 +19,7 @@ refs:
     text: "Big Data and AI teacher, Master level."
   - name: "Lumière"
     text: "Co-founder."
-ctaTitle: "Let's talk about your case: a 30-minute call."
+ctaTitle: "Let's talk about your case: a 20-minute call."
 ---
 
 I don't sell magic AI. I reduce the risk of picking the wrong use case, building a useless prototype, or shipping a tool nobody adopts.

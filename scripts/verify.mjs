@@ -22,11 +22,11 @@ for (const p of pages) {
   console.log('ok', f, fs.statSync(f).size + ' o');
 }
 for (const f of ['sitemap-index.xml', 'sitemap-0.xml', 'robots.txt']) if (!fs.existsSync('dist/' + f)) fail('missing ' + f);
-// mailto de rappel : un par langue, sujet et corps encodés
+// lien de réservation Calendly : exactement un par page
 for (const [p, lang] of [['contact/', 'fr'], ['en/contact/', 'en']]) {
   const h = fs.readFileSync(path.join('dist', p, 'index.html'), 'utf8');
-  const m = h.match(/href="mailto:[^"?]+\?subject=[^"&]+&(?:amp;)?body=[^"]+"/g) || [];
-  if (m.length !== 1) fail(`${p}: lien mailto de rappel attendu 1, trouvé ${m.length}`);
+  const m = h.match(/href="https:\/\/calendly\.com\/samuelgaliere-pro\/echange-20-min-samuel-galiere"/g) || [];
+  if (m.length !== 1) fail(`${p}: lien de réservation Calendly attendu 1, trouvé ${m.length}`);
 }
 // assets facultatifs
 for (const a of ['fonts/Lora-Variable.woff2', 'fonts/DMSans-Variable.woff2', 'img/portrait-400.jpg', 'img/portrait-800.jpg', 'img/portrait-800.webp'])

@@ -63,7 +63,7 @@ const eyebrow: Record<string, string> = { services: t.servicesEyebrow, cas: t.ca
         {s === 'cas' && <div class="cases">{data.cases.map((x: any) => <CaseCard {...x} contextLabel={t.casLabel} resultLabel={t.resultLabel} />)}</div>}
         {s === 'contact' && <ContactBlock lang={lang} />}
       </div>
-      {(s === 'services' || s === 'cas' || s === 'a-propos') && <CtaBand lang={lang} title={lang === 'fr' ? 'Parlons de votre cas : 30 minutes au téléphone.' : "Let's talk about your case: a 30-minute call."} />}
+      {(s === 'services' || s === 'cas' || s === 'a-propos') && <CtaBand lang={lang} title={lang === 'fr' ? 'Parlons de votre cas : 20 minutes au téléphone.' : "Let's talk about your case: a 20-minute call."} />}
     </>
   )}
 </Base>

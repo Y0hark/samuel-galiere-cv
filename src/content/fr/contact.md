@@ -1,7 +1,7 @@
 ---
 title: "Contact"
-description: "Appelez-moi ou demandez à être rappelé."
+description: "Appelez-moi ou réservez un appel de 20 minutes."
 heading: "Parlons-en au téléphone"
 ---
 
-Un clic sur « Me faire rappeler » ouvre un e-mail pré-rempli, et je vous rappelle.
+Choisissez un créneau de 20 minutes dans mon agenda, ou appelez-moi directement.

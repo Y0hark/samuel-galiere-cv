@@ -19,7 +19,7 @@ refs:
     text: "Enseignant Big Data et IA, niveau Master."
   - name: "Lumière"
     text: "Co-fondateur."
-ctaTitle: "Parlons de votre cas : 30 minutes au téléphone."
+ctaTitle: "Parlons de votre cas : 20 minutes au téléphone."
 ---
 
 Je ne vends pas de l'IA magique. Je réduis le risque de choisir le mauvais cas d'usage, de construire un prototype inutile ou un outil que personne n'adopte.

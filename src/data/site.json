@@ -61,9 +61,10 @@
       "delivers": "Je livre",
       "excludes": "Je ne fais pas",
       "entry": "Offre d'entrée",
-      "phoneHint": "Le plus simple : un appel de 30 minutes.",
+      "phoneHint": "Le plus simple : un appel de 20 minutes.",
       "scroll": "Défiler",
-      "navHome": "Accueil"
+      "navHome": "Accueil",
+      "bookLabel": "Réserver un appel de 20 min"
     },
     "en": {
       "htmlLang": "en",
@@ -117,9 +118,10 @@
       "delivers": "I deliver",
       "excludes": "I don't do",
       "entry": "Entry offer",
-      "phoneHint": "The easiest way: a 30-minute call.",
+      "phoneHint": "The easiest way: a 20-minute call.",
       "scroll": "Scroll",
-      "navHome": "Home"
+      "navHome": "Home",
+      "bookLabel": "Book a 20-min call"
     }
   },
   "siret": "898 240 973 00039",
@@ -134,5 +136,6 @@
     "en": "Hello Samuel,\n\nPlease call me back on: \nBest times: \nTopic: \n"
   },
   "portraitWebp": "/img/portrait-800.webp",
-  "portrait400": "/img/portrait-400.jpg"
+  "portrait400": "/img/portrait-400.jpg",
+  "bookingUrl": "https://calendly.com/samuelgaliere-pro/echange-20-min-samuel-galiere"
 }

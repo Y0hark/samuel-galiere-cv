@@ -1,7 +1,7 @@
 ---
 title: "Contact"
-description: "Call me or ask for a call back."
+description: "Call me or book a 20-minute call."
 heading: "Let's talk by phone"
 ---
 
-One click on "Request a call back" opens a pre-filled e-mail, and I will call you back.
+Pick a 20-minute slot in my calendar, or call me directly.
